@@ -1,0 +1,21 @@
+# Copyright 2023--present rgconf developers
+
+[workspace]
+name = "rgconf"
+channels = ["conda-forge"]
+platforms = ["linux-64"]
+
+[environments]
+docs = { features = ["docs"] }
+
+[feature.docs]
+platforms = ["linux-64"]
+
+[feature.docs.dependencies]
+sphinx = ">=8.0,<9"
+emacs = ">=29,<31"
+
+[feature.docs.tasks]
+docs-export = { cmd = "emacs --batch -l export.el", cwd = "docs" }
+docs-llm = { cmd = "python3 tools/generate_llm_docs.py" }
+docs-build = { cmd = "sphinx-build -b html -n docs/source docs/build", depends-on = ["docs-export", "docs-llm"] }
