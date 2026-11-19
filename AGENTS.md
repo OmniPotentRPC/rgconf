@@ -1,0 +1,174 @@
+# Agents
+
+Generated from docs/orgmode by tools/generate_llm_docs.py.
+
+Build with cargo. The workspace crate is `rgconf`. The C ABI is `rgconf-c-abi` and the header is `include/rgconf.h`. Python lives in `python/` (PyO3, module `_core`) and `bind/ext.cpp` (nanobind).
+
+```
+cargo test --workspace
+cargo clippy --workspace --all-targets -- -D warnings
+emacs --batch -l docs/export.el
+python3 tools/generate_llm_docs.py
+```
+
+Public config structs are `#[non_exhaustive]` with `Default` and `with_*` setters. Provenance leaves go through the `rfc9162` crate. Production code does not call `unwrap_or` or `clamp`, and it does not introduce a bare `1e-N` literal. New files carry `Copyright 2023--present rgconf developers`.
+
+# home.org
+
+rgconf is the parameter and provenance library for the OmniPotentRPC stack.
+One Cap'n Proto schema describes a run. A Rust resolver folds defaults, files,
+environment variables, command line flags, and runtime edits. Provenance
+leaves are RFC 9162 hashes from the =rfc9162= crate.
+
+* Read next
+- The tutorial shows one client file becoming a resolved band.
+- The extension how-to adds a third party key without forking ordinals.
+- The deprecation how-to covers =eon-schema= and the rgpot schema.
+- The reference lists the public types.
+- The precedence explanation is the rule the resolver implements.
+
+# tutorials/resolve.org
+
+This walk resolves an eOn client file with the =eonLegacyIni= profile.
+
+* Write the file
+
+[Main]
+job = minimization
+temperature = 300
+
+[Optimizer]
+opt_method = cg
+converged_force = 0.03
+max_move = 0.2
+
+[Refine]
+opt_method = fire
+threshold = 0.2
+
+[Nudged Elastic Band]
+images = 7
+
+=images= counts intermediate images. The resolver adds the two endpoints, so 7 becomes a total of 9.
+
+* Resolve it
+
+rgconf resolve --profile eonLegacyIni --ini client.ini
+
+The printed line for the band force is derived from the optimizer force, because that profile inherits the optimizer tolerance when the band value is unset. =[Refine]= is routed to =optimizer.handoff= while the job is minimization. A nudged elastic band job routes the same section to =band.refine.handoff=.
+
+* Ask for the proof
+
+rgconf explain --profile eonLegacyIni --ini client.ini
+
+=explain= appends the resolved fields to an RFC 9162 log and checks the inclusion proof of the first leaf with =rfc9162::verify_inclusion=.
+
+# howto/extend-schema.org
+
+A third party adds a parameter without taking a new ordinal on =RgConf=.
+
+* Companion schema
+
+A compiled companion, such as =gpridge.capnp=, imports =rgconf.capnp= and stores its extra fields beside =canonical=. That is the typed form. The file id of the companion is its own. =RgConf= ordinals stay put.
+
+* Namespaced keys
+
+A key that no companion declared is a =ThirdPartyExtension= on =RgConf.extensions= (@39) and on =RgConfPatch.extensions= (@24). The canonical name is =ext.<namespace>.<name>=.
+
+[ext.acme]
+alpha = 1.5
+
+The resolver keeps that key, marks it mutable for a live edit, and does not invent a unit. Validation of bounds stays with the companion schema when the field is declared there.
+
+* What not to do
+
+Do not insert a field into the middle of =RgConf=. Do not reuse an ordinal. Do not put a second copy of =refine= or =thermostat= at the top level. Those domains already have one owner.
+
+# howto/deprecation.org
+
+=eon-schema= and the hand written rgpot parameter blocks are inputs to rgconf. They stop being a second source of truth.
+
+* eon-schema
+
+The INI sections =Main=, =Optimizer=, =Refine=, =Nudged Elastic Band=, and =Saddle Search= keep working through aliases on the Cap'n Proto fields. A removed key is a deprecated alias: the resolver still loads it and reports =deprecatedAlias=, as =ci_stability_count= and =use_prune= already do on the gpridge companion.
+
+The removal order is:
+
+- Ship rgconf in the clients that still read those sections.
+- Keep the aliases for one release while jobs print the canonical key beside the old one.
+- Delete the alias from the schema only after that release, in a schema file that bumps nothing underneath an existing ordinal.
+
+=eon-schema= itself is not imported by this crate. The alias table is the migration.
+
+* rgpot schema
+
+=potential.capnp= is the evolved rgpot parameter schema. The union arm is the backend. There is no =kind= field beside it. New backends are new arms at the next free ordinal, not a parallel struct in the rgpot tree.
+
+Fields that exist only as comments in a C++ header stay in the generated parameter map until the schema field that replaces them is in a release. The map records the header line. It is not a second schema.
+
+* Defaults that disagree
+
+The Lennard Jones =switchWidth= literal in the schema is 1.0. =LJConfig.switch_width= in rgpot is 0.0. The importer keeps the header value. Jobs that need the header behavior set the field. The schema literal is not rewritten in this crate, because changing it would be a default change for every profile.
+
+# reference/parameters.org
+
+* Profiles
+
+=rgconfCanonical=, =eonLegacyIni=, =eonServerYaml=, =gpridgePaper=, =gpridgeLegacyToml=, and =aseDropin=.
+
+=eonLegacyIni= uses =l2Euclidean= for the optimizer norm and =maxAtomL2= for the band and the saddle search. The band force copies the optimizer force when the band value is unset. =eonServerYaml= selects the =akmcProcessSearch= job and the =external= potential. Both gpridge profiles use 10 images. The paper force is one thousandth of a hartree per bohr, converted with the CODATA 2018 constants, not the rounded 0.0514221 figure.
+
+* Layers
+
+User layers, from lowest to highest, are the global file, the project file, the job file, the environment, the command line, and a live edit. Schema defaults and the profile sit underneath. Two aliases in one layer that normalize to different numbers are an error and the message names both keys. Equal values keep both origins.
+
+* Derived values
+
+=band.zoom.triggerForceEvPerAngstrom= is the band force tolerance times =triggerForceMultiplier= (10 unless set). =band.spring.ewKMinEvPerAngstrom2= is one tenth of =constantEvPerAngstrom2=. The schema file still carries the literals 0.5 and 0.972. The resolver uses the formulas when the user left the field unset. Those literals are not the runtime default.
+
+* Public Rust types
+
+=RuntimeConfig=, =ConvergenceConfig=, =OptimizerConfig=, =LbfgsConfig=, =FireConfig=, =HandoffConfig=, =BandConfig=, =SpringConfig=, =ClimbingImageConfig=, =UnitSystem=, and =RgConf= are =#[non_exhaustive]=, implement =Default=, and expose =with_*= setters.
+
+* C ABI
+
+=include/rgconf.h= defines =RGCONF_ABI_VERSION_MAJOR=, =RGCONF_ABI_VERSION_MINOR=, =RGCONF_ABI_VERSION_PATCH=, and =RGCONF_ABI_VERSION=. =rgconf_abi_version= returns the packed value. =rgconf_resolve_ini= and =rgconf_apply_edit= write a heap buffer released with =rgconf_free=.
+
+* Python
+
+=python/= is a PyO3 crate named =_core=, the same shape as rgmin. =bind/ext.cpp= is the nanobind module in the rgsaddle style and links the C ABI. =rgconf.resolve_ini= uses the extension when it is installed and the C ABI otherwise.
+
+* Provenance
+
+Config fields, SBOM purls, archive digests, and =ParamEdit= records are appended to =rfc9162_log::Store=. The leaf hash is =rfc9162::leaf_hash=. rgconf does not hash a leaf itself. Gaps are listed in the upstream page.
+
+# explanation/precedence.org
+
+A field starts at its schema literal with status =defaultValue=. A profile function then replaces it with =profileDefault= or, when the value is copied from another field, =derivedFromUnset=. A user layer that sets the field wins over both. A higher user layer replaces a lower one and the status becomes =layeredOverride=. One user layer is =explicitlySet=. A winning deprecated alias is =deprecatedAlias=. A =ParamEdit= is =mutatedMidRun= at the live edit layer.
+
+=restartOnly= fields reject a live edit. A checkpoint restart may change them. =mutableLive= edits record no hook. =betweenStepsWithHook= edits record the hook for that key: LBFGS history, the preconditioner, climbing images, band spacing, the thermostat, the potential, the dimer, or the cell.
+
+Environment names are =RGCONF_= plus the canonical key, with a capital letter after a lower case letter gaining an underscore. =band.imageCount= is =RGCONF_BAND_IMAGE_COUNT=. That variable is the total image count. The =--images= flag is the intermediate count and adds two.
+
+# explanation/upstream.org
+
+* rfc9162 v0.11.0
+
+These calls return =Error::UpstreamPatch= and are not implemented here.
+
+- =rfc9162::canonicalize_capnp= should pack a Cap'n Proto message before =leaf_hash=.
+- =rfc9162_log::Store::put_blob_and_append= should store an entry longer than 65535 bytes as a blob and append a short pointer leaf. =Sidecar::put= writes a file and does not append that leaf.
+- =rfc9162_tiles::Writer::append_shared= should append without holding =treeState.lock= from open until drop.
+- C and Python bindings for the log belong in the =rfc9162= repository.
+
+* Notes on the design text
+
+The schema =ConfigLayer= ordinals stop at =liveRuntimeEdit= (@7). =derived= and the C ABI fallback are =ValueStatus= values, not layers. A map section that calls the fallback a layer is the part that does not match the schema.
+
+=OciNebRefinePatch= still carries =hasMaxSteps=, =hasMaxPhases=, and =hasMaxInnerIterations= beside its counts. That is the presence shape the rest of the schema left behind. The ordinals are unchanged.
+
+The zoom trigger literal in the schema is 0.5 and the =ewKMin= literal is 0.972. The resolver text says 10 times the band force and one tenth of the spring constant. The formulas win when the user did not set the field.
+
+The gpridge companion did not declare =ci_stability_count= or =use_prune=. Those deprecated aliases are on =GpridgeDeprecated= so an old job file still loads.
+
+=RgConf= had no list for a namespaced key that no companion schema declared. =extensions= (@39) is that list.

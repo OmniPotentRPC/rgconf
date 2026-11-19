@@ -1,0 +1,54 @@
+Reference
+=========
+
+
+
+Profiles
+========
+
+
+``rgconfCanonical``, ``eonLegacyIni``, ``eonServerYaml``, ``gpridgePaper``, ``gpridgeLegacyToml``, and ``aseDropin``.
+
+``eonLegacyIni`` uses ``l2Euclidean`` for the optimizer norm and ``maxAtomL2`` for the band and the saddle search. The band force copies the optimizer force when the band value is unset. ``eonServerYaml`` selects the ``akmcProcessSearch`` job and the ``external`` potential. Both gpridge profiles use 10 images. The paper force is one thousandth of a hartree per bohr, converted with the CODATA 2018 constants, not the rounded 0.0514221 figure.
+
+
+Layers
+======
+
+
+User layers, from lowest to highest, are the global file, the project file, the job file, the environment, the command line, and a live edit. Schema defaults and the profile sit underneath. Two aliases in one layer that normalize to different numbers are an error and the message names both keys. Equal values keep both origins.
+
+
+Derived values
+==============
+
+
+``band.zoom.triggerForceEvPerAngstrom`` is the band force tolerance times ``triggerForceMultiplier`` (10 unless set). ``band.spring.ewKMinEvPerAngstrom2`` is one tenth of ``constantEvPerAngstrom2``. The schema file still carries the literals 0.5 and 0.972. The resolver uses the formulas when the user left the field unset. Those literals are not the runtime default.
+
+
+Public Rust types
+=================
+
+
+``RuntimeConfig``, ``ConvergenceConfig``, ``OptimizerConfig``, ``LbfgsConfig``, ``FireConfig``, ``HandoffConfig``, ``BandConfig``, ``SpringConfig``, ``ClimbingImageConfig``, ``UnitSystem``, and ``RgConf`` are ``#[non_exhaustive]``, implement ``Default``, and expose ``with_*`` setters.
+
+
+C ABI
+=====
+
+
+``include/rgconf.h`` defines ``RGCONF_ABI_VERSION_MAJOR``, ``RGCONF_ABI_VERSION_MINOR``, ``RGCONF_ABI_VERSION_PATCH``, and ``RGCONF_ABI_VERSION``. ``rgconf_abi_version`` returns the packed value. ``rgconf_resolve_ini`` and ``rgconf_apply_edit`` write a heap buffer released with ``rgconf_free``.
+
+
+Python
+======
+
+
+``python/`` is a PyO3 crate named ``_core``, the same shape as rgmin. ``bind/ext.cpp`` is the nanobind module in the rgsaddle style and links the C ABI. ``rgconf.resolve_ini`` uses the extension when it is installed and the C ABI otherwise.
+
+
+Provenance
+==========
+
+
+Config fields, SBOM purls, archive digests, and ``ParamEdit`` records are appended to ``rfc9162_log::Store``. The leaf hash is ``rfc9162::leaf_hash``. rgconf does not hash a leaf itself. Gaps are listed in the upstream page.

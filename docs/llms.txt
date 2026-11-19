@@ -1,0 +1,11 @@
+# rgconf
+
+Generated from docs/orgmode. Do not edit by hand.
+
+- docs/orgmode/home.org
+- docs/orgmode/tutorials/resolve.org
+- docs/orgmode/howto/extend-schema.org
+- docs/orgmode/howto/deprecation.org
+- docs/orgmode/reference/parameters.org
+- docs/orgmode/explanation/precedence.org
+- docs/orgmode/explanation/upstream.org
