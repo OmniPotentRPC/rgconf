@@ -5,6 +5,7 @@ members = [
     "crates/rgconf-core",
     "crates/rgconf-c-abi",
     "crates/rgconf-cli",
+    "python",
 ]
 
 [workspace.package]
