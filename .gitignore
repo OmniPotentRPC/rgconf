@@ -1,0 +1,10 @@
+# Copyright 2023--present rgconf developers
+/target
+/docs/build
+**/*.rs.bk
+.pixi
+__pycache__
+*.pyc
+.pytest_cache
+*.egg-info
+/wheelhouse

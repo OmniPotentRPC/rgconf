@@ -1,0 +1,21 @@
+# Copyright 2023--present rgconf developers
+[package]
+name = "rgconf"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+description = "Layered Cap'n Proto parameter resolution and RFC 9162 provenance for the OmniPotentRPC stack."
+publish = false
+
+[dependencies]
+ed25519-dalek = { version = "2", features = ["pkcs8", "pem"] }
+rfc9162 = { git = "https://github.com/stackhands/rfc9162", tag = "v0.11.0" }
+rfc9162-log = { git = "https://github.com/stackhands/rfc9162", tag = "v0.11.0" }
+rfc9162-tiles = { git = "https://github.com/stackhands/rfc9162", tag = "v0.11.0" }
+serde_json = "1"
+toml = "0.8"
+
+[dev-dependencies]
+proptest = "=1.6.0"
