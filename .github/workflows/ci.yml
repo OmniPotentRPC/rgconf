@@ -1,0 +1,37 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.85.0
+        with:
+          components: rustfmt, clippy
+      - name: capnp
+        run: sudo apt-get update && sudo apt-get install -y capnproto meson ninja-build python3-pytest
+      - name: schema
+        run: capnp compile -o- -Ischema schema/*.capnp >/dev/null
+      - name: test
+        run: cargo test --workspace
+      - name: clippy
+        run: cargo clippy --workspace --all-targets -- -D warnings
+      - name: rustdoc
+        run: RUSTDOCFLAGS="-D warnings" cargo doc --workspace --no-deps
+      - name: c abi
+        run: |
+          cargo build -p rgconf-c-abi
+          gcc -Iinclude tests/c/abi_smoke.c -Ltarget/debug -lrgconf_c_abi -Wl,-rpath,target/debug -o target/abi_smoke
+          ./target/abi_smoke
+      - name: python
+        run: PYTHONPATH=python python3 -m pytest python/tests tools/test_parameter_map.py
+      - name: docs
+        run: |
+          emacs --batch -l docs/export.el
+          python3 tools/generate_llm_docs.py
+          sphinx-build -b html -n docs/source docs/build
+          git diff --exit-code
