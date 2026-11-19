@@ -1,0 +1,17 @@
+# Copyright 2023--present rgconf developers
+[package]
+name = "rgconf-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+description = "Command line resolver for rgconf."
+publish = false
+
+[[bin]]
+name = "rgconf"
+path = "src/main.rs"
+
+[dependencies]
+rgconf = { path = "../rgconf-core" }

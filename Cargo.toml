@@ -4,6 +4,7 @@ resolver = "2"
 members = [
     "crates/rgconf-core",
     "crates/rgconf-c-abi",
+    "crates/rgconf-cli",
 ]
 
 [workspace.package]
