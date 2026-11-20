@@ -1,0 +1,35 @@
+# Copyright 2023--present rgconf developers
+[build-system]
+requires = ["maturin>=1.7,<2"]
+build-backend = "maturin"
+
+[project]
+name = "rgconf"
+description = "Python bindings for rgconf."
+readme = "../README.md"
+requires-python = ">=3.9"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Rohit Goswami", email = "rgoswami@ieee.org" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Rust",
+    "Topic :: Software Development :: Libraries",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://omnipotentrpc.github.io/rgconf/"
+Documentation = "https://omnipotentrpc.github.io/rgconf/"
+Repository = "https://github.com/OmniPotentRPC/rgconf"
+Changelog = "https://github.com/OmniPotentRPC/rgconf/blob/main/CHANGELOG.md"
+
+[tool.maturin]
+module-name = "rgconf._core"
+python-source = "."
+features = ["extension-module"]
+include = [{ path = "rust-toolchain.toml", format = "sdist" }]

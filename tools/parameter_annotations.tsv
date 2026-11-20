@@ -1,0 +1,27 @@
+repo	struct	field	rgconf	eon	note
+rgmin	rgmin_rlbfgs_t	memory	optimizer.LbfgsConfig.memory	lbfgs_t.memory	History length in both. The rgmin record defaults to 4 pairs where rgconf defaults to 20.
+rgmin	rgmin_rlbfgs_t	cautious_slope	optimizer.LbfgsConfig.cautiousEpsilon	lbfgs_t.cautious_eps	Factor on the gradient norm in the cautious curvature test. The defaults differ: rgmin uses 1e-4 while the schema and eOn use 1e-6. The rgmin test fixes the exponent at one, while rgconf also exposes it as cautiousAlpha.
+rgmin	rgmin_rlbfgs_t	armijo	unmapped	none	Sufficient-decrease constant of the Riemannian line search. rgconf has no line search constant for this method.
+rgmin	rgmin_rlbfgs_t	backtrack	unmapped	none	Factor applied to a rejected trial length. rgconf has no matching field.
+rgmin	rgmin_rlbfgs_t	linesearch_max	unmapped	none	Rejected trials allowed per iteration. The rgconf maxIterLineSearch field applies to the cg method only.
+rgmin	rgmin_rlbfgs_t	grad_ratio	unmapped	none	Stop when the gradient norm falls below this fraction of the initial norm. rgconf convergence has no ratio criterion.
+rgsaddle	rgsaddle_artn_config_t	version	abi	none	ABI record header, not a run parameter.
+rgsaddle	rgsaddle_artn_config_t	flags	abi	none	Reserved ABI word that callers set to zero.
+rgsaddle	rgsaddle_artn_config_t	lanczos_start	minmode.ArtnConfig.ninitPushSteps	artn_options_t.ninit	Random-direction pushes before the first Lanczos solve. eOn uses -1 to defer to the pARTn default.
+rgsaddle	rgsaddle_artn_config_t	eigenvalue_threshold	minmode.ArtnConfig.eigenvalueThreshold	none	Eigenvalue below which activation starts, in eV per square Angstrom. The rgsaddle default is -0.01 and the schema default is -0.5. The eOn force_threshold is a force criterion, not this value.
+rgsaddle	rgsaddle_artn_config_t	basin_push	minmode.ArtnConfig.pushStepSizeAngstrom	artn_options_t.push_step_size	Length of each random-direction push in Angstrom. rgsaddle and rgconf default to 0.2 and eOn to 0.3.
+rgsaddle	rgsaddle_artn_config_t	basin_relaxations	unmapped	none	Perpendicular relaxation steps after a basin push. rgconf maxPerpRelaxIters is a single limit with no basin and activation split, and the eOn nperp_limitation string is only a loose relative.
+rgsaddle	rgsaddle_artn_config_t	activation_relaxations	unmapped	none	Perpendicular relaxation steps after an activation push. See basin_relaxations for why no field is named.
+rgsaddle	rgsaddle_artn_config_t	relaxation_step	unmapped	none	Scale on the projected gradient during relaxation. Neither rgconf nor eOn has this field.
+rgsaddle	rgsaddle_artn_config_t	lanczos_actions	minmode.ArtnConfig.nlanczosSteps	none	Most Lanczos Hessian actions per geometry. Both rgsaddle and rgconf default to 16. eOn has no matching option.
+rgsaddle	rgsaddle_artn_config_t	curvature_floor	unmapped	none	Lower bound on the absolute eigenvalue in the activation Newton step. Neither rgconf nor eOn has this field.
+rgsaddle	rgsaddle_growing_string_config_t	version	abi	none	ABI record header, not a run parameter.
+rgsaddle	rgsaddle_growing_string_config_t	flags	abi	none	Reserved ABI word.
+rgsaddle	rgsaddle_growing_string_config_t	band	band.BandConfig	none	Nested band configuration. rgconf carries the same group as BandConfig, and eOn spreads it over several fields.
+rgsaddle	rgsaddle_growing_string_config_t	n_images	band.BandConfig.imageCount	neb_options_t.image_count	Total image count including both endpoints in rgsaddle and rgconf. eOn counts intermediate images only.
+rgsaddle	rgsaddle_growing_string_config_t	frontier_tol	band.BandConfig.growingStringFrontierTol	none	Perpendicular-force threshold for adding a node. The rgsaddle default is 0.2 and the schema default is 0.1. The eOn sidpp_frontier_tol belongs to the IDPP path growth, which is a different method.
+rgsaddle	rgsaddle_growing_string_config_t	min_steps_per_node	unmapped	none	Least relaxation steps at the current fragment size before a frontier may add a node. No rgconf or eOn field.
+rgsaddle	rgsaddle_growing_string_config_t	max_steps_per_node	unmapped	none	Cap on relaxation steps at the current fragment size, where zero selects the default cap. No rgconf or eOn field.
+rgsaddle	rgsaddle_growing_string_config_t	join_tol	unmapped	none	Frontier distance at which the two fragments join early, where -1 disables the early join. No rgconf or eOn field.
+rgsaddle	rgsaddle_growing_string_config_t	reparametrization	unmapped	none	Spline kind used to redistribute nodes. The eOn sidpp_reparam is a boolean for IDPP growth and does not choose a spline.
+rgsaddle	rgsaddle_growing_string_config_t	force_gate	convergence.ConvergenceConfig.norm	optimizer_options_t.convergence_metric	Norm used for the frontier test and the reported force. rgsaddle offers L2, Linf and max-atom, defaulting to Linf, while the rgconf ForceNorm also has the rms forms.

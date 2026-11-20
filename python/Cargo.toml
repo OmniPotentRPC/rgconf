@@ -1,0 +1,27 @@
+# Copyright 2023--present rgconf developers
+[package]
+name = "rgconf-python"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+description = "PyO3 bindings for rgconf, matching the rgmin python crate."
+repository.workspace = true
+homepage.workspace = true
+documentation = "https://omnipotentrpc.github.io/rgconf/"
+readme.workspace = true
+keywords = ["configuration", "capnproto", "python", "provenance"]
+categories = ["api-bindings", "config"]
+publish = false
+
+[lib]
+name = "_core"
+crate-type = ["cdylib"]
+
+[features]
+extension-module = ["pyo3/extension-module"]
+
+[dependencies]
+pyo3 = "0.27.2"
+rgconf = { path = "../crates/rgconf-core", version = "0.1.0" }

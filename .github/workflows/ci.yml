@@ -1,0 +1,65 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: dtolnay/rust-toolchain@1.85.0
+        with:
+          components: rustfmt, clippy
+      - name: system packages
+        run: sudo apt-get update && sudo apt-get install -y capnproto meson ninja-build python3-dev emacs-nox
+      - name: python tooling
+        run: |
+          python -m venv "$RUNNER_TEMP/venv"
+          echo "$RUNNER_TEMP/venv/bin" >> "$GITHUB_PATH"
+          echo "VIRTUAL_ENV=$RUNNER_TEMP/venv" >> "$GITHUB_ENV"
+          "$RUNNER_TEMP/venv/bin/python" -m pip install "maturin>=1.7,<2" pytest "sphinx>=8.0,<9"
+      - name: schema
+        run: capnp compile -o- -Icrates/rgconf-core/schema crates/rgconf-core/schema/*.capnp >/dev/null
+      - name: test
+        run: cargo test --workspace
+      - name: clippy
+        run: cargo clippy --workspace --all-targets -- -D warnings
+      - name: rustdoc
+        run: RUSTDOCFLAGS="-D warnings" cargo doc --workspace --no-deps
+      - name: c abi
+        run: |
+          cargo build -p rgconf-c-abi
+          gcc -Iinclude tests/c/abi_smoke.c -Ltarget/debug -lrgconf_c_abi -Wl,-rpath,target/debug -o target/abi_smoke
+          ./target/abi_smoke
+      - name: upstream sources
+        run: |
+          python3 tools/fetch_sources.py "$RUNNER_TEMP/sources"
+          echo "RGCONF_SOURCES=$RUNNER_TEMP/sources" >> "$GITHUB_ENV"
+      - name: python extension
+        run: maturin develop --manifest-path python/Cargo.toml
+      - name: python
+        run: |
+          python3 -m pytest python/tests tools/test_parameter_map.py --junitxml=target/pytest.xml
+          python3 - <<'PY'
+          import sys
+          import xml.etree.ElementTree as ET
+
+          root = ET.parse("target/pytest.xml").getroot()
+          suite = root if root.tag == "testsuite" else root[0]
+          total = int(suite.get("tests"))
+          skipped = int(suite.get("skipped"))
+          print(f"{total} collected, {skipped} skipped, {total - skipped} ran")
+          if total == 0 or skipped:
+              sys.exit("python tests were missing or skipped")
+          PY
+      - name: docs
+        run: |
+          emacs --batch -l docs/export.el
+          python3 tools/generate_llm_docs.py
+          sphinx-build -b html -n docs/source docs/build
+          git diff --exit-code

@@ -1,0 +1,23 @@
+# Copyright 2023--present rgconf developers
+[package]
+name = "rgconf-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+description = "Command line resolver for rgconf."
+repository.workspace = true
+homepage.workspace = true
+documentation = "https://docs.rs/rgconf-cli"
+readme.workspace = true
+keywords = ["configuration", "capnproto", "provenance", "cli"]
+categories = ["command-line-utilities", "config"]
+
+[[bin]]
+name = "rgconf"
+path = "src/main.rs"
+doc = false
+
+[dependencies]
+rgconf = { path = "../rgconf-core", version = "0.1.0" }

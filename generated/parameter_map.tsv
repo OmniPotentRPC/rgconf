@@ -1,0 +1,2316 @@
+repo	relpath	line	struct	field	type	default	section	rgconf	eon	note
+eon	include/eon/ParametersOptions.h	25	constants_t	kB	double	8.6173324e-5				
+eon	include/eon/ParametersOptions.h	26	constants_t	timeUnit	double	10.1805055				
+eon	include/eon/ParametersOptions.h	31	main_options_t	job	JobType	JobType::Process_Search	Main			
+eon	include/eon/ParametersOptions.h	32	main_options_t	randomSeed	long	-1	Main			
+eon	include/eon/ParametersOptions.h	33	main_options_t	temperature	double	300.0	Main			
+eon	include/eon/ParametersOptions.h	34	main_options_t	quiet	bool	false	Main			
+eon	include/eon/ParametersOptions.h	35	main_options_t	writeLog	bool	true	Main			
+eon	include/eon/ParametersOptions.h	36	main_options_t	checkpoint	bool	false	Main			
+eon	include/eon/ParametersOptions.h	37	main_options_t	iniFilename	std::string	"config.ini"	Main			
+eon	include/eon/ParametersOptions.h	38	main_options_t	conFilename	std::string	"pos.con"	Main			
+eon	include/eon/ParametersOptions.h	39	main_options_t	finiteDifference	double	0.01	Main			
+eon	include/eon/ParametersOptions.h	40	main_options_t	maxForceCalls	long	0	Main			
+eon	include/eon/ParametersOptions.h	41	main_options_t	removeNetForce	bool	true	Main			
+eon	include/eon/ParametersOptions.h	42	main_options_t	parallel	bool	true	Main			
+eon	include/eon/ParametersOptions.h	46	main_options_t	writeConForces	bool	false	Main			
+eon	include/eon/ParametersOptions.h	51	potential_options_t	potential	PotType	PotType::LJ	Potential			
+eon	include/eon/ParametersOptions.h	52	potential_options_t	MPIPollPeriod	double	0.25	Potential			
+eon	include/eon/ParametersOptions.h	53	potential_options_t	LAMMPSLogging	bool	false	Potential			
+eon	include/eon/ParametersOptions.h	54	potential_options_t	LAMMPSThreads	int	0	Potential			
+eon	include/eon/ParametersOptions.h	55	potential_options_t	EMTRasmussen	bool	false	Potential			
+eon	include/eon/ParametersOptions.h	56	potential_options_t	LogPotential	bool	false	Potential			
+eon	include/eon/ParametersOptions.h	59	potential_options_t	thread_safe	bool	true	Potential			
+eon	include/eon/ParametersOptions.h	60	potential_options_t	extPotPath	std::string	"./ext_pot"	Potential			
+eon	include/eon/ParametersOptions.h	63	potential_options_t	MPIPotentialRank	int	-1	Potential			
+eon	include/eon/ParametersOptions.h	65	potential_options_t	MPIClientComm	std::uintptr_t	0	Potential			
+eon	include/eon/ParametersOptions.h	70	ams_options_t	engine	std::string		AMS			
+eon	include/eon/ParametersOptions.h	71	ams_options_t	forcefield	std::string		AMS			
+eon	include/eon/ParametersOptions.h	72	ams_options_t	model	std::string		AMS			
+eon	include/eon/ParametersOptions.h	73	ams_options_t	resources	std::string		AMS			
+eon	include/eon/ParametersOptions.h	74	ams_options_t	xc	std::string		AMS			
+eon	include/eon/ParametersOptions.h	75	ams_options_t	basis	std::string		AMS			
+eon	include/eon/ParametersOptions.h	77	env_t	amshome	std::string		AMS			
+eon	include/eon/ParametersOptions.h	78	env_t	scm_tmpdir	std::string		AMS			
+eon	include/eon/ParametersOptions.h	79	env_t	scmlicense	std::string		AMS			
+eon	include/eon/ParametersOptions.h	80	env_t	scm_pythondir	std::string		AMS			
+eon	include/eon/ParametersOptions.h	81	env_t	amsbin	std::string		AMS			
+eon	include/eon/ParametersOptions.h	82	env_t	amsresources	std::string		AMS			
+eon	include/eon/ParametersOptions.h	88	xtb_options_t	paramset	std::string	"GFNFF"	XTBPot			
+eon	include/eon/ParametersOptions.h	89	xtb_options_t	elec_temperature	double	0.0	XTBPot			
+eon	include/eon/ParametersOptions.h	90	xtb_options_t	maxiter	size_t	250	XTBPot			
+eon	include/eon/ParametersOptions.h	91	xtb_options_t	acc	double	1.0	XTBPot			
+eon	include/eon/ParametersOptions.h	92	xtb_options_t	charge	double	0.0	XTBPot			
+eon	include/eon/ParametersOptions.h	93	xtb_options_t	uhf	int	0	XTBPot			
+eon	include/eon/ParametersOptions.h	98	zbl_options_t	cut_inner	double	2.0	ZBLPot			
+eon	include/eon/ParametersOptions.h	99	zbl_options_t	cut_global	double	2.5	ZBLPot			
+eon	include/eon/ParametersOptions.h	104	dftd_options_t	functional	std::string	"pbe"	D3Pot			
+eon	include/eon/ParametersOptions.h	105	dftd_options_t	atm	bool	true	D3Pot			
+eon	include/eon/ParametersOptions.h	106	dftd_options_t	d3_damping	std::string	"bj"	D3Pot			
+eon	include/eon/ParametersOptions.h	107	dftd_options_t	d4_charge	double	0.0	D3Pot			
+eon	include/eon/ParametersOptions.h	112	expr_options_t	expression	std::string		ExprPot			
+eon	include/eon/ParametersOptions.h	113	expr_options_t	terms	std::string		ExprPot			
+eon	include/eon/ParametersOptions.h	118	mopac_options_t	charge	int	0	MOPACPot			
+eon	include/eon/ParametersOptions.h	119	mopac_options_t	spin	int	0	MOPACPot			
+eon	include/eon/ParametersOptions.h	120	mopac_options_t	model	int	4	MOPACPot			
+eon	include/eon/ParametersOptions.h	121	mopac_options_t	engine_path	std::string		MOPACPot			
+eon	include/eon/ParametersOptions.h	126	socket_nwchem_options_t	host	std::string	"127.0.0.1"	SocketNWChemPot			
+eon	include/eon/ParametersOptions.h	127	socket_nwchem_options_t	port	int	9999	SocketNWChemPot			
+eon	include/eon/ParametersOptions.h	128	socket_nwchem_options_t	mem_in_gb	int	2	SocketNWChemPot			
+eon	include/eon/ParametersOptions.h	129	socket_nwchem_options_t	nwchem_settings	std::string	"nwchem_settings.nwi"	SocketNWChemPot			
+eon	include/eon/ParametersOptions.h	130	socket_nwchem_options_t	unix_socket_path	std::string	"eon_nwchem"	SocketNWChemPot			
+eon	include/eon/ParametersOptions.h	131	socket_nwchem_options_t	unix_socket_mode	bool	false	SocketNWChemPot			
+eon	include/eon/ParametersOptions.h	132	socket_nwchem_options_t	make_template_input	bool	true	SocketNWChemPot			
+eon	include/eon/ParametersOptions.h	139	rgpot_options_t	backend	std::string	"nwchemc"	RgpotPot			
+eon	include/eon/ParametersOptions.h	140	rgpot_options_t	basis	std::string	"sto-3g"	RgpotPot			
+eon	include/eon/ParametersOptions.h	141	rgpot_options_t	theory	std::string	"scf"	RgpotPot			
+eon	include/eon/ParametersOptions.h	142	rgpot_options_t	scf_type	std::string	"rhf"	RgpotPot			
+eon	include/eon/ParametersOptions.h	143	rgpot_options_t	functional	std::string	"BLYP"	RgpotPot			
+eon	include/eon/ParametersOptions.h	146	rgpot_options_t	cutoff_ry	double	70.0	cpmd			
+eon	include/eon/ParametersOptions.h	147	rgpot_options_t	charge	int	0	cpmd			
+eon	include/eon/ParametersOptions.h	148	rgpot_options_t	multiplicity	int	1	cpmd			
+eon	include/eon/ParametersOptions.h	149	rgpot_options_t	engine_path	std::string		cpmd			
+eon	include/eon/ParametersOptions.h	150	rgpot_options_t	engine_library	std::string		cpmd			
+eon	include/eon/ParametersOptions.h	151	rgpot_options_t	engine_root	std::string		cpmd			
+eon	include/eon/ParametersOptions.h	152	rgpot_options_t	title	std::string		cpmd			
+eon	include/eon/ParametersOptions.h	153	rgpot_options_t	memory_mb	int	0	cpmd			
+eon	include/eon/ParametersOptions.h	154	rgpot_options_t	scratch_dir	std::string		cpmd			
+eon	include/eon/ParametersOptions.h	157	rgpot_options_t	input_block	std::string		cpmd			
+eon	include/eon/ParametersOptions.h	158	rgpot_options_t	permanent_dir	std::string		cpmd			
+eon	include/eon/ParametersOptions.h	162	rgpot_options_t	params_path	std::string		cpmd			
+eon	include/eon/ParametersOptions.h	166	rgpot_options_t	ranks_per_image	int	0	cpmd			
+eon	include/eon/ParametersOptions.h	168	rgpot_options_t	model_path	std::string		cpmd			
+eon	include/eon/ParametersOptions.h	169	rgpot_options_t	device	std::string	"cpu"	cpmd			
+eon	include/eon/ParametersOptions.h	170	rgpot_options_t	length_unit	std::string	"angstrom"	cpmd			
+eon	include/eon/ParametersOptions.h	171	rgpot_options_t	extensions_directory	std::string		cpmd			
+eon	include/eon/ParametersOptions.h	172	rgpot_options_t	check_consistency	bool	false	cpmd			
+eon	include/eon/ParametersOptions.h	173	rgpot_options_t	uncertainty_threshold	double	-1.0	cpmd			
+eon	include/eon/ParametersOptions.h	174	rgpot_options_t	torch_determinism_strict	bool	false	cpmd			
+eon	include/eon/ParametersOptions.h	176	rgpot_options_t	xtb_paramset	std::string	"GFN2xTB"	cpmd			
+eon	include/eon/ParametersOptions.h	177	rgpot_options_t	xtb_accuracy	double	1.0	cpmd			
+eon	include/eon/ParametersOptions.h	178	rgpot_options_t	xtb_electronic_temperature	double	300.0	cpmd			
+eon	include/eon/ParametersOptions.h	179	rgpot_options_t	xtb_max_iterations	int	250	cpmd			
+eon	include/eon/ParametersOptions.h	180	rgpot_options_t	xtb_charge	double	0.0	cpmd			
+eon	include/eon/ParametersOptions.h	181	rgpot_options_t	xtb_uhf	int	0	cpmd			
+eon	include/eon/ParametersOptions.h	182	rgpot_options_t	task_name	std::string	"omol"	cpmd			
+eon	include/eon/ParametersOptions.h	190	process_search_options_t	minimize_first	bool	true	Process Search			
+eon	include/eon/ParametersOptions.h	191	process_search_options_t	minimization_offset	double	0.2	Process Search			
+eon	include/eon/ParametersOptions.h	196	saddle_search_options_t	max_jump_attempts	long	0	Saddle Search			
+eon	include/eon/ParametersOptions.h	197	saddle_search_options_t	max_iterations	long	1000	Saddle Search			
+eon	include/eon/ParametersOptions.h	198	saddle_search_options_t	method	std::string	"min_mode"	Saddle Search			
+eon	include/eon/ParametersOptions.h	199	saddle_search_options_t	minmode_method	std::string	"dimer"	Saddle Search			
+eon	include/eon/ParametersOptions.h	200	saddle_search_options_t	displace_type	std::string	"load"	Saddle Search			
+eon	include/eon/ParametersOptions.h	201	saddle_search_options_t	displace_atom_list	std::vector<long>		Saddle Search			
+eon	include/eon/ParametersOptions.h	202	saddle_search_options_t	max_energy	double	20.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	203	saddle_search_options_t	displace_magnitude	double	0.1	Saddle Search			
+eon	include/eon/ParametersOptions.h	204	saddle_search_options_t	max_single_displace	double	10.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	205	saddle_search_options_t	displace_radius	double	4.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	206	saddle_search_options_t	converged_force	double	0.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	207	saddle_search_options_t	perp_force_ratio	double	0.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	208	saddle_search_options_t	nonnegative_displacement_abort	bool	false	Saddle Search			
+eon	include/eon/ParametersOptions.h	209	saddle_search_options_t	nonlocal_count_abort	long	0	Saddle Search			
+eon	include/eon/ParametersOptions.h	210	saddle_search_options_t	nonlocal_distance_abort	double	0.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	211	saddle_search_options_t	remove_rotation	bool	false	Saddle Search			
+eon	include/eon/ParametersOptions.h	212	saddle_search_options_t	zero_mode_abort_curvature	double	0.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	214	dynamics_t	temperature	double	0.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	215	dynamics_t	state_check_interval_input	double	100.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	216	dynamics_t	state_check_interval	double	0.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	217	dynamics_t	record_interval_input	double	10.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	218	dynamics_t	record_interval	double	0.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	219	dynamics_t	linear_interpolation	bool	true	Saddle Search			
+eon	include/eon/ParametersOptions.h	220	dynamics_t	max_init_curvature	double	0.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	223	confine_positive_t	enabled	bool	false	Saddle Search			
+eon	include/eon/ParametersOptions.h	224	confine_positive_t	bowl_breakout	bool	false	Saddle Search			
+eon	include/eon/ParametersOptions.h	225	confine_positive_t	bowl_active	long	20	Saddle Search			
+eon	include/eon/ParametersOptions.h	226	confine_positive_t	min_force	double	0.5	Saddle Search			
+eon	include/eon/ParametersOptions.h	227	confine_positive_t	scale_ratio	double	0.9	Saddle Search			
+eon	include/eon/ParametersOptions.h	228	confine_positive_t	boost	double	10.0	Saddle Search			
+eon	include/eon/ParametersOptions.h	229	confine_positive_t	min_active	long	30	Saddle Search			
+eon	include/eon/ParametersOptions.h	235	optimizer_options_t	method	OptType	OptType::CG	Optimizer			
+eon	include/eon/ParametersOptions.h	236	optimizer_options_t	xtsci_method	std::string	"lbfgs"	Optimizer			
+eon	include/eon/ParametersOptions.h	238	xtsci_t	method	std::string	"lbfgs"	Optimizer			
+eon	include/eon/ParametersOptions.h	239	xtsci_t	qn_step	std::string	"lbfgs"	Optimizer			
+eon	include/eon/ParametersOptions.h	240	xtsci_t	precon	std::string	"none"	Optimizer			
+eon	include/eon/ParametersOptions.h	241	xtsci_t	accept	std::string	"energy"	Optimizer			
+eon	include/eon/ParametersOptions.h	242	xtsci_t	highs	bool	false	Optimizer			
+eon	include/eon/ParametersOptions.h	243	xtsci_t	manifold	std::string	"euclidean"	Optimizer			
+eon	include/eon/ParametersOptions.h	245	optimizer_options_t	convergence_metric	std::string	"norm"	Optimizer			
+eon	include/eon/ParametersOptions.h	246	optimizer_options_t	convergence_metric_label	std::string		Optimizer			
+eon	include/eon/ParametersOptions.h	247	optimizer_options_t	max_iterations	size_t	1000	Optimizer			
+eon	include/eon/ParametersOptions.h	248	optimizer_options_t	max_move	double	0.2	Optimizer			
+eon	include/eon/ParametersOptions.h	249	optimizer_options_t	converged_force	double	0.01	Optimizer			
+eon	include/eon/ParametersOptions.h	250	optimizer_options_t	time_step_input	double	1.0	Optimizer			
+eon	include/eon/ParametersOptions.h	251	optimizer_options_t	time_step	double	0.0	Optimizer			
+eon	include/eon/ParametersOptions.h	252	optimizer_options_t	max_time_step_input	double	2.5	Optimizer			
+eon	include/eon/ParametersOptions.h	253	optimizer_options_t	max_time_step	double	0.0	Optimizer			
+eon	include/eon/ParametersOptions.h	255	refine_t	method	OptType	OptType::None	Optimizer			
+eon	include/eon/ParametersOptions.h	256	refine_t	threshold	double	0.5	Optimizer			
+eon	include/eon/ParametersOptions.h	259	lbfgs_t	memory	long	20	Optimizer			
+eon	include/eon/ParametersOptions.h	260	lbfgs_t	inverse_curvature	double	0.01	Optimizer			
+eon	include/eon/ParametersOptions.h	261	lbfgs_t	max_inverse_curvature	double	0.0	Optimizer			
+eon	include/eon/ParametersOptions.h	262	lbfgs_t	auto_scale	bool	true	Optimizer			
+eon	include/eon/ParametersOptions.h	263	lbfgs_t	angle_reset	bool	true	Optimizer			
+eon	include/eon/ParametersOptions.h	264	lbfgs_t	distance_reset	bool	true	Optimizer			
+eon	include/eon/ParametersOptions.h	267	lbfgs_t	curvature	std::string	"reset"	Optimizer			
+eon	include/eon/ParametersOptions.h	270	lbfgs_t	project_rigid	bool	false	Optimizer			
+eon	include/eon/ParametersOptions.h	271	lbfgs_t	secant	std::string	"standard"	Optimizer			
+eon	include/eon/ParametersOptions.h	272	lbfgs_t	precon	std::string	"none"	Optimizer			
+eon	include/eon/ParametersOptions.h	273	lbfgs_t	step	std::string	"lbfgs"	Optimizer			
+eon	include/eon/ParametersOptions.h	274	lbfgs_t	h0	std::string	"sy_yy"	Optimizer			
+eon	include/eon/ParametersOptions.h	275	lbfgs_t	accept	std::string	"energy"	Optimizer			
+eon	include/eon/ParametersOptions.h	276	lbfgs_t	extra_updates	long	0	Optimizer			
+eon	include/eon/ParametersOptions.h	277	lbfgs_t	cautious_eps	double	1.0e-6	Optimizer			
+eon	include/eon/ParametersOptions.h	278	lbfgs_t	cautious_alpha	double	0.01	Optimizer			
+eon	include/eon/ParametersOptions.h	279	lbfgs_t	precon_A	double	3.0	Optimizer			
+eon	include/eon/ParametersOptions.h	280	lbfgs_t	precon_mu	double	1.0	Optimizer			
+eon	include/eon/ParametersOptions.h	281	lbfgs_t	precon_rcut	double	0.0	Optimizer			
+eon	include/eon/ParametersOptions.h	284	cg_t	no_overshooting	bool	false	Optimizer			
+eon	include/eon/ParametersOptions.h	285	cg_t	knock_out_max_move	bool	false	Optimizer			
+eon	include/eon/ParametersOptions.h	286	cg_t	line_search	bool	false	Optimizer			
+eon	include/eon/ParametersOptions.h	287	cg_t	line_converged	double	0.1	Optimizer			
+eon	include/eon/ParametersOptions.h	288	cg_t	line_search_max_iter	long	10	Optimizer			
+eon	include/eon/ParametersOptions.h	289	cg_t	max_iter_before_reset	long	0	Optimizer			
+eon	include/eon/ParametersOptions.h	292	quickmin_t	steepest_descent	bool	false	Optimizer			
+eon	include/eon/ParametersOptions.h	295	sd_t	alpha	double	0.1	Optimizer			
+eon	include/eon/ParametersOptions.h	296	sd_t	two_point	bool	false	Optimizer			
+eon	include/eon/ParametersOptions.h	302	dimer_options_t	rotation_angle	double	0.005	Dimer			
+eon	include/eon/ParametersOptions.h	303	dimer_options_t	improved	bool	true	Dimer			
+eon	include/eon/ParametersOptions.h	304	dimer_options_t	converged_angle	double	5.0	Dimer			
+eon	include/eon/ParametersOptions.h	305	dimer_options_t	max_iterations	long	1000	Dimer			
+eon	include/eon/ParametersOptions.h	306	dimer_options_t	opt_method	OptType	OptType::CG	Dimer			
+eon	include/eon/ParametersOptions.h	307	dimer_options_t	rotations_max	long	10	Dimer			
+eon	include/eon/ParametersOptions.h	308	dimer_options_t	rotations_min	long	1	Dimer			
+eon	include/eon/ParametersOptions.h	309	dimer_options_t	torque_max	double	1.0	Dimer			
+eon	include/eon/ParametersOptions.h	310	dimer_options_t	torque_min	double	0.1	Dimer			
+eon	include/eon/ParametersOptions.h	311	dimer_options_t	remove_rotation	bool	false	Dimer			
+eon	include/eon/ParametersOptions.h	314	dimer_options_t	rotation_backend	DimerRotationBackend	DimerRotationBackend::Classical	Dimer			
+eon	include/eon/ParametersOptions.h	317	dimer_options_t	lor_residual_tol	double	0.1	Dimer			
+eon	include/eon/ParametersOptions.h	322	gpr_dimer_options_t	rotation_angle	double	0.005	GPR Dimer			
+eon	include/eon/ParametersOptions.h	323	gpr_dimer_options_t	converged_angle	double	0.08	GPR Dimer			
+eon	include/eon/ParametersOptions.h	324	gpr_dimer_options_t	relax_conv_angle	double	0.001	GPR Dimer			
+eon	include/eon/ParametersOptions.h	325	gpr_dimer_options_t	init_rotations_max	long	6	GPR Dimer			
+eon	include/eon/ParametersOptions.h	326	gpr_dimer_options_t	relax_rotations_max	long	10	GPR Dimer			
+eon	include/eon/ParametersOptions.h	327	gpr_dimer_options_t	divisor_t_dimer_gp	long	10	GPR Dimer			
+eon	include/eon/ParametersOptions.h	328	gpr_dimer_options_t	max_outer_iterations	long	300	GPR Dimer			
+eon	include/eon/ParametersOptions.h	329	gpr_dimer_options_t	max_inner_iterations	long	1000	GPR Dimer			
+eon	include/eon/ParametersOptions.h	330	gpr_dimer_options_t	midpoint_max_disp	double	0.5	GPR Dimer			
+eon	include/eon/ParametersOptions.h	331	gpr_dimer_options_t	rot_opt_method	std::string	"lbfgs"	GPR Dimer			
+eon	include/eon/ParametersOptions.h	332	gpr_dimer_options_t	trans_opt_method	std::string	"lbfgs"	GPR Dimer			
+eon	include/eon/ParametersOptions.h	333	gpr_dimer_options_t	active_radius	double	5.0	GPR Dimer			
+eon	include/eon/ParametersOptions.h	334	gpr_dimer_options_t	dimer_sep	double	0.01	GPR Dimer			
+eon	include/eon/ParametersOptions.h	335	gpr_dimer_options_t	conv_step	double	0.1	GPR Dimer			
+eon	include/eon/ParametersOptions.h	336	gpr_dimer_options_t	max_step	double	0.1	GPR Dimer			
+eon	include/eon/ParametersOptions.h	337	gpr_dimer_options_t	ratio_at_limit	double	0.66667	GPR Dimer			
+eon	include/eon/ParametersOptions.h	338	gpr_dimer_options_t	init_rot_gp	bool	false	GPR Dimer			
+eon	include/eon/ParametersOptions.h	339	gpr_dimer_options_t	init_trans_gp	bool	false	GPR Dimer			
+eon	include/eon/ParametersOptions.h	340	gpr_dimer_options_t	many_iterations	bool	true	GPR Dimer			
+eon	include/eon/ParametersOptions.h	342	gpr_params_t	hyper_opt_method	std::string	"scg"	GPR Dimer			
+eon	include/eon/ParametersOptions.h	343	gpr_params_t	sigma2	double	1e-8	GPR Dimer			
+eon	include/eon/ParametersOptions.h	344	gpr_params_t	jitter_sigma2	double	0.0	GPR Dimer			
+eon	include/eon/ParametersOptions.h	345	gpr_params_t	noise_sigma2	double	1e-8	GPR Dimer			
+eon	include/eon/ParametersOptions.h	346	gpr_params_t	prior_mu	double	0.0	GPR Dimer			
+eon	include/eon/ParametersOptions.h	347	gpr_params_t	prior_sigma2	double	1.0	GPR Dimer			
+eon	include/eon/ParametersOptions.h	348	gpr_params_t	prior_nu	long	20	GPR Dimer			
+eon	include/eon/ParametersOptions.h	351	opt_params_t	check_derivatives	bool	false	GPR Dimer			
+eon	include/eon/ParametersOptions.h	352	opt_params_t	max_iterations	int	400	GPR Dimer			
+eon	include/eon/ParametersOptions.h	353	opt_params_t	tol_func	double	1e-4	GPR Dimer			
+eon	include/eon/ParametersOptions.h	354	opt_params_t	tol_sol	double	1e-4	GPR Dimer			
+eon	include/eon/ParametersOptions.h	355	opt_params_t	lambda_limit	long	static_cast<long>(1e17)	GPR Dimer			
+eon	include/eon/ParametersOptions.h	356	opt_params_t	lambda_init	long	10	GPR Dimer			
+eon	include/eon/ParametersOptions.h	359	prune_params_t	use_prune	bool	false	GPR Dimer			
+eon	include/eon/ParametersOptions.h	360	prune_params_t	begin	int	8	GPR Dimer			
+eon	include/eon/ParametersOptions.h	361	prune_params_t	n_vals	int	3	GPR Dimer			
+eon	include/eon/ParametersOptions.h	362	prune_params_t	threshold	double	0.5	GPR Dimer			
+eon	include/eon/ParametersOptions.h	365	debug_params_t	report_level	int	1	GPR Dimer			
+eon	include/eon/ParametersOptions.h	366	debug_params_t	debug_level	int	2	GPR Dimer			
+eon	include/eon/ParametersOptions.h	367	debug_params_t	out_dir	std::string	"output"	GPR Dimer			
+eon	include/eon/ParametersOptions.h	368	debug_params_t	pos_file	std::string	"position"	GPR Dimer			
+eon	include/eon/ParametersOptions.h	369	debug_params_t	energy_file	std::string	"energy"	GPR Dimer			
+eon	include/eon/ParametersOptions.h	370	debug_params_t	grad_file	std::string	"gradient"	GPR Dimer			
+eon	include/eon/ParametersOptions.h	371	debug_params_t	out_ext	std::string	"dat"	GPR Dimer			
+eon	include/eon/ParametersOptions.h	372	debug_params_t	offset_mid_point	double	3.0	GPR Dimer			
+eon	include/eon/ParametersOptions.h	373	debug_params_t	dy	double	0.1	GPR Dimer			
+eon	include/eon/ParametersOptions.h	374	debug_params_t	dz	double	0.1	GPR Dimer			
+eon	include/eon/ParametersOptions.h	380	gp_surrogate_options_t	enabled	bool	false	GP Surrogate			
+eon	include/eon/ParametersOptions.h	381	gp_surrogate_options_t	sub_job	JobType	JobType::Unknown	GP Surrogate			
+eon	include/eon/ParametersOptions.h	382	gp_surrogate_options_t	uncertainty	double	0.05	GP Surrogate			
+eon	include/eon/ParametersOptions.h	383	gp_surrogate_options_t	linear_path_always	bool	false	GP Surrogate			
+eon	include/eon/ParametersOptions.h	384	gp_surrogate_options_t	potential	PotType	PotType::CatLearn	GP Surrogate			
+eon	include/eon/ParametersOptions.h	389	catlearn_options_t	path	std::string		CatLearn			
+eon	include/eon/ParametersOptions.h	390	catlearn_options_t	model	std::string	"gp"	CatLearn			
+eon	include/eon/ParametersOptions.h	391	catlearn_options_t	prior	std::string	"median"	CatLearn			
+eon	include/eon/ParametersOptions.h	392	catlearn_options_t	use_deriv	bool	true	CatLearn			
+eon	include/eon/ParametersOptions.h	393	catlearn_options_t	use_fingerprint	bool	false	CatLearn			
+eon	include/eon/ParametersOptions.h	394	catlearn_options_t	parallel	bool	false	CatLearn			
+eon	include/eon/ParametersOptions.h	399	ase_orca_options_t	path	std::string		ASE_ORCA			
+eon	include/eon/ParametersOptions.h	400	ase_orca_options_t	nproc	std::string	"1"	ASE_ORCA			
+eon	include/eon/ParametersOptions.h	401	ase_orca_options_t	simpleinput	std::string		ASE_ORCA			
+eon	include/eon/ParametersOptions.h	402	ase_orca_options_t	charge	int	0	ASE_ORCA			
+eon	include/eon/ParametersOptions.h	403	ase_orca_options_t	multiplicity	int	1	ASE_ORCA			
+eon	include/eon/ParametersOptions.h	408	ase_nwchem_options_t	path	std::string		ASE_NWCHEM			
+eon	include/eon/ParametersOptions.h	409	ase_nwchem_options_t	nproc	std::string	"1"	ASE_NWCHEM			
+eon	include/eon/ParametersOptions.h	411	ase_nwchem_options_t	mpi_launcher	std::string	"mpirun"	ASE_NWCHEM			
+eon	include/eon/ParametersOptions.h	412	ase_nwchem_options_t	multiplicity	std::string		ASE_NWCHEM			
+eon	include/eon/ParametersOptions.h	413	ase_nwchem_options_t	scf_thresh	double	1e-5	ASE_NWCHEM			
+eon	include/eon/ParametersOptions.h	414	ase_nwchem_options_t	scf_maxiter	long	200	ASE_NWCHEM			
+eon	include/eon/ParametersOptions.h	415	ase_nwchem_options_t	basis	std::string	"3-21G"	ASE_NWCHEM			
+eon	include/eon/ParametersOptions.h	416	ase_nwchem_options_t	memory	std::string	"2 gb"	ASE_NWCHEM			
+eon	include/eon/ParametersOptions.h	421	metatomic_options_t	model_path	std::string		Metatomic			
+eon	include/eon/ParametersOptions.h	422	metatomic_options_t	device	std::string	"cpu"	Metatomic			
+eon	include/eon/ParametersOptions.h	423	metatomic_options_t	length_unit	std::string	"angstrom"	Metatomic			
+eon	include/eon/ParametersOptions.h	424	metatomic_options_t	extensions_directory	std::string		Metatomic			
+eon	include/eon/ParametersOptions.h	425	metatomic_options_t	check_consistency	bool	false	Metatomic			
+eon	include/eon/ParametersOptions.h	426	metatomic_options_t	uncertainty_threshold	double	-1.0	Metatomic			
+eon	include/eon/ParametersOptions.h	429	metatomic_options_t	energy_output	std::string		Metatomic			
+eon	include/eon/ParametersOptions.h	430	metatomic_options_t	energy_uncertainty_output	std::string		Metatomic			
+eon	include/eon/ParametersOptions.h	433	metatomic_options_t	force_output	std::string		Metatomic			
+eon	include/eon/ParametersOptions.h	436	metatomic_options_t	non_conservative	bool	false	Metatomic			
+eon	include/eon/ParametersOptions.h	439	metatomic_options_t	random_rotation	bool	false	Metatomic			
+eon	include/eon/ParametersOptions.h	443	metatomic_options_t	n_symmetry_rotations	long	0	Metatomic			
+eon	include/eon/ParametersOptions.h	447	metatomic_options_t	deterministic	bool	true	Metatomic			
+eon	include/eon/ParametersOptions.h	450	metatomic_options_t	deterministic_strict	bool	false	Metatomic			
+eon	include/eon/ParametersOptions.h	452	variants_t	base	std::string		Metatomic			
+eon	include/eon/ParametersOptions.h	453	variants_t	energy	std::string		Metatomic			
+eon	include/eon/ParametersOptions.h	454	variants_t	energy_uncertainty	std::string		Metatomic			
+eon	include/eon/ParametersOptions.h	455	variants_t	force	std::string		Metatomic			
+eon	include/eon/ParametersOptions.h	464	lanczos_options_t	tolerance	double	0.01	Lanczos			
+eon	include/eon/ParametersOptions.h	465	lanczos_options_t	max_iterations	long	20	Lanczos			
+eon	include/eon/ParametersOptions.h	466	lanczos_options_t	quit_early	bool	true	Lanczos			
+eon	include/eon/ParametersOptions.h	467	lanczos_options_t	phva_atoms	std::string	"All"	Lanczos			
+eon	include/eon/ParametersOptions.h	472	davidson_options_t	tolerance	double	0.01	Davidson			
+eon	include/eon/ParametersOptions.h	473	davidson_options_t	max_iterations	long	20	Davidson			
+eon	include/eon/ParametersOptions.h	476	davidson_options_t	diagonal_preconditioner	bool	false	Davidson			
+eon	include/eon/ParametersOptions.h	478	davidson_options_t	phva_atoms	std::string	"All"	Davidson			
+eon	include/eon/ParametersOptions.h	483	prefactor_options_t	default_value	double	0.0	Prefactor			
+eon	include/eon/ParametersOptions.h	484	prefactor_options_t	max_value	double	1e+21	Prefactor			
+eon	include/eon/ParametersOptions.h	485	prefactor_options_t	min_value	double	1e+9	Prefactor			
+eon	include/eon/ParametersOptions.h	486	prefactor_options_t	within_radius	double	3.3	Prefactor			
+eon	include/eon/ParametersOptions.h	487	prefactor_options_t	min_displacement	double	0.25	Prefactor			
+eon	include/eon/ParametersOptions.h	488	prefactor_options_t	rate	std::string	"htst"	Prefactor			
+eon	include/eon/ParametersOptions.h	489	prefactor_options_t	configuration	std::string	"reactant"	Prefactor			
+eon	include/eon/ParametersOptions.h	490	prefactor_options_t	all_free_atoms	bool	false	Prefactor			
+eon	include/eon/ParametersOptions.h	491	prefactor_options_t	filter_scheme	std::string	"fraction"	Prefactor			
+eon	include/eon/ParametersOptions.h	492	prefactor_options_t	filter_fraction	double	0.90	Prefactor			
+eon	include/eon/ParametersOptions.h	500	hessian_options_t	phva_atoms	std::string	"All"	Hessian			
+eon	include/eon/ParametersOptions.h	501	hessian_options_t	zero_freq_value	double	1e-6	Hessian			
+eon	include/eon/ParametersOptions.h	506	hessian_options_t	fd_scheme	std::string	"one_sided"	Hessian			
+eon	include/eon/ParametersOptions.h	508	hessian_options_t	resume	bool	false	Hessian			
+eon	include/eon/ParametersOptions.h	510	hessian_options_t	checkpoint_path	std::string	""	Hessian			
+eon	include/eon/ParametersOptions.h	514	hessian_options_t	write_modes	bool	true	Hessian			
+eon	include/eon/ParametersOptions.h	519	neb_options_t	image_count	long	5	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	520	neb_options_t	max_iterations	long	1000	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	521	neb_options_t	opt_method	OptType	OptType::LBFGS	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	522	neb_options_t	force_tolerance	double	0.01	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	524	mmf_peak_options_t	enabled	bool	true	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	525	mmf_peak_options_t	tolerance	double	0.05	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	528	neb_options_t	match_endpoints	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	530	neb_options_t	match_method	std::string	"ira"	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	533	spring_options_t	constant	double	5.0	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	534	spring_options_t	use_elastic_band	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	535	spring_options_t	doubly_nudged	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	536	spring_options_t	use_switching	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	539	energy_weighting_t	enabled	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	540	energy_weighting_t	trigger	double	10.0	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	541	energy_weighting_t	k_min	double	0.97	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	542	energy_weighting_t	k_max	double	9.7	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	545	onsager_machlup_t	enabled	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	546	onsager_machlup_t	optimize_k	bool	true	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	547	onsager_machlup_t	k_scale	double	1.0	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	548	onsager_machlup_t	k_min	double	0.1	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	549	onsager_machlup_t	k_max	double	100.0	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	554	climbing_image_options_t	enabled	bool	true	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	555	climbing_image_options_t	converged_only	bool	true	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	559	climbing_image_options_t	band_slack	double	10.0	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	560	climbing_image_options_t	use_old_tangent	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	561	climbing_image_options_t	trigger_force	double	std::numeric_limits<double>::infinity()	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	562	climbing_image_options_t	trigger_factor	double	0.0	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	565	hybrid_dimer_t	use_mmf	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	566	hybrid_dimer_t	trigger_force	double	0.1	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	567	hybrid_dimer_t	max_steps	long	1000	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	568	hybrid_dimer_t	ci_stability_count	long	5	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	569	hybrid_dimer_t	angle_tol	double	0.7071	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	570	hybrid_dimer_t	trigger_factor	double	0.0	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	573	hybrid_dimer_t	restore_unhelpful	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	582	zoom_options_t	enabled	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	583	zoom_options_t	alpha	double	0.5	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	584	zoom_options_t	offset	int	1	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	585	zoom_options_t	Mode	enum class	Auto, Manual	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	586	zoom_options_t	mode	Mode	Mode::Auto	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	587	zoom_options_t	activation_threshold	double	0.0	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	588	zoom_options_t	Interpolation	enum class	Cubic, Linear	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	589	zoom_options_t	interpolation	Interpolation	Interpolation::Cubic	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	590	zoom_options_t	stability_count	int	5	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	591	zoom_options_t	max_iterations	int	0	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	595	path_initialization_t	method	NEBInit	NEBInit::LINEAR	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	596	path_initialization_t	input_path	std::string		Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	597	path_initialization_t	max_iterations	int	5000	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	598	path_initialization_t	nsteps	int	250	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	599	path_initialization_t	max_move	double	0.1	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	600	path_initialization_t	force_tolerance	double	0.001	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	601	path_initialization_t	sidpp_alpha	double	0.33	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	602	path_initialization_t	sidpp_frontier_tol	double	0.01	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	603	path_initialization_t	sidpp_reparam	bool	true	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	604	path_initialization_t	sidpp_ideal_ksp	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	605	path_initialization_t	opt_method	OptType	OptType::LBFGS	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	606	path_initialization_t	oversampling	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	607	path_initialization_t	oversampling_factor	int	3	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	611	endpoint_options_t	minimize	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	612	endpoint_options_t	use_path_file	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	618	solid_state_options_t	enabled	bool	false	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	619	solid_state_options_t	weight	double	1.0	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	622	solid_state_options_t	pressure	double	0.0	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	628	dynamics_options_t	time_step_input	double	1.0	Molecular Dynamics			
+eon	include/eon/ParametersOptions.h	629	dynamics_options_t	time_step	double	0.0	Molecular Dynamics			
+eon	include/eon/ParametersOptions.h	630	dynamics_options_t	time_input	double	1000.0	Molecular Dynamics			
+eon	include/eon/ParametersOptions.h	631	dynamics_options_t	time	double	0.0	Molecular Dynamics			
+eon	include/eon/ParametersOptions.h	632	dynamics_options_t	steps	long	0	Molecular Dynamics			
+eon	include/eon/ParametersOptions.h	637	parallel_replica_options_t	refine_transition	bool	true	Parallel Replica			
+eon	include/eon/ParametersOptions.h	638	parallel_replica_options_t	auto_stop	bool	false	Parallel Replica			
+eon	include/eon/ParametersOptions.h	639	parallel_replica_options_t	dephase_loop_stop	bool	false	Parallel Replica			
+eon	include/eon/ParametersOptions.h	640	parallel_replica_options_t	dephase_time_input	double	1000.0	Parallel Replica			
+eon	include/eon/ParametersOptions.h	641	parallel_replica_options_t	dephase_time	double	0.0	Parallel Replica			
+eon	include/eon/ParametersOptions.h	642	parallel_replica_options_t	dephase_loop_max	long	5	Parallel Replica			
+eon	include/eon/ParametersOptions.h	643	parallel_replica_options_t	state_check_interval_input	double	1000.0	Parallel Replica			
+eon	include/eon/ParametersOptions.h	644	parallel_replica_options_t	state_check_interval	double	0.0	Parallel Replica			
+eon	include/eon/ParametersOptions.h	645	parallel_replica_options_t	record_interval_input	double	50.0	Parallel Replica			
+eon	include/eon/ParametersOptions.h	646	parallel_replica_options_t	record_interval	double	0.0	Parallel Replica			
+eon	include/eon/ParametersOptions.h	647	parallel_replica_options_t	corr_time_input	double	1000.0	Parallel Replica			
+eon	include/eon/ParametersOptions.h	648	parallel_replica_options_t	corr_time	double	0.0	Parallel Replica			
+eon	include/eon/ParametersOptions.h	653	tad_options_t	low_temperature	double	300.0	Temperature Accelerated Dynamics			
+eon	include/eon/ParametersOptions.h	654	tad_options_t	min_prefactor	double	0.001	Temperature Accelerated Dynamics			
+eon	include/eon/ParametersOptions.h	655	tad_options_t	confidence	double	0.001	Temperature Accelerated Dynamics			
+eon	include/eon/ParametersOptions.h	660	thermostat_options_t	kind	std::string	"none"	Thermostat			
+eon	include/eon/ParametersOptions.h	661	thermostat_options_t	andersen_alpha	double	1.0	Thermostat			
+eon	include/eon/ParametersOptions.h	662	thermostat_options_t	andersen_tcol_input	double	100.0	Thermostat			
+eon	include/eon/ParametersOptions.h	663	thermostat_options_t	andersen_tcol	double	0.0	Thermostat			
+eon	include/eon/ParametersOptions.h	664	thermostat_options_t	nose_mass	double	1.0	Thermostat			
+eon	include/eon/ParametersOptions.h	665	thermostat_options_t	langevin_friction_input	double	0.01	Thermostat			
+eon	include/eon/ParametersOptions.h	666	thermostat_options_t	langevin_friction	double	0.0	Thermostat			
+eon	include/eon/ParametersOptions.h	667	thermostat_options_t	path_beads	long	8	Thermostat			
+eon	include/eon/ParametersOptions.h	668	thermostat_options_t	path_springs	std::string	"trotter"	Thermostat			
+eon	include/eon/ParametersOptions.h	669	thermostat_options_t	path_eco_omega_max	double	0.0	Thermostat			
+eon	include/eon/ParametersOptions.h	670	thermostat_options_t	path_gle_file	std::string		Thermostat			
+eon	include/eon/ParametersOptions.h	671	thermostat_options_t	path_pile_tau_input	double	100.0	Thermostat			
+eon	include/eon/ParametersOptions.h	672	thermostat_options_t	path_pile_tau	double	0.0	Thermostat			
+eon	include/eon/ParametersOptions.h	673	thermostat_options_t	path_pile_scale	double	1.0	Thermostat			
+eon	include/eon/ParametersOptions.h	674	thermostat_options_t	path_seed	std::uint64_t	1	Thermostat			
+eon	include/eon/ParametersOptions.h	679	replica_exchange_options_t	temperature_distribution	std::string	"exponential"	Replica Exchange			
+eon	include/eon/ParametersOptions.h	680	replica_exchange_options_t	replicas	long	10	Replica Exchange			
+eon	include/eon/ParametersOptions.h	681	replica_exchange_options_t	exchange_trials	long	10	Replica Exchange			
+eon	include/eon/ParametersOptions.h	682	replica_exchange_options_t	sampling_time_input	double	1000.0	Replica Exchange			
+eon	include/eon/ParametersOptions.h	683	replica_exchange_options_t	sampling_time	double	0.0	Replica Exchange			
+eon	include/eon/ParametersOptions.h	684	replica_exchange_options_t	temperature_high	double	0.0	Replica Exchange			
+eon	include/eon/ParametersOptions.h	685	replica_exchange_options_t	temperature_low	double	0.0	Replica Exchange			
+eon	include/eon/ParametersOptions.h	686	replica_exchange_options_t	exchange_period_input	double	100.0	Replica Exchange			
+eon	include/eon/ParametersOptions.h	687	replica_exchange_options_t	exchange_period	double	0.0	Replica Exchange			
+eon	include/eon/ParametersOptions.h	692	hyperdynamics_options_t	bias_potential	std::string	"none"	Bond Boost / Hyperdynamics			
+eon	include/eon/ParametersOptions.h	693	hyperdynamics_options_t	boost_atom_list	std::string	"All"	Bond Boost / Hyperdynamics			
+eon	include/eon/ParametersOptions.h	694	hyperdynamics_options_t	rmd_time_input	double	100.0	Bond Boost / Hyperdynamics			
+eon	include/eon/ParametersOptions.h	695	hyperdynamics_options_t	rmd_time	double	0.0	Bond Boost / Hyperdynamics			
+eon	include/eon/ParametersOptions.h	696	hyperdynamics_options_t	dvmax	double	0.0	Bond Boost / Hyperdynamics			
+eon	include/eon/ParametersOptions.h	697	hyperdynamics_options_t	qrr	double	0.2	Bond Boost / Hyperdynamics			
+eon	include/eon/ParametersOptions.h	698	hyperdynamics_options_t	prr	double	0.95	Bond Boost / Hyperdynamics			
+eon	include/eon/ParametersOptions.h	699	hyperdynamics_options_t	qcut	double	3.0	Bond Boost / Hyperdynamics			
+eon	include/eon/ParametersOptions.h	704	basin_hopping_options_t	displacement	double	0.5	Basin Hopping			
+eon	include/eon/ParametersOptions.h	705	basin_hopping_options_t	initial_random_structure_probability	double	0.0	Basin Hopping			
+eon	include/eon/ParametersOptions.h	706	basin_hopping_options_t	push_apart_distance	double	0.4	Basin Hopping			
+eon	include/eon/ParametersOptions.h	707	basin_hopping_options_t	steps	long	10000	Basin Hopping			
+eon	include/eon/ParametersOptions.h	708	basin_hopping_options_t	quenching_steps	long	0	Basin Hopping			
+eon	include/eon/ParametersOptions.h	709	basin_hopping_options_t	significant_structure	bool	true	Basin Hopping			
+eon	include/eon/ParametersOptions.h	710	basin_hopping_options_t	single_atom_displace	bool	false	Basin Hopping			
+eon	include/eon/ParametersOptions.h	711	basin_hopping_options_t	displacement_algorithm	std::string	"standard"	Basin Hopping			
+eon	include/eon/ParametersOptions.h	712	basin_hopping_options_t	displacement_distribution	std::string	"uniform"	Basin Hopping			
+eon	include/eon/ParametersOptions.h	713	basin_hopping_options_t	swap_probability	double	0.0	Basin Hopping			
+eon	include/eon/ParametersOptions.h	714	basin_hopping_options_t	jump_max	long	10	Basin Hopping			
+eon	include/eon/ParametersOptions.h	715	basin_hopping_options_t	jump_steps	long	0	Basin Hopping			
+eon	include/eon/ParametersOptions.h	716	basin_hopping_options_t	adjust_displacement	bool	true	Basin Hopping			
+eon	include/eon/ParametersOptions.h	717	basin_hopping_options_t	adjust_period	long	10	Basin Hopping			
+eon	include/eon/ParametersOptions.h	718	basin_hopping_options_t	adjust_fraction	double	0.05	Basin Hopping			
+eon	include/eon/ParametersOptions.h	719	basin_hopping_options_t	target_ratio	double	0.5	Basin Hopping			
+eon	include/eon/ParametersOptions.h	720	basin_hopping_options_t	write_unique	bool	false	Basin Hopping			
+eon	include/eon/ParametersOptions.h	721	basin_hopping_options_t	stop_energy	double	-std::numeric_limits<double>::max()	Basin Hopping			
+eon	include/eon/ParametersOptions.h	726	global_optimization_options_t	move_method	std::string	"md"	Global Optimization			
+eon	include/eon/ParametersOptions.h	727	global_optimization_options_t	decision_method	std::string	"npew"	Global Optimization			
+eon	include/eon/ParametersOptions.h	728	global_optimization_options_t	steps	long	10000	Global Optimization			
+eon	include/eon/ParametersOptions.h	729	global_optimization_options_t	beta	double	1.05	Global Optimization			
+eon	include/eon/ParametersOptions.h	730	global_optimization_options_t	alpha	double	1.02	Global Optimization			
+eon	include/eon/ParametersOptions.h	731	global_optimization_options_t	mdmin	long	3	Global Optimization			
+eon	include/eon/ParametersOptions.h	732	global_optimization_options_t	target_energy	double	-1.0e50	Global Optimization			
+eon	include/eon/ParametersOptions.h	737	monte_carlo_options_t	step_size	double	0.005	Monte Carlo			
+eon	include/eon/ParametersOptions.h	738	monte_carlo_options_t	steps	int	1000	Monte Carlo			
+eon	include/eon/ParametersOptions.h	743	bgsd_options_t	alpha	double	10.0	BGSD			
+eon	include/eon/ParametersOptions.h	744	bgsd_options_t	beta	double	0.2	BGSD			
+eon	include/eon/ParametersOptions.h	745	bgsd_options_t	gradient_finite_difference	double	0.000001	BGSD			
+eon	include/eon/ParametersOptions.h	746	bgsd_options_t	h_force_convergence	double	0.01	BGSD			
+eon	include/eon/ParametersOptions.h	747	bgsd_options_t	grad2energy_convergence	double	0.000001	BGSD			
+eon	include/eon/ParametersOptions.h	748	bgsd_options_t	grad2force_convergence	double	0.0001	BGSD			
+eon	include/eon/ParametersOptions.h	753	serve_options_t	host	std::string	"localhost"	Serve			
+eon	include/eon/ParametersOptions.h	754	serve_options_t	port	uint16_t	12345	Serve			
+eon	include/eon/ParametersOptions.h	755	serve_options_t	replicas	size_t	1	Serve			
+eon	include/eon/ParametersOptions.h	756	serve_options_t	gateway_port	uint16_t	0	Serve			
+eon	include/eon/ParametersOptions.h	757	serve_options_t	endpoints	std::string		Serve			
+eon	include/eon/ParametersOptions.h	762	artn_options_t	push_step_size	double	0.3	ARTn			
+eon	include/eon/ParametersOptions.h	763	artn_options_t	force_threshold	double	0.05	ARTn			
+eon	include/eon/ParametersOptions.h	764	artn_options_t	max_iterations	int	500	ARTn			
+eon	include/eon/ParametersOptions.h	765	artn_options_t	ninit	int	-1	ARTn			
+eon	include/eon/ParametersOptions.h	770	artn_options_t	nperp_limitation	std::string	"default"	ARTn			
+eon	include/eon/ParametersOptions.h	773	artn_options_t	nsmooth	int	-1	ARTn			
+eon	include/eon/ParametersOptions.h	780	artn_options_t	filin	std::string	""	ARTn			
+eon	include/eon/ParametersOptions.h	790	ira_options_t	distance_threshold	double	0.3	IRA			
+eon	include/eon/ParametersOptions.h	791	ira_options_t	symmetry_threshold	double	0.1	IRA			
+eon	include/eon/ParametersOptions.h	792	ira_options_t	use_pbc	bool	false	IRA			
+eon	include/eon/ParametersOptions.h	797	debug_options_t	write_movies	bool	false	Debug			
+eon	include/eon/ParametersOptions.h	798	debug_options_t	write_movies_interval	long	1	Debug			
+eon	include/eon/ParametersOptions.h	799	debug_options_t	write_deprecated_outs	bool	false	Debug			
+eon	include/eon/ParametersOptions.h	800	debug_options_t	estimate_neb_eigenvalues	bool	false	Debug			
+eon	include/eon/ParametersOptions.h	801	debug_options_t	neb_mmf	std::string	"dimer"	Debug			
+eon	include/eon/ParametersOptions.h	810	instanton_options_t	mode	std::string	"splitting"	Instanton			
+eon	include/eon/ParametersOptions.h	811	instanton_options_t	reactant_filename	std::string	"reactant.con"	Instanton			
+eon	include/eon/ParametersOptions.h	812	instanton_options_t	product_filename	std::string	"product.con"	Instanton			
+eon	include/eon/ParametersOptions.h	815	instanton_options_t	initial_path	std::string	""	Instanton			
+eon	include/eon/ParametersOptions.h	816	instanton_options_t	beads	long	256	Instanton			
+eon	include/eon/ParametersOptions.h	817	instanton_options_t	beta_hbar_omega	double	30.0	Instanton			
+eon	include/eon/ParametersOptions.h	818	instanton_options_t	max_iterations	long	5000	Instanton			
+eon	include/eon/ParametersOptions.h	819	instanton_options_t	force_tolerance	double	1e-3	Instanton			
+eon	include/eon/ParametersOptions.h	821	instanton_options_t	hessian_stride	long	1	Instanton			
+eon	include/eon/ParametersOptions.h	823	instanton_options_t	saddle_filename	std::string	"saddle.con"	Instanton			
+eon	include/eon/ParametersOptions.h	824	instanton_options_t	temperature	double	0.0	Instanton			
+eon	include/eon/ParametersOptions.h	827	instanton_options_t	temperatures	std::vector<double>		Instanton			
+eon	include/eon/ParametersOptions.h	830	instanton_options_t	half_ring	bool	true	Instanton			
+eon	include/eon/ParametersOptions.h	831	instanton_options_t	energy_shift	double	0.0	Instanton			
+eon	include/eon/ParametersOptions.h	835	instanton_options_t	initial_hessians	std::string	"saddle"	Instanton			
+eon	include/eon/ParametersOptions.h	838	instanton_options_t	bead_ladder	bool	false	Instanton			
+eon	include/eon/ParametersOptions.h	840	instanton_options_t	hessian_final	std::string	"recomputed"	Instanton			
+eon	include/eon/ParametersOptions.h	843	instanton_options_t	springs	std::string	"trotter"	Instanton			
+eon	include/eon/ParametersOptions.h	847	instanton_options_t	pi_planes	long	0	Instanton			
+eon	include/eon/ParametersOptions.h	848	instanton_options_t	pi_beads	long	16	Instanton			
+eon	include/eon/ParametersOptions.h	849	instanton_options_t	pi_equilibration_steps	long	500	Instanton			
+eon	include/eon/ParametersOptions.h	850	instanton_options_t	pi_sampling_steps	long	2000	Instanton			
+eon	include/eon/ParametersOptions.h	851	instanton_options_t	pi_time_step	double	0.5	Instanton			
+eon	include/eon/ParametersOptions.h	854	instanton_options_t	pi_thermostat	std::string	"pile"	Instanton			
+eon	include/eon/ParametersOptions.h	855	instanton_options_t	pi_gle_file	std::string	""	Instanton			
+eon	include/eon/ParametersOptions.h	856	instanton_options_t	pi_pile_tau	double	100.0	Instanton			
+eon	include/eon/ParametersOptions.h	857	instanton_options_t	pi_pile_scale	double	1.0	Instanton			
+eon	include/eon/ParametersOptions.h	858	instanton_options_t	pi_seed	long	1	Instanton			
+eon	include/eon/ParametersOptions.h	861	instanton_options_t	pi_direction	std::string	"mode"	Instanton			
+eon	include/eon/ParametersOptions.h	864	instanton_options_t	pi_reactant_extent	double	0.5	Instanton			
+eon	include/eon/ParametersOptions.h	869	instanton_options_t	pi_recrossing_parents	long	0	Instanton			
+eon	include/eon/ParametersOptions.h	870	instanton_options_t	pi_recrossing_children	long	20	Instanton			
+eon	include/eon/ParametersOptions.h	871	instanton_options_t	pi_recrossing_time	double	100.0	Instanton			
+eon	include/eon/ParametersOptions.h	872	instanton_options_t	pi_recrossing_spacing	long	50	Instanton			
+eon	include/eon/ParametersOptions.h	880	oh_tst_options_t	reactant_filename	std::string	"pos.con"	OH_TST			
+eon	include/eon/ParametersOptions.h	881	oh_tst_options_t	product_filename	std::string	"product.con"	OH_TST			
+eon	include/eon/ParametersOptions.h	882	oh_tst_options_t	time_step	double	1.0	OH_TST			
+eon	include/eon/ParametersOptions.h	883	oh_tst_options_t	equil_steps	long	200	OH_TST			
+eon	include/eon/ParametersOptions.h	884	oh_tst_options_t	sample_steps	long	800	OH_TST			
+eon	include/eon/ParametersOptions.h	885	oh_tst_options_t	max_planes	long	200	OH_TST			
+eon	include/eon/ParametersOptions.h	886	oh_tst_options_t	plane_mass	double	50.0	OH_TST			
+eon	include/eon/ParametersOptions.h	887	oh_tst_options_t	alpha_rot	double	50.0	OH_TST			
+eon	include/eon/ParametersOptions.h	888	oh_tst_options_t	plane_time_step	double	0.1	OH_TST			
+eon	include/eon/ParametersOptions.h	889	oh_tst_options_t	ds_max	double	0.1	OH_TST			
+eon	include/eon/ParametersOptions.h	890	oh_tst_options_t	dtheta_max	double	0.05	OH_TST			
+eon	include/eon/ParametersOptions.h	891	oh_tst_options_t	force_tol	double	0.005	OH_TST			
+eon	include/eon/ParametersOptions.h	892	oh_tst_options_t	s_init	double	0.05	OH_TST			
+eon	include/eon/ParametersOptions.h	893	oh_tst_options_t	reactant_md_steps	long	20000	OH_TST			
+eon	include/eon/ParametersOptions.h	894	oh_tst_options_t	max_delta_a	double	10.0	OH_TST			
+eon	include/eon/ParametersOptions.h	900	oh_tst_options_t	thermostat	std::string	"andersen"	OH_TST			
+eon	include/eon/ParametersOptions.h	901	oh_tst_options_t	gle_a_file	std::string	""	OH_TST			
+eon	include/eon/ParametersOptions.h	906	oh_tst_options_t	symmetry_products	std::string	""	OH_TST			
+eon	include/eon/ParametersOptions.h	912	oh_tst_options_t	pmf_scan	bool	false	OH_TST			
+eon	include/eon/ParametersOptions.h	913	oh_tst_options_t	scan_planes	long	40	OH_TST			
+rgmin	include/rgmin.h	70	rgmin_abi_stamp_t	abi_major	uint16_t					
+rgmin	include/rgmin.h	71	rgmin_abi_stamp_t	abi_minor	uint16_t					
+rgmin	include/rgmin.h	72	rgmin_abi_stamp_t	layout_revision	uint16_t					
+rgmin	include/rgmin.h	194	rgmin_control_t	maxiter	size_t					
+rgmin	include/rgmin.h	195	rgmin_control_t	gtol	double					
+rgmin	include/rgmin.h	196	rgmin_control_t	istep	double					
+rgmin	include/rgmin.h	197	rgmin_control_t	memory	size_t					
+rgmin	include/rgmin.h	200	rgmin_control_t	maxmove	double					
+rgmin	include/rgmin.h	202	rgmin_control_t	noise_eps	double					
+rgmin	include/rgmin.h	204	rgmin_control_t	noise_c	double					
+rgmin	include/rgmin.h	218	rgmin_report_t	value	double					
+rgmin	include/rgmin.h	219	rgmin_report_t	steps	size_t					
+rgmin	include/rgmin.h	220	rgmin_report_t	grad_norm	double					
+rgmin	include/rgmin.h	222	rgmin_report_t	stop	rgmin_stop_t					
+rgmin	include/rgmin.h	363	rgmin_exp_t	a	double					
+rgmin	include/rgmin.h	364	rgmin_exp_t	c_stab	double					
+rgmin	include/rgmin.h	365	rgmin_exp_t	mu	double					
+rgmin	include/rgmin.h	366	rgmin_exp_t	r_nn	double					
+rgmin	include/rgmin.h	367	rgmin_exp_t	r_cut	double					
+rgmin	include/rgmin.h	368	rgmin_exp_t	length_x	double					
+rgmin	include/rgmin.h	369	rgmin_exp_t	length_y	double					
+rgmin	include/rgmin.h	370	rgmin_exp_t	length_z	double					
+rgmin	include/rgmin.h	371	rgmin_exp_t	recalc_mu	int32_t					
+rgmin	include/rgmin.h	411	rgmin_bond_t	k	double					
+rgmin	include/rgmin.h	416	rgmin_angle_t	k_theta	double					
+rgmin	include/rgmin.h	441	rgmin_precon_t	struct_size	uint32_t					
+rgmin	include/rgmin.h	442	rgmin_precon_t	kind	uint32_t					
+rgmin	include/rgmin.h	446	rgmin_precon_t	natoms	size_t					
+rgmin	include/rgmin.h	449	rgmin_precon_t	nghost	size_t					
+rgmin	include/rgmin.h	453	rgmin_precon_t	npairs	size_t					
+rgmin	include/rgmin.h	456	rgmin_precon_t	nanchor	size_t					
+rgmin	include/rgmin.h	457	rgmin_precon_t	exp_a	double					
+rgmin	include/rgmin.h	459	rgmin_precon_t	nbonds	size_t					
+rgmin	include/rgmin.h	461	rgmin_precon_t	nangles	size_t					
+rgmin	include/rgmin.h	462	rgmin_precon_t	dihedrals	int32_t					
+rgmin	include/rgmin.h	463	rgmin_precon_t	geometry_kind	int32_t					
+rgmin	include/rgmin.h	1120	rgmin_scg_params_t	sigma0	double					
+rgmin	include/rgmin.h	1121	rgmin_scg_params_t	lambda	double					
+rgmin	include/rgmin.h	1122	rgmin_scg_params_t	lambda_limit	double					
+rgmin	include/rgmin.h	1123	rgmin_scg_params_t	tol_sol	double					
+rgmin	include/rgmin.h	1124	rgmin_scg_params_t	tol_func	double					
+rgmin	include/rgmin.h	1128	rgmin_scg_params_t	conjugacy	rgmin_conjugacy_t					
+rgmin	include/rgmin.h	1171	rgmin_scg_options_t	step_tolerance	int32_t					
+rgmin	include/rgmin.h	1187	rgmin_rlbfgs_t	memory	size_t			optimizer.LbfgsConfig.memory	lbfgs_t.memory	History length in both. The rgmin record defaults to 4 pairs where rgconf defaults to 20.
+rgmin	include/rgmin.h	1188	rgmin_rlbfgs_t	cautious_slope	double			optimizer.LbfgsConfig.cautiousEpsilon	lbfgs_t.cautious_eps	Factor on the gradient norm in the cautious curvature test. The defaults differ: rgmin uses 1e-4 while the schema and eOn use 1e-6. The rgmin test fixes the exponent at one, while rgconf also exposes it as cautiousAlpha.
+rgmin	include/rgmin.h	1189	rgmin_rlbfgs_t	armijo	double			unmapped	none	Sufficient-decrease constant of the Riemannian line search. rgconf has no line search constant for this method.
+rgmin	include/rgmin.h	1190	rgmin_rlbfgs_t	backtrack	double			unmapped	none	Factor applied to a rejected trial length. rgconf has no matching field.
+rgmin	include/rgmin.h	1191	rgmin_rlbfgs_t	linesearch_max	size_t			unmapped	none	Rejected trials allowed per iteration. The rgconf maxIterLineSearch field applies to the cg method only.
+rgmin	include/rgmin.h	1192	rgmin_rlbfgs_t	grad_ratio	double			unmapped	none	Stop when the gradient norm falls below this fraction of the initial norm. rgconf convergence has no ratio criterion.
+rgmin	include/rgmin.h	1234	rgmin_eigen_params_t	kind	int32_t					
+rgmin	include/rgmin.h	1235	rgmin_eigen_params_t	nev	uint32_t					
+rgmin	include/rgmin.h	1236	rgmin_eigen_params_t	krylov	uint32_t					
+rgmin	include/rgmin.h	1237	rgmin_eigen_params_t	max_iter	uint32_t					
+rgmin	include/rgmin.h	1238	rgmin_eigen_params_t	tol	double					
+rgmin	include/rgmin.h	1246	rgmin_lowest_mode_t	value	double					
+rgmin	include/rgmin.h	1247	rgmin_lowest_mode_t	actions	size_t					
+rgmin	include/rgmin.h	1303	rgmin_eigen_options_t	degree	uint32_t					
+rgmin	include/rgmin.h	1305	rgmin_eigen_options_t	extra	uint32_t					
+rgmin	include/rgmin.h	1314	rgmin_eigenpair_t	value	double					
+rgmin	include/rgmin.h	1315	rgmin_eigenpair_t	actions	size_t					
+rgmin	include/rgmin.h	1341	rgmin_eigenpair_ex_t	value	double					
+rgmin	include/rgmin.h	1342	rgmin_eigenpair_ex_t	actions	size_t					
+rgmin	include/rgmin.h	1343	rgmin_eigenpair_ex_t	residual	double					
+rgmin	include/rgmin.h	1344	rgmin_eigenpair_ex_t	converged	int32_t					
+rgmin	include/rgmin.h	206	rgmin_control_t	maxiter	comment	100	control			
+rgmin	include/rgmin.h	206	rgmin_control_t	gtol	comment	1e-5	control			
+rgmin	include/rgmin.h	206	rgmin_control_t	istep	comment	1	control			
+rgmin	include/rgmin.h	206	rgmin_control_t	memory	comment	0	control			
+rgmin	include/rgmin.h	207	rgmin_control_t	maxmove	comment	0	control			
+rgmin	include/rgmin.h	208	rgmin_control_t	noise_eps	comment	0	control			
+rgmin	include/rgmin.h	208	rgmin_control_t	noise_c	comment	3	control			
+rgsaddle	include/rgsaddle.h	124	rgsaddle_version_t	major	uint32_t					
+rgsaddle	include/rgsaddle.h	125	rgsaddle_version_t	minor	uint32_t					
+rgsaddle	include/rgsaddle.h	232	rgsaddle_hyperplane_budget_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	233	rgsaddle_hyperplane_budget_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	234	rgsaddle_hyperplane_budget_t	thermal	double					
+rgsaddle	include/rgsaddle.h	235	rgsaddle_hyperplane_budget_t	seed	uint64_t					
+rgsaddle	include/rgsaddle.h	236	rgsaddle_hyperplane_budget_t	thermalize	int64_t					
+rgsaddle	include/rgsaddle.h	237	rgsaddle_hyperplane_budget_t	stride	int64_t					
+rgsaddle	include/rgsaddle.h	238	rgsaddle_hyperplane_budget_t	samples	int64_t					
+rgsaddle	include/rgsaddle.h	239	rgsaddle_hyperplane_budget_t	lambda	double					
+rgsaddle	include/rgsaddle.h	240	rgsaddle_hyperplane_budget_t	positions	int32_t					
+rgsaddle	include/rgsaddle.h	245	rgsaddle_hyperplane_observation_t	constraint_force	double					
+rgsaddle	include/rgsaddle.h	248	rgsaddle_hyperplane_observation_t	thermodynamic_derivative	double					
+rgsaddle	include/rgsaddle.h	259	rgsaddle_hyperplane_ti_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	260	rgsaddle_hyperplane_ti_config_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	261	rgsaddle_hyperplane_ti_config_t	thermal	double					
+rgsaddle	include/rgsaddle.h	262	rgsaddle_hyperplane_ti_config_t	nodes	int64_t					
+rgsaddle	include/rgsaddle.h	263	rgsaddle_hyperplane_ti_config_t	thermalize	int64_t					
+rgsaddle	include/rgsaddle.h	264	rgsaddle_hyperplane_ti_config_t	stride	int64_t					
+rgsaddle	include/rgsaddle.h	265	rgsaddle_hyperplane_ti_config_t	samples	int64_t					
+rgsaddle	include/rgsaddle.h	266	rgsaddle_hyperplane_ti_config_t	blocks	int64_t					
+rgsaddle	include/rgsaddle.h	267	rgsaddle_hyperplane_ti_config_t	seed	uint64_t					
+rgsaddle	include/rgsaddle.h	271	rgsaddle_hyperplane_ti_result_t	free_energy	double					
+rgsaddle	include/rgsaddle.h	272	rgsaddle_hyperplane_ti_result_t	error	double					
+rgsaddle	include/rgsaddle.h	273	rgsaddle_hyperplane_ti_result_t	evaluations	int64_t					
+rgsaddle	include/rgsaddle.h	320	rgsaddle_surface_request_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	321	rgsaddle_surface_request_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	322	rgsaddle_surface_request_t	n_images	int64_t					
+rgsaddle	include/rgsaddle.h	323	rgsaddle_surface_request_t	n_atoms	int64_t					
+rgsaddle	include/rgsaddle.h	327	rgsaddle_surface_request_t	image	int64_t					
+rgsaddle	include/rgsaddle.h	335	rgsaddle_band_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	336	rgsaddle_band_config_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	337	rgsaddle_band_config_t	tangent	int32_t					
+rgsaddle	include/rgsaddle.h	338	rgsaddle_band_config_t	spring	int32_t					
+rgsaddle	include/rgsaddle.h	339	rgsaddle_band_config_t	projection	int32_t					
+rgsaddle	include/rgsaddle.h	340	rgsaddle_band_config_t	method	int32_t					
+rgsaddle	include/rgsaddle.h	341	rgsaddle_band_config_t	spring_k	double					
+rgsaddle	include/rgsaddle.h	345	rgsaddle_band_config_t	ci_trigger_factor	double					
+rgsaddle	include/rgsaddle.h	346	rgsaddle_band_config_t	ci_trigger_force	double					
+rgsaddle	include/rgsaddle.h	349	rgsaddle_band_config_t	force_tol	double					
+rgsaddle	include/rgsaddle.h	350	rgsaddle_band_config_t	max_move	double					
+rgsaddle	include/rgsaddle.h	351	rgsaddle_band_config_t	memory	int64_t					
+rgsaddle	include/rgsaddle.h	356	rgsaddle_report_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	357	rgsaddle_report_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	358	rgsaddle_report_t	status	int32_t					
+rgsaddle	include/rgsaddle.h	364	rgsaddle_report_t	evaluations	int32_t					
+rgsaddle	include/rgsaddle.h	365	rgsaddle_report_t	max_force	double					
+rgsaddle	include/rgsaddle.h	367	rgsaddle_report_t	ci_index	int64_t					
+rgsaddle	include/rgsaddle.h	368	rgsaddle_report_t	iteration	int64_t					
+rgsaddle	include/rgsaddle.h	373	rgsaddle_report_t	curvature	double					
+rgsaddle	include/rgsaddle.h	374	rgsaddle_report_t	rotations	int64_t					
+rgsaddle	include/rgsaddle.h	416	rgsaddle_solid_surface_request_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	417	rgsaddle_solid_surface_request_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	418	rgsaddle_solid_surface_request_t	n_images	int64_t					
+rgsaddle	include/rgsaddle.h	419	rgsaddle_solid_surface_request_t	n_atoms	int64_t					
+rgsaddle	include/rgsaddle.h	425	rgsaddle_solid_surface_request_t	image	int64_t					
+rgsaddle	include/rgsaddle.h	571	rgsaddle_minmode_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	572	rgsaddle_minmode_config_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	573	rgsaddle_minmode_config_t	kind	int32_t					
+rgsaddle	include/rgsaddle.h	574	rgsaddle_minmode_config_t	method	int32_t					
+rgsaddle	include/rgsaddle.h	575	rgsaddle_minmode_config_t	dr	double					
+rgsaddle	include/rgsaddle.h	576	rgsaddle_minmode_config_t	rotation_tol	double					
+rgsaddle	include/rgsaddle.h	577	rgsaddle_minmode_config_t	max_rotations	int64_t					
+rgsaddle	include/rgsaddle.h	578	rgsaddle_minmode_config_t	krylov_dim	int64_t					
+rgsaddle	include/rgsaddle.h	579	rgsaddle_minmode_config_t	force_tol	double					
+rgsaddle	include/rgsaddle.h	580	rgsaddle_minmode_config_t	max_move	double					
+rgsaddle	include/rgsaddle.h	588	rgsaddle_minmode_config_t	rotation_angle_tol	double					
+rgsaddle	include/rgsaddle.h	590	rgsaddle_minmode_config_t	difference	int32_t					
+rgsaddle	include/rgsaddle.h	591	rgsaddle_minmode_config_t	reserved	int32_t					
+rgsaddle	include/rgsaddle.h	600	rgsaddle_artn_config_t	version	rgsaddle_version_t			abi	none	ABI record header, not a run parameter.
+rgsaddle	include/rgsaddle.h	601	rgsaddle_artn_config_t	flags	uint64_t			abi	none	Reserved ABI word that callers set to zero.
+rgsaddle	include/rgsaddle.h	602	rgsaddle_artn_config_t	lanczos_start	int64_t			minmode.ArtnConfig.ninitPushSteps	artn_options_t.ninit	Random-direction pushes before the first Lanczos solve. eOn uses -1 to defer to the pARTn default.
+rgsaddle	include/rgsaddle.h	603	rgsaddle_artn_config_t	eigenvalue_threshold	double			minmode.ArtnConfig.eigenvalueThreshold	none	Eigenvalue below which activation starts, in eV per square Angstrom. The rgsaddle default is -0.01 and the schema default is -0.5. The eOn force_threshold is a force criterion, not this value.
+rgsaddle	include/rgsaddle.h	604	rgsaddle_artn_config_t	basin_push	double			minmode.ArtnConfig.pushStepSizeAngstrom	artn_options_t.push_step_size	Length of each random-direction push in Angstrom. rgsaddle and rgconf default to 0.2 and eOn to 0.3.
+rgsaddle	include/rgsaddle.h	605	rgsaddle_artn_config_t	basin_relaxations	int64_t			unmapped	none	Perpendicular relaxation steps after a basin push. rgconf maxPerpRelaxIters is a single limit with no basin and activation split, and the eOn nperp_limitation string is only a loose relative.
+rgsaddle	include/rgsaddle.h	606	rgsaddle_artn_config_t	activation_relaxations	int64_t			unmapped	none	Perpendicular relaxation steps after an activation push. See basin_relaxations for why no field is named.
+rgsaddle	include/rgsaddle.h	607	rgsaddle_artn_config_t	relaxation_step	double			unmapped	none	Scale on the projected gradient during relaxation. Neither rgconf nor eOn has this field.
+rgsaddle	include/rgsaddle.h	608	rgsaddle_artn_config_t	lanczos_actions	int64_t			minmode.ArtnConfig.nlanczosSteps	none	Most Lanczos Hessian actions per geometry. Both rgsaddle and rgconf default to 16. eOn has no matching option.
+rgsaddle	include/rgsaddle.h	609	rgsaddle_artn_config_t	curvature_floor	double			unmapped	none	Lower bound on the absolute eigenvalue in the activation Newton step. Neither rgconf nor eOn has this field.
+rgsaddle	include/rgsaddle.h	780	rgsaddle_index1_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	781	rgsaddle_index1_config_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	782	rgsaddle_index1_config_t	update	int32_t					
+rgsaddle	include/rgsaddle.h	783	rgsaddle_index1_config_t	mode	int32_t					
+rgsaddle	include/rgsaddle.h	785	rgsaddle_index1_config_t	trust_radius	double					
+rgsaddle	include/rgsaddle.h	786	rgsaddle_index1_config_t	force_tol	double					
+rgsaddle	include/rgsaddle.h	788	rgsaddle_index1_config_t	fd_dr	double					
+rgsaddle	include/rgsaddle.h	829	rgsaddle_kappa_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	830	rgsaddle_kappa_config_t	beta	double					
+rgsaddle	include/rgsaddle.h	831	rgsaddle_kappa_config_t	tolerance	double					
+rgsaddle	include/rgsaddle.h	832	rgsaddle_kappa_config_t	max_iterations	int64_t					
+rgsaddle	include/rgsaddle.h	833	rgsaddle_kappa_config_t	krylov_dimension	int64_t					
+rgsaddle	include/rgsaddle.h	834	rgsaddle_kappa_config_t	eigen_kind	int32_t					
+rgsaddle	include/rgsaddle.h	838	rgsaddle_kappa_report_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	839	rgsaddle_kappa_report_t	kappa	double					
+rgsaddle	include/rgsaddle.h	840	rgsaddle_kappa_report_t	tangent_curvature	double					
+rgsaddle	include/rgsaddle.h	841	rgsaddle_kappa_report_t	gamma_parallel	double					
+rgsaddle	include/rgsaddle.h	842	rgsaddle_kappa_report_t	gamma_perpendicular	double					
+rgsaddle	include/rgsaddle.h	843	rgsaddle_kappa_report_t	residual	double					
+rgsaddle	include/rgsaddle.h	844	rgsaddle_kappa_report_t	hessian_actions	int64_t					
+rgsaddle	include/rgsaddle.h	845	rgsaddle_kappa_report_t	tangent_dimension	int64_t					
+rgsaddle	include/rgsaddle.h	885	rgsaddle_irc_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	886	rgsaddle_irc_config_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	887	rgsaddle_irc_config_t	dx	double					
+rgsaddle	include/rgsaddle.h	888	rgsaddle_irc_config_t	force_tol	double					
+rgsaddle	include/rgsaddle.h	889	rgsaddle_irc_config_t	force_gate	rgsaddle_force_gate_t					
+rgsaddle	include/rgsaddle.h	890	rgsaddle_irc_config_t	max_move	double					
+rgsaddle	include/rgsaddle.h	891	rgsaddle_irc_config_t	max_inner	int64_t					
+rgsaddle	include/rgsaddle.h	892	rgsaddle_irc_config_t	kind	int32_t					
+rgsaddle	include/rgsaddle.h	893	rgsaddle_irc_config_t	direction	int32_t					
+rgsaddle	include/rgsaddle.h	924	rgsaddle_sella_min_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	925	rgsaddle_sella_min_config_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	926	rgsaddle_sella_min_config_t	delta	double					
+rgsaddle	include/rgsaddle.h	927	rgsaddle_sella_min_config_t	force_tol	double					
+rgsaddle	include/rgsaddle.h	928	rgsaddle_sella_min_config_t	force_gate	rgsaddle_force_gate_t					
+rgsaddle	include/rgsaddle.h	982	rgsaddle_sella_saddle_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	983	rgsaddle_sella_saddle_config_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	984	rgsaddle_sella_saddle_config_t	delta	double					
+rgsaddle	include/rgsaddle.h	985	rgsaddle_sella_saddle_config_t	force_tol	double					
+rgsaddle	include/rgsaddle.h	986	rgsaddle_sella_saddle_config_t	force_gate	rgsaddle_force_gate_t					
+rgsaddle	include/rgsaddle.h	987	rgsaddle_sella_saddle_config_t	order	int64_t					
+rgsaddle	include/rgsaddle.h	1055	rgsaddle_constraints_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	1056	rgsaddle_constraints_config_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	1176	rgsaddle_samd_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	1177	rgsaddle_samd_config_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	1178	rgsaddle_samd_config_t	dt	double					
+rgsaddle	include/rgsaddle.h	1179	rgsaddle_samd_config_t	tau	double					
+rgsaddle	include/rgsaddle.h	1180	rgsaddle_samd_config_t	t0	double					
+rgsaddle	include/rgsaddle.h	1181	rgsaddle_samd_config_t	tf	double					
+rgsaddle	include/rgsaddle.h	1182	rgsaddle_samd_config_t	ngen	int64_t					
+rgsaddle	include/rgsaddle.h	1183	rgsaddle_samd_config_t	exponential	int32_t					
+rgsaddle	include/rgsaddle.h	1248	rgsaddle_ocineb_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	1249	rgsaddle_ocineb_config_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	1250	rgsaddle_ocineb_config_t	trigger_factor	double					
+rgsaddle	include/rgsaddle.h	1251	rgsaddle_ocineb_config_t	trigger_force	double					
+rgsaddle	include/rgsaddle.h	1252	rgsaddle_ocineb_config_t	angle_tol	double					
+rgsaddle	include/rgsaddle.h	1253	rgsaddle_ocineb_config_t	stability_count	int64_t					
+rgsaddle	include/rgsaddle.h	1254	rgsaddle_ocineb_config_t	max_mmf_steps	int64_t					
+rgsaddle	include/rgsaddle.h	1255	rgsaddle_ocineb_config_t	restore_unhelpful	int32_t					
+rgsaddle	include/rgsaddle.h	1256	rgsaddle_ocineb_config_t	reserved	int32_t					
+rgsaddle	include/rgsaddle.h	1261	rgsaddle_ocineb_report_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	1262	rgsaddle_ocineb_report_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	1263	rgsaddle_ocineb_report_t	status	int32_t					
+rgsaddle	include/rgsaddle.h	1264	rgsaddle_ocineb_report_t	phase	int32_t					
+rgsaddle	include/rgsaddle.h	1265	rgsaddle_ocineb_report_t	fell_back	int32_t					
+rgsaddle	include/rgsaddle.h	1266	rgsaddle_ocineb_report_t	evaluations	int32_t					
+rgsaddle	include/rgsaddle.h	1267	rgsaddle_ocineb_report_t	max_force	double					
+rgsaddle	include/rgsaddle.h	1268	rgsaddle_ocineb_report_t	curvature	double					
+rgsaddle	include/rgsaddle.h	1269	rgsaddle_ocineb_report_t	alignment	double					
+rgsaddle	include/rgsaddle.h	1270	rgsaddle_ocineb_report_t	threshold	double					
+rgsaddle	include/rgsaddle.h	1271	rgsaddle_ocineb_report_t	ci_index	int64_t					
+rgsaddle	include/rgsaddle.h	1272	rgsaddle_ocineb_report_t	iteration	int64_t					
+rgsaddle	include/rgsaddle.h	1273	rgsaddle_ocineb_report_t	rotations	int64_t					
+rgsaddle	include/rgsaddle.h	1508	rgsaddle_stencil_report_t	struct_size	uint64_t					
+rgsaddle	include/rgsaddle.h	1509	rgsaddle_stencil_report_t	status	int32_t					
+rgsaddle	include/rgsaddle.h	1510	rgsaddle_stencil_report_t	reserved	int32_t					
+rgsaddle	include/rgsaddle.h	1511	rgsaddle_stencil_report_t	max_force	double					
+rgsaddle	include/rgsaddle.h	1512	rgsaddle_stencil_report_t	curvature	double					
+rgsaddle	include/rgsaddle.h	1513	rgsaddle_stencil_report_t	iteration	uint64_t					
+rgsaddle	include/rgsaddle.h	1514	rgsaddle_stencil_report_t	evaluations	uint64_t					
+rgsaddle	include/rgsaddle.h	1552	rgsaddle_connect_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	1553	rgsaddle_connect_config_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	1554	rgsaddle_connect_config_t	force_tol	double					
+rgsaddle	include/rgsaddle.h	1555	rgsaddle_connect_config_t	max_calls	int64_t					
+rgsaddle	include/rgsaddle.h	1556	rgsaddle_connect_config_t	quench_nodes	int32_t					
+rgsaddle	include/rgsaddle.h	1561	rgsaddle_connect_report_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	1562	rgsaddle_connect_report_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	1563	rgsaddle_connect_report_t	energy	double					
+rgsaddle	include/rgsaddle.h	1564	rgsaddle_connect_report_t	force_norm	double					
+rgsaddle	include/rgsaddle.h	1565	rgsaddle_connect_report_t	kind	int32_t					
+rgsaddle	include/rgsaddle.h	1566	rgsaddle_connect_report_t	hessian_index	int32_t					
+rgsaddle	include/rgsaddle.h	1567	rgsaddle_connect_report_t	evaluations	int32_t					
+rgsaddle	include/rgsaddle.h	1586	rgsaddle_indexk_config_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	1587	rgsaddle_indexk_config_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	1588	rgsaddle_indexk_config_t	index	int32_t					
+rgsaddle	include/rgsaddle.h	1589	rgsaddle_indexk_config_t	method	int32_t					
+rgsaddle	include/rgsaddle.h	1590	rgsaddle_indexk_config_t	dr	double					
+rgsaddle	include/rgsaddle.h	1591	rgsaddle_indexk_config_t	rotation_tol	double					
+rgsaddle	include/rgsaddle.h	1592	rgsaddle_indexk_config_t	max_rotations	int64_t					
+rgsaddle	include/rgsaddle.h	1593	rgsaddle_indexk_config_t	force_tol	double					
+rgsaddle	include/rgsaddle.h	1594	rgsaddle_indexk_config_t	max_move	double					
+rgsaddle	include/rgsaddle.h	1595	rgsaddle_indexk_config_t	residual_tol	double					
+rgsaddle	include/rgsaddle.h	1596	rgsaddle_indexk_config_t	max_block_iterations	int32_t					
+rgsaddle	include/rgsaddle.h	1680	rgsaddle_saddle_check_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	1681	rgsaddle_saddle_check_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	1682	rgsaddle_saddle_check_t	block	int32_t					
+rgsaddle	include/rgsaddle.h	1683	rgsaddle_saddle_check_t	lowest	int32_t					
+rgsaddle	include/rgsaddle.h	1684	rgsaddle_saddle_check_t	max_actions	int32_t					
+rgsaddle	include/rgsaddle.h	1685	rgsaddle_saddle_check_t	difference	int32_t					
+rgsaddle	include/rgsaddle.h	1686	rgsaddle_saddle_check_t	dr	double					
+rgsaddle	include/rgsaddle.h	1687	rgsaddle_saddle_check_t	residual_tol	double					
+rgsaddle	include/rgsaddle.h	1688	rgsaddle_saddle_check_t	negative_tol	double					
+rgsaddle	include/rgsaddle.h	1689	rgsaddle_saddle_check_t	seed	uint64_t					
+rgsaddle	include/rgsaddle.h	1690	rgsaddle_saddle_check_t	escape_attempts	int32_t					
+rgsaddle	include/rgsaddle.h	1691	rgsaddle_saddle_check_t	reserved	int32_t					
+rgsaddle	include/rgsaddle.h	1692	rgsaddle_saddle_check_t	escape_push	double					
+rgsaddle	include/rgsaddle.h	1697	rgsaddle_saddle_index_t	version	rgsaddle_version_t					
+rgsaddle	include/rgsaddle.h	1698	rgsaddle_saddle_index_t	flags	uint64_t					
+rgsaddle	include/rgsaddle.h	1701	rgsaddle_saddle_index_t	certified	int32_t					
+rgsaddle	include/rgsaddle.h	1703	rgsaddle_saddle_index_t	index	int32_t					
+rgsaddle	include/rgsaddle.h	1706	rgsaddle_saddle_index_t	converged	int32_t					
+rgsaddle	include/rgsaddle.h	1709	rgsaddle_saddle_index_t	n_curvatures	int32_t					
+rgsaddle	include/rgsaddle.h	1711	rgsaddle_saddle_index_t	evaluations	int64_t					
+rgsaddle	include/rgsaddle.h	1714	rgsaddle_saddle_index_t	total_evaluations	int64_t					
+rgsaddle	include/rgsaddle.h	1716	rgsaddle_saddle_index_t	escapes	int64_t					
+rgsaddle	include/rgsaddle.h	1802	rgsaddle_growing_string_config_t	version	rgsaddle_version_t			abi	none	ABI record header, not a run parameter.
+rgsaddle	include/rgsaddle.h	1803	rgsaddle_growing_string_config_t	flags	uint64_t			abi	none	Reserved ABI word.
+rgsaddle	include/rgsaddle.h	1804	rgsaddle_growing_string_config_t	band	rgsaddle_band_config_t			band.BandConfig	none	Nested band configuration. rgconf carries the same group as BandConfig, and eOn spreads it over several fields.
+rgsaddle	include/rgsaddle.h	1805	rgsaddle_growing_string_config_t	n_images	int64_t			band.BandConfig.imageCount	neb_options_t.image_count	Total image count including both endpoints in rgsaddle and rgconf. eOn counts intermediate images only.
+rgsaddle	include/rgsaddle.h	1806	rgsaddle_growing_string_config_t	frontier_tol	double			band.BandConfig.growingStringFrontierTol	none	Perpendicular-force threshold for adding a node. The rgsaddle default is 0.2 and the schema default is 0.1. The eOn sidpp_frontier_tol belongs to the IDPP path growth, which is a different method.
+rgsaddle	include/rgsaddle.h	1807	rgsaddle_growing_string_config_t	min_steps_per_node	int64_t			unmapped	none	Least relaxation steps at the current fragment size before a frontier may add a node. No rgconf or eOn field.
+rgsaddle	include/rgsaddle.h	1808	rgsaddle_growing_string_config_t	max_steps_per_node	int64_t			unmapped	none	Cap on relaxation steps at the current fragment size, where zero selects the default cap. No rgconf or eOn field.
+rgsaddle	include/rgsaddle.h	1809	rgsaddle_growing_string_config_t	join_tol	double			unmapped	none	Frontier distance at which the two fragments join early, where -1 disables the early join. No rgconf or eOn field.
+rgsaddle	include/rgsaddle.h	1810	rgsaddle_growing_string_config_t	reparametrization	int32_t			unmapped	none	Spline kind used to redistribute nodes. The eOn sidpp_reparam is a boolean for IDPP growth and does not choose a spline.
+rgsaddle	include/rgsaddle.h	1811	rgsaddle_growing_string_config_t	force_gate	int32_t			convergence.ConvergenceConfig.norm	optimizer_options_t.convergence_metric	Norm used for the frontier test and the reported force. rgsaddle offers L2, Linf and max-atom, defaulting to Linf, while the rgconf ForceNorm also has the rms forms.
+rgpot	CppCore/rgpot/LennardJones/LJPot.hpp	37	LJConfig	u0	double	1.0				
+rgpot	CppCore/rgpot/LennardJones/LJPot.hpp	38	LJConfig	cutoff	double	15.0				
+rgpot	CppCore/rgpot/LennardJones/LJPot.hpp	39	LJConfig	psi	double	1.0				
+rgpot	CppCore/rgpot/LennardJones/LJPot.hpp	43	LJConfig	switch_width	double	0.0				
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	13	MetatomicConfig	model_path	std::string					
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	14	MetatomicConfig	device	std::string					
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	15	MetatomicConfig	length_unit	std::string	"angstrom"				
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	16	MetatomicConfig	extensions_directory	std::string					
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	17	MetatomicConfig	check_consistency	bool	false				
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	18	MetatomicConfig	uncertainty_threshold	double	-1.0				
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	19	MetatomicConfig	dtype_override	std::string					
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	20	MetatomicConfig	random_rotation	bool	false				
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	21	MetatomicConfig	n_symmetry_rotations	long	0				
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	22	MetatomicConfig	so3_probe_scatter	bool	false				
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	23	MetatomicConfig	torch_determinism	TorchDeterminismPolicy	TorchDeterminismPolicy::Fast				
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	25	MetatomicConfig	engine_path	std::string					
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	27	MetatomicConfig	task_name	std::string					
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	29	MetatomicConfig	charge	int	0				
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	32	MetatomicConfig	spin	int	1				
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	34	MetatomicConfig	requested_inputs	*					
+rgpot	CppCore/rgpot/MetatomicPot/MetatomicConfig.hpp	36	MetatomicConfig	attach_system_extras	bool	false				
+cpmdc	include/cpmdc.h	42	CPMDCResult	ok	int					
+cpmdc	include/cpmdc.h	44	CPMDCResult	energy_h	double					
+cpmdc	include/cpmdc.h	59	CPMDCEnergyComponents	valid	int					
+cpmdc	include/cpmdc.h	61	CPMDCEnergyComponents	etot	double					
+cpmdc	include/cpmdc.h	63	CPMDCEnergyComponents	ekin	double					
+cpmdc	include/cpmdc.h	65	CPMDCEnergyComponents	epseu	double					
+cpmdc	include/cpmdc.h	67	CPMDCEnergyComponents	enl	double					
+cpmdc	include/cpmdc.h	69	CPMDCEnergyComponents	eht	double					
+cpmdc	include/cpmdc.h	71	CPMDCEnergyComponents	ehep	double					
+cpmdc	include/cpmdc.h	73	CPMDCEnergyComponents	ehee	double					
+cpmdc	include/cpmdc.h	75	CPMDCEnergyComponents	ehii	double					
+cpmdc	include/cpmdc.h	77	CPMDCEnergyComponents	exc	double					
+cpmdc	include/cpmdc.h	79	CPMDCEnergyComponents	vxc	double					
+cpmdc	include/cpmdc.h	81	CPMDCEnergyComponents	egc	double					
+cpmdc	include/cpmdc.h	83	CPMDCEnergyComponents	esr	double					
+cpmdc	include/cpmdc.h	85	CPMDCEnergyComponents	eeig	double					
+cpmdc	include/cpmdc.h	87	CPMDCEnergyComponents	eband	double					
+cpmdc	include/cpmdc.h	89	CPMDCEnergyComponents	entropy	double					
+cpmdc	include/cpmdc.h	91	CPMDCEnergyComponents	eself	double					
+cpmdc	include/cpmdc.h	93	CPMDCEnergyComponents	ecnstr	double					
+cpmdc	include/cpmdc.h	95	CPMDCEnergyComponents	amu	double					
+cpmdc	include/cpmdc.h	97	CPMDCEnergyComponents	ebogo	double					
+cpmdc	include/cpmdc.h	99	CPMDCEnergyComponents	eext	double					
+cpmdc	include/cpmdc.h	101	CPMDCEnergyComponents	etddft	double					
+cpmdc	include/cpmdc.h	103	CPMDCEnergyComponents	ehsic	double					
+cpmdc	include/cpmdc.h	105	CPMDCEnergyComponents	erestr	double					
+cpmdc	include/cpmdc.h	107	CPMDCEnergyComponents	eefield	double					
+cpmdc	include/cpmdc.h	115	CPMDCChargeIntegrals	valid	int					
+cpmdc	include/cpmdc.h	117	CPMDCChargeIntegrals	csumg	double					
+cpmdc	include/cpmdc.h	119	CPMDCChargeIntegrals	csumr	double					
+cpmdc	include/cpmdc.h	121	CPMDCChargeIntegrals	csums	double					
+cpmdc	include/cpmdc.h	123	CPMDCChargeIntegrals	csumsabs	double					
+cpmdc	include/cpmdc.h	134	CPMDCMultiStateEnergies	valid	int					
+cpmdc	include/cpmdc.h	136	CPMDCMultiStateEnergies	count	size_t					
+cpmdc	include/cpmdc.h	151	CPMDCMDTrajectoryRow	valid	int					
+cpmdc	include/cpmdc.h	153	CPMDCMDTrajectoryRow	count	size_t					
+cpmdc	include/cpmdc.h	169	CPMDCPropertySnapshot	valid	int					
+cpmdc	include/cpmdc.h	171	CPMDCPropertySnapshot	hessian_count	size_t					
+cpmdc	include/cpmdc.h	175	CPMDCPropertySnapshot	dipole_count	size_t					
+cpmdc	include/cpmdc.h	179	CPMDCPropertySnapshot	polarizability_count	size_t					
+cpmdc	include/cpmdc.h	195	CPMDCStressTensor	valid	int					
+cpmdc	include/cpmdc.h	210	CPMDCRankSpread	valid	int					
+cpmdc	include/cpmdc.h	212	CPMDCRankSpread	ranks	int					
+cpmdc	include/cpmdc.h	214	CPMDCRankSpread	energy_h	double					
+cpmdc	include/cpmdc.h	216	CPMDCRankSpread	gradient_h_bohr	double					
+cpmdc	schema/Potentials.capnp	19	ForceInput	pos	List					
+cpmdc	schema/Potentials.capnp	20	ForceInput	atmnrs	List					
+cpmdc	schema/Potentials.capnp	21	ForceInput	box	List					
+cpmdc	schema/Potentials.capnp	22	ForceInput	lengthUnit	Text	"angstrom"				
+cpmdc	schema/Potentials.capnp	23	ForceInput	energyUnit	Text	"eV"				
+cpmdc	schema/Potentials.capnp	24	ForceInput	hasCharge	Bool	false				
+cpmdc	schema/Potentials.capnp	25	ForceInput	charge	Int32	0				
+cpmdc	schema/Potentials.capnp	26	ForceInput	hasMultiplicity	Bool	false				
+cpmdc	schema/Potentials.capnp	27	ForceInput	multiplicity	Int32	1				
+cpmdc	schema/Potentials.capnp	33	PotentialResult	energy	Float64					
+cpmdc	schema/Potentials.capnp	34	PotentialResult	forces	List					
+cpmdc	schema/Potentials.capnp	35	PotentialResult	hessian	List					
+cpmdc	schema/Potentials.capnp	36	PotentialResult	dipole	List					
+cpmdc	schema/Potentials.capnp	37	PotentialResult	quadrupole	List					
+cpmdc	schema/Potentials.capnp	38	PotentialResult	optimizedPos	List					
+cpmdc	schema/Potentials.capnp	39	PotentialResult	frequencies	List					
+cpmdc	schema/Potentials.capnp	40	PotentialResult	intensities	List					
+cpmdc	schema/Potentials.capnp	41	PotentialResult	stress	List					
+cpmdc	schema/Potentials.capnp	42	PotentialResult	polarizability	List					
+cpmdc	schema/Potentials.capnp	43	PotentialResult	gradient	List					
+cpmdc	schema/Potentials.capnp	44	PotentialResult	normalModes	List					
+cpmdc	schema/Potentials.capnp	45	PotentialResult	zeroPointEnergy	Float64					
+cpmdc	schema/Potentials.capnp	46	PotentialResult	thermalEnergy	Float64					
+cpmdc	schema/Potentials.capnp	47	PotentialResult	thermalEnthalpy	Float64					
+cpmdc	schema/Potentials.capnp	48	PotentialResult	entropy	Float64					
+cpmdc	schema/Potentials.capnp	49	PotentialResult	heatCapacityCv	Float64					
+cpmdc	schema/Potentials.capnp	50	PotentialResult	projectedFrequencies	List					
+cpmdc	schema/Potentials.capnp	51	PotentialResult	projectedIntensities	List					
+cpmdc	schema/Potentials.capnp	53	PotentialResult	energyComponents	List					
+cpmdc	schema/Potentials.capnp	54	PotentialResult	componentsValid	Bool	false				
+cpmdc	schema/Potentials.capnp	55	PotentialResult	chargeIntegrals	List					
+cpmdc	schema/Potentials.capnp	56	PotentialResult	chargeValid	Bool	false				
+cpmdc	schema/Potentials.capnp	57	PotentialResult	multiStateEnergies	List					
+cpmdc	schema/Potentials.capnp	58	PotentialResult	multiStateValid	Bool	false				
+cpmdc	schema/Potentials.capnp	59	PotentialResult	mdTrajectoryRow	List					
+cpmdc	schema/Potentials.capnp	60	PotentialResult	mdTrajectoryValid	Bool	false				
+cpmdc	schema/Potentials.capnp	61	PotentialResult	embedMdPropsSkipped	Bool	true				
+cpmdc	schema/Potentials.capnp	73	Capabilities	backendName	Text					
+cpmdc	schema/Potentials.capnp	74	Capabilities	backendVersion	Text					
+cpmdc	schema/Potentials.capnp	75	Capabilities	abiVersion	Int32					
+cpmdc	schema/Potentials.capnp	76	Capabilities	available	Bool					
+cpmdc	schema/Potentials.capnp	77	Capabilities	operations	List					
+cpmdc	schema/Potentials.capnp	78	Capabilities	loweredCommonFields	List					
+cpmdc	schema/Potentials.capnp	79	Capabilities	configKinds	List					
+cpmdc	schema/Potentials.capnp	80	Capabilities	schemaVersion	Text					
+cpmdc	schema/Potentials.capnp	81	Capabilities	protocolFamily	Text					
+cpmdc	schema/Potentials.capnp	82	Capabilities	protocolMajor	UInt16					
+cpmdc	schema/Potentials.capnp	83	Capabilities	protocolMinor	UInt16					
+cpmdc	schema/Potentials.capnp	84	Capabilities	schemaId	Text					
+cpmdc	schema/Potentials.capnp	85	Capabilities	bridgeAbiMajor	UInt16					
+cpmdc	schema/Potentials.capnp	86	Capabilities	bridgeAbiMinor	UInt16					
+cpmdc	schema/Potentials.capnp	87	Capabilities	bridgeLayout	UInt32					
+cpmdc	schema/Potentials.capnp	88	Capabilities	dlpackMajor	UInt16					
+cpmdc	schema/Potentials.capnp	89	Capabilities	dlpackMinor	UInt16					
+cpmdc	schema/Potentials.capnp	90	Capabilities	bridgeFeatures	UInt64					
+cpmdc	schema/Potentials.capnp	112	NWChemDirective	keyword	Text					
+cpmdc	schema/Potentials.capnp	113	NWChemDirective	args	List					
+cpmdc	schema/Potentials.capnp	117	NWChemGenericStanza	name	Text					
+cpmdc	schema/Potentials.capnp	118	NWChemGenericStanza	directives	List					
+cpmdc	schema/Potentials.capnp	122	NWChemSetDirective	key	Text					
+cpmdc	schema/Potentials.capnp	123	NWChemSetDirective	value	Text					
+cpmdc	schema/Potentials.capnp	124	NWChemSetDirective	valueType	ValueType	auto				
+cpmdc	schema/Potentials.capnp	125	NWChemSetDirective	values	List					
+cpmdc	schema/Potentials.capnp	137	NWChemDftSmearing	sigmaHartree	Float64	0.0				
+cpmdc	schema/Potentials.capnp	138	NWChemDftSmearing	mode	Mode	fixsz				
+cpmdc	schema/Potentials.capnp	149	NWChemDftGridSpec	quality	Quality	unspecified				
+cpmdc	schema/Potentials.capnp	150	NWChemDftGridSpec	radial	Text	""				
+cpmdc	schema/Potentials.capnp	151	NWChemDftGridSpec	angular	Text	""				
+cpmdc	schema/Potentials.capnp	165	NWChemDftStanza	xc	Text	""				
+cpmdc	schema/Potentials.capnp	166	NWChemDftStanza	direct	Bool	false				
+cpmdc	schema/Potentials.capnp	167	NWChemDftStanza	smearing	NWChemDftSmearing					
+cpmdc	schema/Potentials.capnp	169	NWChemDftStanza	directives	List					
+cpmdc	schema/Potentials.capnp	170	NWChemDftStanza	iterations	Int32	0				
+cpmdc	schema/Potentials.capnp	171	NWChemDftStanza	grid	Text	""				
+cpmdc	schema/Potentials.capnp	173	NWChemDftStanza	energyConv	Float64	0.0				
+cpmdc	schema/Potentials.capnp	174	NWChemDftStanza	densityConv	Float64	0.0				
+cpmdc	schema/Potentials.capnp	175	NWChemDftStanza	gradientConv	Float64	0.0				
+cpmdc	schema/Potentials.capnp	177	NWChemDftStanza	odft	Bool	false				
+cpmdc	schema/Potentials.capnp	178	NWChemDftStanza	diis	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	179	NWChemDftStanza	nfock	Int32	0				
+cpmdc	schema/Potentials.capnp	180	NWChemDftStanza	levelShift	Float64	0.0				
+cpmdc	schema/Potentials.capnp	181	NWChemDftStanza	vectorsInput	Text	""				
+cpmdc	schema/Potentials.capnp	182	NWChemDftStanza	vectorsOutput	Text	""				
+cpmdc	schema/Potentials.capnp	183	NWChemDftStanza	gridSpec	NWChemDftGridSpec					
+cpmdc	schema/Potentials.capnp	184	NWChemDftStanza	disp	NWChemDftDisp					
+cpmdc	schema/Potentials.capnp	185	NWChemDftStanza	cdft	NWChemCdftSpec					
+cpmdc	schema/Potentials.capnp	191	NWChemDftDisp	enabled	Bool	false				
+cpmdc	schema/Potentials.capnp	192	NWChemDftDisp	vdw	Int32	0				
+cpmdc	schema/Potentials.capnp	193	NWChemDftDisp	s6	Float64	0.0				
+cpmdc	schema/Potentials.capnp	194	NWChemDftDisp	s8	Float64	0.0				
+cpmdc	schema/Potentials.capnp	195	NWChemDftDisp	sr6	Float64	0.0				
+cpmdc	schema/Potentials.capnp	196	NWChemDftDisp	alpha	Float64	0.0				
+cpmdc	schema/Potentials.capnp	202	NWChemRelativisticStanza	method	Method	none				
+cpmdc	schema/Potentials.capnp	203	NWChemRelativisticStanza	spinOrbit	Bool	false				
+cpmdc	schema/Potentials.capnp	204	NWChemRelativisticStanza	atomicScf	Bool	false				
+cpmdc	schema/Potentials.capnp	205	NWChemRelativisticStanza	cutoff	Float64	0.0				
+cpmdc	schema/Potentials.capnp	206	NWChemRelativisticStanza	dkOrder	Int32	0				
+cpmdc	schema/Potentials.capnp	207	NWChemRelativisticStanza	dkModifier	Text	""				
+cpmdc	schema/Potentials.capnp	208	NWChemRelativisticStanza	directives	List					
+cpmdc	schema/Potentials.capnp	220	NWChemCosmoStanza	dielec	Float64	0.0				
+cpmdc	schema/Potentials.capnp	221	NWChemCosmoStanza	solvent	Text	""				
+cpmdc	schema/Potentials.capnp	222	NWChemCosmoStanza	rsolv	Float64	0.0				
+cpmdc	schema/Potentials.capnp	223	NWChemCosmoStanza	radiusScheme	Text	""				
+cpmdc	schema/Potentials.capnp	224	NWChemCosmoStanza	radii	List					
+cpmdc	schema/Potentials.capnp	225	NWChemCosmoStanza	iscren	Int32	0				
+cpmdc	schema/Potentials.capnp	226	NWChemCosmoStanza	minbem	Int32	0				
+cpmdc	schema/Potentials.capnp	227	NWChemCosmoStanza	lineq	Int32	0				
+cpmdc	schema/Potentials.capnp	228	NWChemCosmoStanza	doCosmoSmd	Bool	false				
+cpmdc	schema/Potentials.capnp	229	NWChemCosmoStanza	directives	List					
+cpmdc	schema/Potentials.capnp	235	NWChemSmdStanza	solvent	Text	""				
+cpmdc	schema/Potentials.capnp	236	NWChemSmdStanza	sola	Float64	0.0				
+cpmdc	schema/Potentials.capnp	237	NWChemSmdStanza	solb	Float64	0.0				
+cpmdc	schema/Potentials.capnp	238	NWChemSmdStanza	soln	Float64	0.0				
+cpmdc	schema/Potentials.capnp	239	NWChemSmdStanza	solg	Float64	0.0				
+cpmdc	schema/Potentials.capnp	240	NWChemSmdStanza	directives	List					
+cpmdc	schema/Potentials.capnp	246	NWChemConstraint	kind	Kind					
+cpmdc	schema/Potentials.capnp	247	NWChemConstraint	atoms	List					
+cpmdc	schema/Potentials.capnp	248	NWChemConstraint	value	Float64	0.0				
+cpmdc	schema/Potentials.capnp	259	NWChemConstraintsStanza	clear	Bool	false				
+cpmdc	schema/Potentials.capnp	260	NWChemConstraintsStanza	constraints	List					
+cpmdc	schema/Potentials.capnp	261	NWChemConstraintsStanza	directives	List					
+cpmdc	schema/Potentials.capnp	267	NWChemIsotope	atom	UInt32					
+cpmdc	schema/Potentials.capnp	268	NWChemIsotope	mass	Float64					
+cpmdc	schema/Potentials.capnp	272	NWChemVibStanza	temperatures	List					
+cpmdc	schema/Potentials.capnp	273	NWChemVibStanza	pressure	Float64	0.0				
+cpmdc	schema/Potentials.capnp	274	NWChemVibStanza	reuse	Text	""				
+cpmdc	schema/Potentials.capnp	275	NWChemVibStanza	animate	Bool	false				
+cpmdc	schema/Potentials.capnp	276	NWChemVibStanza	masses	List					
+cpmdc	schema/Potentials.capnp	277	NWChemVibStanza	directives	List					
+cpmdc	schema/Potentials.capnp	283	NWChemBqCharge	x	Float64					
+cpmdc	schema/Potentials.capnp	284	NWChemBqCharge	y	Float64					
+cpmdc	schema/Potentials.capnp	285	NWChemBqCharge	z	Float64					
+cpmdc	schema/Potentials.capnp	286	NWChemBqCharge	q	Float64					
+cpmdc	schema/Potentials.capnp	290	NWChemBqStanza	units	Text	""				
+cpmdc	schema/Potentials.capnp	291	NWChemBqStanza	charges	List					
+cpmdc	schema/Potentials.capnp	292	NWChemBqStanza	loadFile	Text	""				
+cpmdc	schema/Potentials.capnp	293	NWChemBqStanza	forces	Bool	false				
+cpmdc	schema/Potentials.capnp	294	NWChemBqStanza	directives	List					
+cpmdc	schema/Potentials.capnp	389	NWChemModuleStanza	name	NWChemModuleName	custom				
+cpmdc	schema/Potentials.capnp	390	NWChemModuleStanza	customName	Text	""				
+cpmdc	schema/Potentials.capnp	391	NWChemModuleStanza	directives	List					
+cpmdc	schema/Potentials.capnp	395	NWChemPseudopotentialEntry	element	Text					
+cpmdc	schema/Potentials.capnp	396	NWChemPseudopotentialEntry	libraryType	LibraryType	library				
+cpmdc	schema/Potentials.capnp	397	NWChemPseudopotentialEntry	libraryName	Text					
+cpmdc	schema/Potentials.capnp	398	NWChemPseudopotentialEntry	allElements	Bool	false				
+cpmdc	schema/Potentials.capnp	416	NWChemPseudopotentialSpinRule	channel	Channel	up				
+cpmdc	schema/Potentials.capnp	417	NWChemPseudopotentialSpinRule	angularMomentum	AngularMomentum	s				
+cpmdc	schema/Potentials.capnp	418	NWChemPseudopotentialSpinRule	scale	Float64	1.0				
+cpmdc	schema/Potentials.capnp	419	NWChemPseudopotentialSpinRule	ionIndices	List					
+cpmdc	schema/Potentials.capnp	420	NWChemPseudopotentialSpinRule	hasMagneticQuantumNumber	Bool	false				
+cpmdc	schema/Potentials.capnp	421	NWChemPseudopotentialSpinRule	magneticQuantumNumber	Int32	0				
+cpmdc	schema/Potentials.capnp	437	NWChemPseudopotentialUtermRule	angularMomentum	AngularMomentum	s				
+cpmdc	schema/Potentials.capnp	438	NWChemPseudopotentialUtermRule	uScale	Float64	0.0				
+cpmdc	schema/Potentials.capnp	439	NWChemPseudopotentialUtermRule	jScale	Float64	0.0				
+cpmdc	schema/Potentials.capnp	440	NWChemPseudopotentialUtermRule	ionIndices	List					
+cpmdc	schema/Potentials.capnp	456	NWChemPseudopotentialStanza	entries	List					
+cpmdc	schema/Potentials.capnp	457	NWChemPseudopotentialStanza	directives	List					
+cpmdc	schema/Potentials.capnp	458	NWChemPseudopotentialStanza	pspSpin	NWChemPseudopotentialSpinMode	unspecified				
+cpmdc	schema/Potentials.capnp	459	NWChemPseudopotentialStanza	spinRules	List					
+cpmdc	schema/Potentials.capnp	460	NWChemPseudopotentialStanza	semicoreSmall	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	461	NWChemPseudopotentialStanza	uterm	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	462	NWChemPseudopotentialStanza	utermRules	List					
+cpmdc	schema/Potentials.capnp	463	NWChemPseudopotentialStanza	blockName	NWChemPseudopotentialBlockName	pseudopotentials				
+cpmdc	schema/Potentials.capnp	467	NWChemKVector	x	Float64	0.0				
+cpmdc	schema/Potentials.capnp	468	NWChemKVector	y	Float64	0.0				
+cpmdc	schema/Potentials.capnp	469	NWChemKVector	z	Float64	0.0				
+cpmdc	schema/Potentials.capnp	470	NWChemKVector	weight	Float64	0.0				
+cpmdc	schema/Potentials.capnp	474	NWChemBrillouinZoneStanza	zoneName	Text	""				
+cpmdc	schema/Potentials.capnp	475	NWChemBrillouinZoneStanza	kVectors	List					
+cpmdc	schema/Potentials.capnp	476	NWChemBrillouinZoneStanza	maxKpointsPrint	Int32	0				
+cpmdc	schema/Potentials.capnp	477	NWChemBrillouinZoneStanza	monkhorstPackX	Int32	0				
+cpmdc	schema/Potentials.capnp	478	NWChemBrillouinZoneStanza	monkhorstPackY	Int32	0				
+cpmdc	schema/Potentials.capnp	479	NWChemBrillouinZoneStanza	monkhorstPackZ	Int32	0				
+cpmdc	schema/Potentials.capnp	480	NWChemBrillouinZoneStanza	directives	List					
+cpmdc	schema/Potentials.capnp	481	NWChemBrillouinZoneStanza	zoneStructureName	Text	""				
+cpmdc	schema/Potentials.capnp	482	NWChemBrillouinZoneStanza	zoneFftName	Text	""				
+cpmdc	schema/Potentials.capnp	483	NWChemBrillouinZoneStanza	tetrahedronGridX	Int32	0				
+cpmdc	schema/Potentials.capnp	484	NWChemBrillouinZoneStanza	tetrahedronGridY	Int32	0				
+cpmdc	schema/Potentials.capnp	485	NWChemBrillouinZoneStanza	tetrahedronGridZ	Int32	0				
+cpmdc	schema/Potentials.capnp	486	NWChemBrillouinZoneStanza	tetrahedronZoneName	Text	""				
+cpmdc	schema/Potentials.capnp	487	NWChemBrillouinZoneStanza	dosGridX	Int32	0				
+cpmdc	schema/Potentials.capnp	488	NWChemBrillouinZoneStanza	dosGridY	Int32	0				
+cpmdc	schema/Potentials.capnp	489	NWChemBrillouinZoneStanza	dosGridZ	Int32	0				
+cpmdc	schema/Potentials.capnp	490	NWChemBrillouinZoneStanza	dosGridZoneName	Text	""				
+cpmdc	schema/Potentials.capnp	491	NWChemBrillouinZoneStanza	dosFftGridX	Int32	0				
+cpmdc	schema/Potentials.capnp	492	NWChemBrillouinZoneStanza	dosFftGridY	Int32	0				
+cpmdc	schema/Potentials.capnp	493	NWChemBrillouinZoneStanza	dosFftGridZ	Int32	0				
+cpmdc	schema/Potentials.capnp	494	NWChemBrillouinZoneStanza	dosFftGridZoneName	Text	""				
+cpmdc	schema/Potentials.capnp	505	NWChemSimulationCellStanza	cellName	Text	""				
+cpmdc	schema/Potentials.capnp	506	NWChemSimulationCellStanza	boundaryConditions	Text	""				
+cpmdc	schema/Potentials.capnp	507	NWChemSimulationCellStanza	latticeVectorsBohr	List					
+cpmdc	schema/Potentials.capnp	508	NWChemSimulationCellStanza	ngridX	Int32	0				
+cpmdc	schema/Potentials.capnp	509	NWChemSimulationCellStanza	ngridY	Int32	0				
+cpmdc	schema/Potentials.capnp	510	NWChemSimulationCellStanza	ngridZ	Int32	0				
+cpmdc	schema/Potentials.capnp	511	NWChemSimulationCellStanza	ngridSmallX	Int32	0				
+cpmdc	schema/Potentials.capnp	512	NWChemSimulationCellStanza	ngridSmallY	Int32	0				
+cpmdc	schema/Potentials.capnp	513	NWChemSimulationCellStanza	ngridSmallZ	Int32	0				
+cpmdc	schema/Potentials.capnp	514	NWChemSimulationCellStanza	boxDeltaBohr	Float64	0.0				
+cpmdc	schema/Potentials.capnp	515	NWChemSimulationCellStanza	boxOrient	Bool	false				
+cpmdc	schema/Potentials.capnp	516	NWChemSimulationCellStanza	boxDifferentLengths	Bool	false				
+cpmdc	schema/Potentials.capnp	517	NWChemSimulationCellStanza	latticeKind	NWChemSimulationCellLatticeKind	unspecified				
+cpmdc	schema/Potentials.capnp	518	NWChemSimulationCellStanza	latticeLengthBohr	Float64	0.0				
+cpmdc	schema/Potentials.capnp	519	NWChemSimulationCellStanza	directives	List					
+cpmdc	schema/Potentials.capnp	671	NWChemNwpwStanza	energyCutoff	Float64	0.0				
+cpmdc	schema/Potentials.capnp	672	NWChemNwpwStanza	wavefunctionCutoff	Float64	0.0				
+cpmdc	schema/Potentials.capnp	673	NWChemNwpwStanza	ewaldRcut	Float64	0.0				
+cpmdc	schema/Potentials.capnp	674	NWChemNwpwStanza	ewaldNcut	Int32	0				
+cpmdc	schema/Potentials.capnp	675	NWChemNwpwStanza	directives	List					
+cpmdc	schema/Potentials.capnp	676	NWChemNwpwStanza	cellName	Text	""				
+cpmdc	schema/Potentials.capnp	677	NWChemNwpwStanza	inputWavefunctionFilename	Text	""				
+cpmdc	schema/Potentials.capnp	678	NWChemNwpwStanza	outputWavefunctionFilename	Text	""				
+cpmdc	schema/Potentials.capnp	679	NWChemNwpwStanza	fakeMass	Float64	0.0				
+cpmdc	schema/Potentials.capnp	680	NWChemNwpwStanza	timeStep	Float64	0.0				
+cpmdc	schema/Potentials.capnp	681	NWChemNwpwStanza	loopStart	Int32	0				
+cpmdc	schema/Potentials.capnp	682	NWChemNwpwStanza	loopEnd	Int32	0				
+cpmdc	schema/Potentials.capnp	683	NWChemNwpwStanza	toleranceEnergy	Float64	0.0				
+cpmdc	schema/Potentials.capnp	684	NWChemNwpwStanza	toleranceDensity	Float64	0.0				
+cpmdc	schema/Potentials.capnp	685	NWChemNwpwStanza	toleranceGradient	Float64	0.0				
+cpmdc	schema/Potentials.capnp	686	NWChemNwpwStanza	exchangeCorrelation	Text	""				
+cpmdc	schema/Potentials.capnp	687	NWChemNwpwStanza	balanceMode	NWChemNwpwBalanceMode	unspecified				
+cpmdc	schema/Potentials.capnp	688	NWChemNwpwStanza	boStepStart	Int32	0				
+cpmdc	schema/Potentials.capnp	689	NWChemNwpwStanza	boStepEnd	Int32	0				
+cpmdc	schema/Potentials.capnp	690	NWChemNwpwStanza	boTimeStep	Float64	0.0				
+cpmdc	schema/Potentials.capnp	691	NWChemNwpwStanza	boAlgorithm	NWChemNwpwBoAlgorithm	unspecified				
+cpmdc	schema/Potentials.capnp	692	NWChemNwpwStanza	boFakeMass	Float64	0.0				
+cpmdc	schema/Potentials.capnp	693	NWChemNwpwStanza	scalingFirst	Float64	0.0				
+cpmdc	schema/Potentials.capnp	694	NWChemNwpwStanza	scalingSecond	Float64	0.0				
+cpmdc	schema/Potentials.capnp	695	NWChemNwpwStanza	npFftProcesses	Int32	0				
+cpmdc	schema/Potentials.capnp	696	NWChemNwpwStanza	npOrbitalProcesses	Int32	0				
+cpmdc	schema/Potentials.capnp	697	NWChemNwpwStanza	npKspaceProcesses	Int32	0				
+cpmdc	schema/Potentials.capnp	698	NWChemNwpwStanza	spinOrbit	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	699	NWChemNwpwStanza	parallelIo	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	700	NWChemNwpwStanza	xyzFilename	Text	""				
+cpmdc	schema/Potentials.capnp	701	NWChemNwpwStanza	ionMotionFilename	Text	""				
+cpmdc	schema/Potentials.capnp	702	NWChemNwpwStanza	electronMotionFilename	Text	""				
+cpmdc	schema/Potentials.capnp	703	NWChemNwpwStanza	hamiltonianMotionFilename	Text	""				
+cpmdc	schema/Potentials.capnp	704	NWChemNwpwStanza	orbitalMotionFilename	Text	""				
+cpmdc	schema/Potentials.capnp	705	NWChemNwpwStanza	eigenvalueMotionFilename	Text	""				
+cpmdc	schema/Potentials.capnp	706	NWChemNwpwStanza	fractionalOrbitalsStart	Int32	0				
+cpmdc	schema/Potentials.capnp	707	NWChemNwpwStanza	fractionalOrbitalsEnd	Int32	0				
+cpmdc	schema/Potentials.capnp	708	NWChemNwpwStanza	smearTemperature	Float64	0.0				
+cpmdc	schema/Potentials.capnp	709	NWChemNwpwStanza	smearAlpha	Float64	0.0				
+cpmdc	schema/Potentials.capnp	710	NWChemNwpwStanza	smearType	NWChemNwpwSmearType	unspecified				
+cpmdc	schema/Potentials.capnp	711	NWChemNwpwStanza	virtualOrbitalsStart	Int32	0				
+cpmdc	schema/Potentials.capnp	712	NWChemNwpwStanza	virtualOrbitalsEnd	Int32	0				
+cpmdc	schema/Potentials.capnp	713	NWChemNwpwStanza	lcaoMode	NWChemNwpwLcaoMode	unspecified				
+cpmdc	schema/Potentials.capnp	714	NWChemNwpwStanza	ewaldGridX	Int32	0				
+cpmdc	schema/Potentials.capnp	715	NWChemNwpwStanza	ewaldGridY	Int32	0				
+cpmdc	schema/Potentials.capnp	716	NWChemNwpwStanza	ewaldGridZ	Int32	0				
+cpmdc	schema/Potentials.capnp	717	NWChemNwpwStanza	noseHoover	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	718	NWChemNwpwStanza	noseRestart	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	719	NWChemNwpwStanza	noseElectronPeriod	Float64	0.0				
+cpmdc	schema/Potentials.capnp	720	NWChemNwpwStanza	noseElectronTemperature	Float64	0.0				
+cpmdc	schema/Potentials.capnp	721	NWChemNwpwStanza	noseIonPeriod	Float64	0.0				
+cpmdc	schema/Potentials.capnp	722	NWChemNwpwStanza	noseIonTemperature	Float64	0.0				
+cpmdc	schema/Potentials.capnp	723	NWChemNwpwStanza	noseElectronChainLength	Int32	0				
+cpmdc	schema/Potentials.capnp	724	NWChemNwpwStanza	noseIonChainLength	Int32	0				
+cpmdc	schema/Potentials.capnp	725	NWChemNwpwStanza	atomEfield	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	726	NWChemNwpwStanza	atomEfieldGradient	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	727	NWChemNwpwStanza	mulliken	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	728	NWChemNwpwStanza	mullikenKawai	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	729	NWChemNwpwStanza	periodicDipole	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	730	NWChemNwpwStanza	electricField	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	731	NWChemNwpwStanza	electricFieldX	Float64	0.0				
+cpmdc	schema/Potentials.capnp	732	NWChemNwpwStanza	electricFieldY	Float64	0.0				
+cpmdc	schema/Potentials.capnp	733	NWChemNwpwStanza	electricFieldZ	Float64	0.0				
+cpmdc	schema/Potentials.capnp	734	NWChemNwpwStanza	electricFieldCenterSet	Bool	false				
+cpmdc	schema/Potentials.capnp	735	NWChemNwpwStanza	electricFieldCenterX	Float64	0.0				
+cpmdc	schema/Potentials.capnp	736	NWChemNwpwStanza	electricFieldCenterY	Float64	0.0				
+cpmdc	schema/Potentials.capnp	737	NWChemNwpwStanza	electricFieldCenterZ	Float64	0.0				
+cpmdc	schema/Potentials.capnp	738	NWChemNwpwStanza	electricFieldType	NWChemNwpwEfieldType	unspecified				
+cpmdc	schema/Potentials.capnp	739	NWChemNwpwStanza	smoothCutoff	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	740	NWChemNwpwStanza	smoothCutoffAfac	Float64	0.0				
+cpmdc	schema/Potentials.capnp	741	NWChemNwpwStanza	smoothCutoffSigma	Float64	0.0				
+cpmdc	schema/Potentials.capnp	742	NWChemNwpwStanza	cutoffBootWavefunction	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	743	NWChemNwpwStanza	fastErf	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	744	NWChemNwpwStanza	dipoleMotion	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	745	NWChemNwpwStanza	dipoleMotionFilename	Text	""				
+cpmdc	schema/Potentials.capnp	746	NWChemNwpwStanza	rhoUseSymmetry	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	747	NWChemNwpwStanza	fmm	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	748	NWChemNwpwStanza	fmmLmax	Int32	0				
+cpmdc	schema/Potentials.capnp	749	NWChemNwpwStanza	fmmLongRange	Int32	0				
+cpmdc	schema/Potentials.capnp	750	NWChemNwpwStanza	born	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	751	NWChemNwpwStanza	bornDielectric	Float64	0.0				
+cpmdc	schema/Potentials.capnp	752	NWChemNwpwStanza	bornRelax	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	753	NWChemNwpwStanza	bornVRadiiAngstrom	List					
+cpmdc	schema/Potentials.capnp	754	NWChemNwpwStanza	cpmdProperties	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	755	NWChemNwpwStanza	useGridComparison	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	756	NWChemNwpwStanza	director	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	757	NWChemNwpwStanza	directorFilename	Text	""				
+cpmdc	schema/Potentials.capnp	758	NWChemNwpwStanza	cellExpandX	Int32	0				
+cpmdc	schema/Potentials.capnp	759	NWChemNwpwStanza	cellExpandY	Int32	0				
+cpmdc	schema/Potentials.capnp	760	NWChemNwpwStanza	cellExpandZ	Int32	0				
+cpmdc	schema/Potentials.capnp	761	NWChemNwpwStanza	mapping	Int32	0				
+cpmdc	schema/Potentials.capnp	762	NWChemNwpwStanza	rotation	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	763	NWChemNwpwStanza	lmaxMultipole	Int32	-1				
+cpmdc	schema/Potentials.capnp	764	NWChemNwpwStanza	fei	Bool	false				
+cpmdc	schema/Potentials.capnp	765	NWChemNwpwStanza	feiFilename	Text	""				
+cpmdc	schema/Potentials.capnp	766	NWChemNwpwStanza	initialVelocitiesTemperature	Float64	0.0				
+cpmdc	schema/Potentials.capnp	767	NWChemNwpwStanza	initialVelocitiesSeed	Int32	-1				
+cpmdc	schema/Potentials.capnp	768	NWChemNwpwStanza	makeHmass2	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	769	NWChemNwpwStanza	translateVectorSet	Bool	false				
+cpmdc	schema/Potentials.capnp	770	NWChemNwpwStanza	translateVectorX	Float64	0.0				
+cpmdc	schema/Potentials.capnp	771	NWChemNwpwStanza	translateVectorY	Float64	0.0				
+cpmdc	schema/Potentials.capnp	772	NWChemNwpwStanza	translateVectorZ	Float64	0.0				
+cpmdc	schema/Potentials.capnp	773	NWChemNwpwStanza	translateGeometryName	Text	""				
+cpmdc	schema/Potentials.capnp	774	NWChemNwpwStanza	translateReorder	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	775	NWChemNwpwStanza	socketType	Text	""				
+cpmdc	schema/Potentials.capnp	776	NWChemNwpwStanza	socketIp	Text	""				
+cpmdc	schema/Potentials.capnp	777	NWChemNwpwStanza	apcSet	Bool	false				
+cpmdc	schema/Potentials.capnp	778	NWChemNwpwStanza	apcGc	Float64	0.0				
+cpmdc	schema/Potentials.capnp	779	NWChemNwpwStanza	apcGamma	List					
+cpmdc	schema/Potentials.capnp	780	NWChemNwpwStanza	translation	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	781	NWChemNwpwStanza	minimizer	NWChemNwpwMinimizer	unspecified				
+cpmdc	schema/Potentials.capnp	782	NWChemNwpwStanza	ksAlgorithm	NWChemNwpwKsAlgorithm	unspecified				
+cpmdc	schema/Potentials.capnp	783	NWChemNwpwStanza	scfAlgorithm	NWChemNwpwScfAlgorithm	unspecified				
+cpmdc	schema/Potentials.capnp	784	NWChemNwpwStanza	precondition	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	785	NWChemNwpwStanza	kerkerG0Set	Bool	false				
+cpmdc	schema/Potentials.capnp	786	NWChemNwpwStanza	kerkerG0	Float64	0.0				
+cpmdc	schema/Potentials.capnp	787	NWChemNwpwStanza	ksAlphaSet	Bool	false				
+cpmdc	schema/Potentials.capnp	788	NWChemNwpwStanza	ksAlpha	Float64	0.0				
+cpmdc	schema/Potentials.capnp	789	NWChemNwpwStanza	ksMaxitOrbSet	Bool	false				
+cpmdc	schema/Potentials.capnp	790	NWChemNwpwStanza	ksMaxitOrb	Int32	0				
+cpmdc	schema/Potentials.capnp	791	NWChemNwpwStanza	ksMaxitOrbsSet	Bool	false				
+cpmdc	schema/Potentials.capnp	792	NWChemNwpwStanza	ksMaxitOrbs	Int32	0				
+cpmdc	schema/Potentials.capnp	793	NWChemNwpwStanza	diisHistoriesSet	Bool	false				
+cpmdc	schema/Potentials.capnp	794	NWChemNwpwStanza	diisHistories	Int32	0				
+cpmdc	schema/Potentials.capnp	795	NWChemNwpwStanza	oneElectronGuessSet	Bool	false				
+cpmdc	schema/Potentials.capnp	796	NWChemNwpwStanza	oneElectronGuessItIn	Int32	0				
+cpmdc	schema/Potentials.capnp	797	NWChemNwpwStanza	oneElectronGuessItOut	Int32	0				
+cpmdc	schema/Potentials.capnp	798	NWChemNwpwStanza	oneElectronGuessItOrtho	Int32	0				
+cpmdc	schema/Potentials.capnp	799	NWChemNwpwStanza	vfieldFilenames	List					
+cpmdc	schema/Potentials.capnp	800	NWChemNwpwStanza	singlePrecisionHfx	Bool	false				
+cpmdc	schema/Potentials.capnp	801	NWChemNwpwStanza	dosAlphaSet	Bool	false				
+cpmdc	schema/Potentials.capnp	802	NWChemNwpwStanza	dosAlpha	Float64	0.0				
+cpmdc	schema/Potentials.capnp	803	NWChemNwpwStanza	dosNpointsSet	Bool	false				
+cpmdc	schema/Potentials.capnp	804	NWChemNwpwStanza	dosNpoints	Int32	0				
+cpmdc	schema/Potentials.capnp	805	NWChemNwpwStanza	dosEminSet	Bool	false				
+cpmdc	schema/Potentials.capnp	806	NWChemNwpwStanza	dosEmin	Float64	0.0				
+cpmdc	schema/Potentials.capnp	807	NWChemNwpwStanza	dosEmaxSet	Bool	false				
+cpmdc	schema/Potentials.capnp	808	NWChemNwpwStanza	dosEmax	Float64	0.0				
+cpmdc	schema/Potentials.capnp	809	NWChemNwpwStanza	dosFilename	Text	""				
+cpmdc	schema/Potentials.capnp	810	NWChemNwpwStanza	geometryOptimize	Bool	false				
+cpmdc	schema/Potentials.capnp	811	NWChemNwpwStanza	auxiliaryPotentials	Bool	false				
+cpmdc	schema/Potentials.capnp	812	NWChemNwpwStanza	multiplicity	Int32	0				
+cpmdc	schema/Potentials.capnp	813	NWChemNwpwStanza	spinMode	NWChemNwpwSpinMode	unspecified				
+cpmdc	schema/Potentials.capnp	814	NWChemNwpwStanza	allowTranslation	Bool	false				
+cpmdc	schema/Potentials.capnp	815	NWChemNwpwStanza	cutoffWavefunction	Float64	0.0				
+cpmdc	schema/Potentials.capnp	816	NWChemNwpwStanza	cutoffEnergy	Float64	0.0				
+cpmdc	schema/Potentials.capnp	817	NWChemNwpwStanza	mcStepStart	Int32	0				
+cpmdc	schema/Potentials.capnp	818	NWChemNwpwStanza	mcStepEnd	Int32	0				
+cpmdc	schema/Potentials.capnp	819	NWChemNwpwStanza	etMovecsA	Text	""				
+cpmdc	schema/Potentials.capnp	820	NWChemNwpwStanza	etMovecsB	Text	""				
+cpmdc	schema/Potentials.capnp	821	NWChemNwpwStanza	etIonA	Text	""				
+cpmdc	schema/Potentials.capnp	822	NWChemNwpwStanza	etIonB	Text	""				
+cpmdc	schema/Potentials.capnp	823	NWChemNwpwStanza	temperatureIon	Float64	0.0				
+cpmdc	schema/Potentials.capnp	824	NWChemNwpwStanza	temperatureIonPeriod	Float64	0.0				
+cpmdc	schema/Potentials.capnp	825	NWChemNwpwStanza	temperatureElectron	Float64	0.0				
+cpmdc	schema/Potentials.capnp	826	NWChemNwpwStanza	temperatureElectronPeriod	Float64	0.0				
+cpmdc	schema/Potentials.capnp	827	NWChemNwpwStanza	temperatureRestart	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	828	NWChemNwpwStanza	temperatureIonChainLength	Int32	0				
+cpmdc	schema/Potentials.capnp	829	NWChemNwpwStanza	temperatureElectronChainLength	Int32	0				
+cpmdc	schema/Potentials.capnp	830	NWChemNwpwStanza	mappingAlias	NWChemNwpwMappingAlias	unspecified				
+cpmdc	schema/Potentials.capnp	831	NWChemNwpwStanza	virtualAliasSet	Bool	false				
+cpmdc	schema/Potentials.capnp	832	NWChemNwpwStanza	virtualAliasStart	Int32	0				
+cpmdc	schema/Potentials.capnp	833	NWChemNwpwStanza	virtualAliasEnd	Int32	0				
+cpmdc	schema/Potentials.capnp	834	NWChemNwpwStanza	boTimeStepSet	Bool	false				
+cpmdc	schema/Potentials.capnp	835	NWChemNwpwStanza	boFakeMassSet	Bool	false				
+cpmdc	schema/Potentials.capnp	836	NWChemNwpwStanza	scalingSet	Bool	false				
+cpmdc	schema/Potentials.capnp	837	NWChemNwpwStanza	npDimensionsSet	Bool	false				
+cpmdc	schema/Potentials.capnp	838	NWChemNwpwStanza	tolerancesSet	Bool	false				
+cpmdc	schema/Potentials.capnp	839	NWChemNwpwStanza	mappingSet	Bool	false				
+cpmdc	schema/Potentials.capnp	840	NWChemNwpwStanza	dosSet	Bool	false				
+cpmdc	schema/Potentials.capnp	841	NWChemNwpwStanza	lcaoMask	NWChemNwpwToggle	unspecified				
+cpmdc	schema/Potentials.capnp	842	NWChemNwpwStanza	lcaoMaskUpOrbitals	List					
+cpmdc	schema/Potentials.capnp	843	NWChemNwpwStanza	lcaoMaskDownOrbitals	List					
+cpmdc	schema/Potentials.capnp	844	NWChemNwpwStanza	occupations	List					
+cpmdc	schema/Potentials.capnp	845	NWChemNwpwStanza	occupationStates	List					
+cpmdc	schema/Potentials.capnp	846	NWChemNwpwStanza	extraOrbitals	Int32	0				
+cpmdc	schema/Potentials.capnp	847	NWChemNwpwStanza	scalingAtomIndices	List					
+cpmdc	schema/Potentials.capnp	852	NWChemScfConvergence	mode	Mode	unspecified				
+cpmdc	schema/Potentials.capnp	870	NWChemScfSemidirect	enabled	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	871	NWChemScfSemidirect	filesize	Int32	0				
+cpmdc	schema/Potentials.capnp	872	NWChemScfSemidirect	memsize	Int32	0				
+cpmdc	schema/Potentials.capnp	879	NWChemScfStanza	vectorsInput	Text	""				
+cpmdc	schema/Potentials.capnp	880	NWChemScfStanza	vectorsOutput	Text	""				
+cpmdc	schema/Potentials.capnp	881	NWChemScfStanza	maxiter	Int32	0				
+cpmdc	schema/Potentials.capnp	882	NWChemScfStanza	thresh	Float64	0				
+cpmdc	schema/Potentials.capnp	883	NWChemScfStanza	tol2e	Float64	0				
+cpmdc	schema/Potentials.capnp	884	NWChemScfStanza	noprint	Bool	false				
+cpmdc	schema/Potentials.capnp	885	NWChemScfStanza	directives	List					
+cpmdc	schema/Potentials.capnp	889	NWChemScfStanza	wavefunctionType	Text	""				
+cpmdc	schema/Potentials.capnp	891	NWChemScfStanza	nopen	Int32	-1				
+cpmdc	schema/Potentials.capnp	892	NWChemScfStanza	diis	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	893	NWChemScfStanza	diisBas	Int32	0				
+cpmdc	schema/Potentials.capnp	894	NWChemScfStanza	maxsub	Int32	0				
+cpmdc	schema/Potentials.capnp	895	NWChemScfStanza	lock	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	896	NWChemScfStanza	adapt	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	897	NWChemScfStanza	noscf	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	898	NWChemScfStanza	convergence	NWChemScfConvergence					
+cpmdc	schema/Potentials.capnp	899	NWChemScfStanza	semidirect	NWChemScfSemidirect					
+cpmdc	schema/Potentials.capnp	905	NWChemCcsdStanza	maxiter	Int32	0				
+cpmdc	schema/Potentials.capnp	906	NWChemCcsdStanza	thresh	Float64	0.0				
+cpmdc	schema/Potentials.capnp	907	NWChemCcsdStanza	tol2e	Float64	0.0				
+cpmdc	schema/Potentials.capnp	908	NWChemCcsdStanza	iprt	Int32	0				
+cpmdc	schema/Potentials.capnp	909	NWChemCcsdStanza	maxDiis	Int32	0				
+cpmdc	schema/Potentials.capnp	910	NWChemCcsdStanza	frozenCore	Int32	0				
+cpmdc	schema/Potentials.capnp	911	NWChemCcsdStanza	frozenVirtual	Int32	0				
+cpmdc	schema/Potentials.capnp	912	NWChemCcsdStanza	useDisk	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	913	NWChemCcsdStanza	sameSpinScale	Float64	0.0				
+cpmdc	schema/Potentials.capnp	914	NWChemCcsdStanza	oppositeSpinScale	Float64	0.0				
+cpmdc	schema/Potentials.capnp	915	NWChemCcsdStanza	directives	List					
+cpmdc	schema/Potentials.capnp	916	NWChemCcsdStanza	printLevel	NWChemPrintLevel	unspecified				
+cpmdc	schema/Potentials.capnp	917	NWChemCcsdStanza	printItems	List					
+cpmdc	schema/Potentials.capnp	918	NWChemCcsdStanza	noPrintItems	List					
+cpmdc	schema/Potentials.capnp	919	NWChemCcsdStanza	doa	List					
+cpmdc	schema/Potentials.capnp	920	NWChemCcsdStanza	dob	List					
+cpmdc	schema/Potentials.capnp	921	NWChemCcsdStanza	dog	List					
+cpmdc	schema/Potentials.capnp	922	NWChemCcsdStanza	doh	List					
+cpmdc	schema/Potentials.capnp	923	NWChemCcsdStanza	dojk	List					
+cpmdc	schema/Potentials.capnp	924	NWChemCcsdStanza	dos	List					
+cpmdc	schema/Potentials.capnp	925	NWChemCcsdStanza	dod	List					
+cpmdc	schema/Potentials.capnp	926	NWChemCcsdStanza	useTriplesDriverNonblocking	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	927	NWChemCcsdStanza	useCcsdOpenmp	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	928	NWChemCcsdStanza	useTriplesDriverOpenmp	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	929	NWChemCcsdStanza	useTriplesDriverOffload	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	935	NWChemTceStanza	method	Text	""				
+cpmdc	schema/Potentials.capnp	936	NWChemTceStanza	model	Text	""				
+cpmdc	schema/Potentials.capnp	937	NWChemTceStanza	model2e	NWChemTceTwoElectronStorage	unspecified				
+cpmdc	schema/Potentials.capnp	938	NWChemTceStanza	perturbative	Text	""				
+cpmdc	schema/Potentials.capnp	939	NWChemTceStanza	ccsdVariant	Text	""				
+cpmdc	schema/Potentials.capnp	940	NWChemTceStanza	noTriplesSingles	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	941	NWChemTceStanza	reference	NWChemTceReference	unspecified				
+cpmdc	schema/Potentials.capnp	942	NWChemTceStanza	frozenCore	Int32	0				
+cpmdc	schema/Potentials.capnp	943	NWChemTceStanza	frozenVirtual	Int32	0				
+cpmdc	schema/Potentials.capnp	944	NWChemTceStanza	thresh	Float64	0.0				
+cpmdc	schema/Potentials.capnp	945	NWChemTceStanza	levelShift	Float64	0.0				
+cpmdc	schema/Potentials.capnp	946	NWChemTceStanza	leftLevelShift	Float64	0.0				
+cpmdc	schema/Potentials.capnp	947	NWChemTceStanza	levelShift2Alpha	Float64	0.0				
+cpmdc	schema/Potentials.capnp	948	NWChemTceStanza	levelShift2Beta	Float64	0.0				
+cpmdc	schema/Potentials.capnp	949	NWChemTceStanza	levelShift3Alpha	Float64	0.0				
+cpmdc	schema/Potentials.capnp	950	NWChemTceStanza	levelShift3Beta	Float64	0.0				
+cpmdc	schema/Potentials.capnp	951	NWChemTceStanza	maxiter	Int32	0				
+cpmdc	schema/Potentials.capnp	952	NWChemTceStanza	ioAlgorithm	NWChemTceIoAlgorithm	unspecified				
+cpmdc	schema/Potentials.capnp	953	NWChemTceStanza	diis	Int32	0				
+cpmdc	schema/Potentials.capnp	954	NWChemTceStanza	diis2	Int32	0				
+cpmdc	schema/Potentials.capnp	955	NWChemTceStanza	diis3	Int32	0				
+cpmdc	schema/Potentials.capnp	956	NWChemTceStanza	eomSolver	Int32	0				
+cpmdc	schema/Potentials.capnp	957	NWChemTceStanza	hbarDimension	Int32	0				
+cpmdc	schema/Potentials.capnp	958	NWChemTceStanza	nroots	Int32	0				
+cpmdc	schema/Potentials.capnp	959	NWChemTceStanza	target	Int32	0				
+cpmdc	schema/Potentials.capnp	960	NWChemTceStanza	targetSymmetry	Text	""				
+cpmdc	schema/Potentials.capnp	961	NWChemTceStanza	symmetry	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	962	NWChemTceStanza	densityMatrix	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	963	NWChemTceStanza	densityMatrixFile	Text	""				
+cpmdc	schema/Potentials.capnp	964	NWChemTceStanza	left	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	965	NWChemTceStanza	multipole	Int32	0				
+cpmdc	schema/Potentials.capnp	966	NWChemTceStanza	fragment	Int32	-1				
+cpmdc	schema/Potentials.capnp	967	NWChemTceStanza	recomputeFock	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	968	NWChemTceStanza	activeOccupiedAlpha	Int32	0				
+cpmdc	schema/Potentials.capnp	969	NWChemTceStanza	activeOccupiedBeta	Int32	0				
+cpmdc	schema/Potentials.capnp	970	NWChemTceStanza	activeVirtualAlpha	Int32	0				
+cpmdc	schema/Potentials.capnp	971	NWChemTceStanza	activeVirtualBeta	Int32	0				
+cpmdc	schema/Potentials.capnp	972	NWChemTceStanza	activeOccupied	Int32	0				
+cpmdc	schema/Potentials.capnp	973	NWChemTceStanza	activeUnoccupied	Int32	0				
+cpmdc	schema/Potentials.capnp	974	NWChemTceStanza	activeEnergyMin	Float64	0.0				
+cpmdc	schema/Potentials.capnp	975	NWChemTceStanza	activeEnergyMax	Float64	0.0				
+cpmdc	schema/Potentials.capnp	976	NWChemTceStanza	activeExcitationLevel	Int32	0				
+cpmdc	schema/Potentials.capnp	977	NWChemTceStanza	maxDiff	Float64	0.0				
+cpmdc	schema/Potentials.capnp	978	NWChemTceStanza	atomicTileSize	Int32	0				
+cpmdc	schema/Potentials.capnp	979	NWChemTceStanza	split	Int32	0				
+cpmdc	schema/Potentials.capnp	980	NWChemTceStanza	twoElectronMethod	Int32	0				
+cpmdc	schema/Potentials.capnp	981	NWChemTceStanza	diskBackend	Int32	-1				
+cpmdc	schema/Potentials.capnp	982	NWChemTceStanza	tileSize	Int32	0				
+cpmdc	schema/Potentials.capnp	983	NWChemTceStanza	cudaDevices	Int32	0				
+cpmdc	schema/Potentials.capnp	984	NWChemTceStanza	mrcc	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	985	NWChemTceStanza	tccSpaces	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	986	NWChemTceStanza	eaCcsd	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	987	NWChemTceStanza	ipCcsd	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	988	NWChemTceStanza	directives	List					
+cpmdc	schema/Potentials.capnp	989	NWChemTceStanza	freezeMode	NWChemTceFreezeMode	unspecified				
+cpmdc	schema/Potentials.capnp	990	NWChemTceStanza	dipole	Bool	false				
+cpmdc	schema/Potentials.capnp	991	NWChemTceStanza	printLevel	NWChemPrintLevel	unspecified				
+cpmdc	schema/Potentials.capnp	992	NWChemTceStanza	printItems	List					
+cpmdc	schema/Potentials.capnp	993	NWChemTceStanza	quadrupole	Bool	false				
+cpmdc	schema/Potentials.capnp	994	NWChemTceStanza	octupole	Bool	false				
+cpmdc	schema/Potentials.capnp	1000	NWChemMrccDataStanza	root	Int32	0				
+cpmdc	schema/Potentials.capnp	1001	NWChemMrccDataStanza	casElectrons	Int32	0				
+cpmdc	schema/Potentials.capnp	1002	NWChemMrccDataStanza	casOrbitals	Int32	0				
+cpmdc	schema/Potentials.capnp	1003	NWChemMrccDataStanza	nref	Int32	0				
+cpmdc	schema/Potentials.capnp	1004	NWChemMrccDataStanza	references	List					
+cpmdc	schema/Potentials.capnp	1005	NWChemMrccDataStanza	se4t	Bool	false				
+cpmdc	schema/Potentials.capnp	1006	NWChemMrccDataStanza	noAposteriori	Bool	false				
+cpmdc	schema/Potentials.capnp	1007	NWChemMrccDataStanza	subgroupSize	Int32	0				
+cpmdc	schema/Potentials.capnp	1008	NWChemMrccDataStanza	improveTiling	Bool	false				
+cpmdc	schema/Potentials.capnp	1009	NWChemMrccDataStanza	usspt	Bool	false				
+cpmdc	schema/Potentials.capnp	1010	NWChemMrccDataStanza	directives	List					
+cpmdc	schema/Potentials.capnp	1018	NWChemTaskStanza	theory	Text	""				
+cpmdc	schema/Potentials.capnp	1019	NWChemTaskStanza	operation	Text	""				
+cpmdc	schema/Potentials.capnp	1020	NWChemTaskStanza	ignore	Bool	false				
+cpmdc	schema/Potentials.capnp	1026	NWChemDriverStanza	maxiter	Int32	0				
+cpmdc	schema/Potentials.capnp	1027	NWChemDriverStanza	tight	Bool	false				
+cpmdc	schema/Potentials.capnp	1028	NWChemDriverStanza	loose	Bool	false				
+cpmdc	schema/Potentials.capnp	1029	NWChemDriverStanza	xyz	Text	""				
+cpmdc	schema/Potentials.capnp	1030	NWChemDriverStanza	directives	List					
+cpmdc	schema/Potentials.capnp	1031	NWChemDriverStanza	gmaxTol	Float64	0				
+cpmdc	schema/Potentials.capnp	1032	NWChemDriverStanza	grmsTol	Float64	0				
+cpmdc	schema/Potentials.capnp	1033	NWChemDriverStanza	xmaxTol	Float64	0				
+cpmdc	schema/Potentials.capnp	1034	NWChemDriverStanza	xrmsTol	Float64	0				
+cpmdc	schema/Potentials.capnp	1041	NWChemPropertyStanza	dipole	Bool	false				
+cpmdc	schema/Potentials.capnp	1042	NWChemPropertyStanza	mulliken	Bool	false				
+cpmdc	schema/Potentials.capnp	1043	NWChemPropertyStanza	quadrupol	Bool	false				
+cpmdc	schema/Potentials.capnp	1044	NWChemPropertyStanza	directives	List					
+cpmdc	schema/Potentials.capnp	1045	NWChemPropertyStanza	octupole	Bool	false				
+cpmdc	schema/Potentials.capnp	1046	NWChemPropertyStanza	esp	Bool	false				
+cpmdc	schema/Potentials.capnp	1047	NWChemPropertyStanza	efield	Bool	false				
+cpmdc	schema/Potentials.capnp	1048	NWChemPropertyStanza	efieldGrad	Bool	false				
+cpmdc	schema/Potentials.capnp	1049	NWChemPropertyStanza	electronDensity	Bool	false				
+cpmdc	schema/Potentials.capnp	1050	NWChemPropertyStanza	spinDensity	Bool	false				
+cpmdc	schema/Potentials.capnp	1051	NWChemPropertyStanza	spinPopulation	Bool	false				
+cpmdc	schema/Potentials.capnp	1052	NWChemPropertyStanza	shielding	Bool	false				
+cpmdc	schema/Potentials.capnp	1053	NWChemPropertyStanza	hyperfine	Bool	false				
+cpmdc	schema/Potentials.capnp	1054	NWChemPropertyStanza	polarizability	Bool	false				
+cpmdc	schema/Potentials.capnp	1060	NWChemMp2Stanza	freezeCore	Int32	0				
+cpmdc	schema/Potentials.capnp	1061	NWChemMp2Stanza	freezeVirtual	Int32	0				
+cpmdc	schema/Potentials.capnp	1062	NWChemMp2Stanza	tight	Bool	false				
+cpmdc	schema/Potentials.capnp	1063	NWChemMp2Stanza	aotol2e	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1064	NWChemMp2Stanza	aotol2eFock	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1065	NWChemMp2Stanza	backtol	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1066	NWChemMp2Stanza	sameSpinScale	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1067	NWChemMp2Stanza	oppositeSpinScale	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1068	NWChemMp2Stanza	scs	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	1069	NWChemMp2Stanza	scratchDisk	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1070	NWChemMp2Stanza	directives	List					
+cpmdc	schema/Potentials.capnp	1076	NWChemTddftStanza	nroots	Int32	0				
+cpmdc	schema/Potentials.capnp	1077	NWChemTddftStanza	tda	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	1078	NWChemTddftStanza	maxiter	Int32	0				
+cpmdc	schema/Potentials.capnp	1079	NWChemTddftStanza	thresh	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1080	NWChemTddftStanza	maxvecs	Int32	0				
+cpmdc	schema/Potentials.capnp	1081	NWChemTddftStanza	singlet	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	1082	NWChemTddftStanza	triplet	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	1083	NWChemTddftStanza	target	Int32	0				
+cpmdc	schema/Potentials.capnp	1084	NWChemTddftStanza	targetSym	Text	""				
+cpmdc	schema/Potentials.capnp	1085	NWChemTddftStanza	symmetry	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	1086	NWChemTddftStanza	algorithm	Int32	0				
+cpmdc	schema/Potentials.capnp	1087	NWChemTddftStanza	energyCutoff	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1088	NWChemTddftStanza	directives	List					
+cpmdc	schema/Potentials.capnp	1090	NWChemTddftStanza	cdspectrum	Bool	false				
+cpmdc	schema/Potentials.capnp	1091	NWChemTddftStanza	giao	Bool	false				
+cpmdc	schema/Potentials.capnp	1092	NWChemTddftStanza	velocity	Bool	false				
+cpmdc	schema/Potentials.capnp	1093	NWChemTddftStanza	civecs	Bool	false				
+cpmdc	schema/Potentials.capnp	1094	NWChemTddftStanza	transden	Bool	false				
+cpmdc	schema/Potentials.capnp	1095	NWChemTddftStanza	ewinLow	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1096	NWChemTddftStanza	ewinHigh	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1097	NWChemTddftStanza	gradRoots	List					
+cpmdc	schema/Potentials.capnp	1105	NWChemBasisStanza	spherical	Bool	false				
+cpmdc	schema/Potentials.capnp	1106	NWChemBasisStanza	segment	Text	""				
+cpmdc	schema/Potentials.capnp	1107	NWChemBasisStanza	ecp	Text	""				
+cpmdc	schema/Potentials.capnp	1108	NWChemBasisStanza	directives	List					
+cpmdc	schema/Potentials.capnp	1109	NWChemBasisStanza	libraryRoot	NWChemBasisLibraryRoot	unspecified				
+cpmdc	schema/Potentials.capnp	1110	NWChemBasisStanza	angularKind	NWChemBasisAngularKind	unspecified				
+cpmdc	schema/Potentials.capnp	1111	NWChemBasisStanza	segmentMode	NWChemBasisSegmentMode	unspecified				
+cpmdc	schema/Potentials.capnp	1118	NWChemGeometryStanza	units	Text	""				
+cpmdc	schema/Potentials.capnp	1119	NWChemGeometryStanza	symmetry	Text	""				
+cpmdc	schema/Potentials.capnp	1120	NWChemGeometryStanza	noautosym	Bool	false				
+cpmdc	schema/Potentials.capnp	1121	NWChemGeometryStanza	noautoz	Bool	false				
+cpmdc	schema/Potentials.capnp	1122	NWChemGeometryStanza	center	Bool	false				
+cpmdc	schema/Potentials.capnp	1123	NWChemGeometryStanza	directives	List					
+cpmdc	schema/Potentials.capnp	1127	NWChemInputStanza	kind	Kind	generic				
+cpmdc	schema/Potentials.capnp	1128	NWChemInputStanza	generic	NWChemGenericStanza					
+cpmdc	schema/Potentials.capnp	1129	NWChemInputStanza	dft	NWChemDftStanza					
+cpmdc	schema/Potentials.capnp	1130	NWChemInputStanza	set	NWChemSetDirective					
+cpmdc	schema/Potentials.capnp	1131	NWChemInputStanza	raw	Text					
+cpmdc	schema/Potentials.capnp	1132	NWChemInputStanza	module	NWChemModuleStanza					
+cpmdc	schema/Potentials.capnp	1133	NWChemInputStanza	pseudopotential	NWChemPseudopotentialStanza					
+cpmdc	schema/Potentials.capnp	1134	NWChemInputStanza	scf	NWChemScfStanza					
+cpmdc	schema/Potentials.capnp	1135	NWChemInputStanza	taskStanza	NWChemTaskStanza					
+cpmdc	schema/Potentials.capnp	1136	NWChemInputStanza	driver	NWChemDriverStanza					
+cpmdc	schema/Potentials.capnp	1137	NWChemInputStanza	property	NWChemPropertyStanza					
+cpmdc	schema/Potentials.capnp	1138	NWChemInputStanza	basisStanza	NWChemBasisStanza					
+cpmdc	schema/Potentials.capnp	1139	NWChemInputStanza	geometry	NWChemGeometryStanza					
+cpmdc	schema/Potentials.capnp	1140	NWChemInputStanza	nwpw	NWChemNwpwStanza					
+cpmdc	schema/Potentials.capnp	1141	NWChemInputStanza	ccsd	NWChemCcsdStanza					
+cpmdc	schema/Potentials.capnp	1142	NWChemInputStanza	tce	NWChemTceStanza					
+cpmdc	schema/Potentials.capnp	1143	NWChemInputStanza	mrccData	NWChemMrccDataStanza					
+cpmdc	schema/Potentials.capnp	1144	NWChemInputStanza	brillouinZone	NWChemBrillouinZoneStanza					
+cpmdc	schema/Potentials.capnp	1145	NWChemInputStanza	simulationCell	NWChemSimulationCellStanza					
+cpmdc	schema/Potentials.capnp	1146	NWChemInputStanza	mp2	NWChemMp2Stanza					
+cpmdc	schema/Potentials.capnp	1147	NWChemInputStanza	tddft	NWChemTddftStanza					
+cpmdc	schema/Potentials.capnp	1148	NWChemInputStanza	relativistic	NWChemRelativisticStanza					
+cpmdc	schema/Potentials.capnp	1149	NWChemInputStanza	cosmo	NWChemCosmoStanza					
+cpmdc	schema/Potentials.capnp	1150	NWChemInputStanza	smd	NWChemSmdStanza					
+cpmdc	schema/Potentials.capnp	1151	NWChemInputStanza	constraints	NWChemConstraintsStanza					
+cpmdc	schema/Potentials.capnp	1152	NWChemInputStanza	vib	NWChemVibStanza					
+cpmdc	schema/Potentials.capnp	1153	NWChemInputStanza	bq	NWChemBqStanza					
+cpmdc	schema/Potentials.capnp	1154	NWChemInputStanza	dplot	NWChemDplotStanza					
+cpmdc	schema/Potentials.capnp	1155	NWChemInputStanza	esp	NWChemEspStanza					
+cpmdc	schema/Potentials.capnp	1156	NWChemInputStanza	qmd	NWChemQmdStanza					
+cpmdc	schema/Potentials.capnp	1157	NWChemInputStanza	raman	NWChemRamanStanza					
+cpmdc	schema/Potentials.capnp	1158	NWChemInputStanza	fon	NWChemFonStanza					
+cpmdc	schema/Potentials.capnp	1159	NWChemInputStanza	neb	NWChemNebStanza					
+cpmdc	schema/Potentials.capnp	1160	NWChemInputStanza	stringMethod	NWChemStringStanza					
+cpmdc	schema/Potentials.capnp	1161	NWChemInputStanza	gw	NWChemGwStanza					
+cpmdc	schema/Potentials.capnp	1162	NWChemInputStanza	etrans	NWChemEtransStanza					
+cpmdc	schema/Potentials.capnp	1163	NWChemInputStanza	rism	NWChemRismStanza					
+cpmdc	schema/Potentials.capnp	1164	NWChemInputStanza	dimQm	NWChemDimQmStanza					
+cpmdc	schema/Potentials.capnp	1165	NWChemInputStanza	metadynamics	NWChemMetadynamicsStanza					
+cpmdc	schema/Potentials.capnp	1166	NWChemInputStanza	cellOptimize	NWChemCellOptimizeStanza					
+cpmdc	schema/Potentials.capnp	1167	NWChemInputStanza	mepgs	NWChemMepgsStanza					
+cpmdc	schema/Potentials.capnp	1168	NWChemInputStanza	tropt	NWChemTroptStanza					
+cpmdc	schema/Potentials.capnp	1216	NWChemParams	basis	Text	"sto-3g"				
+cpmdc	schema/Potentials.capnp	1217	NWChemParams	theory	Text	"scf"				
+cpmdc	schema/Potentials.capnp	1218	NWChemParams	scfType	Text	"rhf"				
+cpmdc	schema/Potentials.capnp	1219	NWChemParams	charge	Int32	0				
+cpmdc	schema/Potentials.capnp	1220	NWChemParams	multiplicity	Int32	1				
+cpmdc	schema/Potentials.capnp	1221	NWChemParams	enginePath	Text	""				
+cpmdc	schema/Potentials.capnp	1222	NWChemParams	nwchemRoot	Text	""				
+cpmdc	schema/Potentials.capnp	1223	NWChemParams	task	Text	"gradient"				
+cpmdc	schema/Potentials.capnp	1224	NWChemParams	title	Text	""				
+cpmdc	schema/Potentials.capnp	1225	NWChemParams	memoryMb	UInt32	0				
+cpmdc	schema/Potentials.capnp	1226	NWChemParams	scratchDir	Text	""				
+cpmdc	schema/Potentials.capnp	1227	NWChemParams	permanentDir	Text	""				
+cpmdc	schema/Potentials.capnp	1228	NWChemParams	inputBlocks	List					
+cpmdc	schema/Potentials.capnp	1229	NWChemParams	inputStanzas	List					
+cpmdc	schema/Potentials.capnp	1242	CPMDDirective	keyword	Text					
+cpmdc	schema/Potentials.capnp	1243	CPMDDirective	args	List					
+cpmdc	schema/Potentials.capnp	1247	CPMDGenericSection	name	Text					
+cpmdc	schema/Potentials.capnp	1248	CPMDGenericSection	directives	List					
+cpmdc	schema/Potentials.capnp	1252	CPMDSetDirective	key	Text					
+cpmdc	schema/Potentials.capnp	1253	CPMDSetDirective	value	Text					
+cpmdc	schema/Potentials.capnp	1257	CPMDKPoint	coordinates	List					
+cpmdc	schema/Potentials.capnp	1258	CPMDKPoint	weight	Float64	1.0				
+cpmdc	schema/Potentials.capnp	1262	CPMDKPointBand	points	Int32	0				
+cpmdc	schema/Potentials.capnp	1263	CPMDKPointBand	start	List					
+cpmdc	schema/Potentials.capnp	1264	CPMDKPointBand	end	List					
+cpmdc	schema/Potentials.capnp	1268	CPMDCouplingSurface	stateI	Int32	0				
+cpmdc	schema/Potentials.capnp	1269	CPMDCouplingSurface	stateJ	Int32	0				
+cpmdc	schema/Potentials.capnp	1270	CPMDCouplingSurface	coefficient	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1274	CPMDSystemSection	symmetry	Int32	0				
+cpmdc	schema/Potentials.capnp	1275	CPMDSystemSection	angstrom	Bool	true				
+cpmdc	schema/Potentials.capnp	1276	CPMDSystemSection	cell	List					
+cpmdc	schema/Potentials.capnp	1277	CPMDSystemSection	cutOffRy	Float64	70.0				
+cpmdc	schema/Potentials.capnp	1278	CPMDSystemSection	scale	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1279	CPMDSystemSection	charge	Int32	0				
+cpmdc	schema/Potentials.capnp	1280	CPMDSystemSection	multiplicity	Int32	1				
+cpmdc	schema/Potentials.capnp	1281	CPMDSystemSection	directives	List					
+cpmdc	schema/Potentials.capnp	1282	CPMDSystemSection	densityCutOffRy	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1283	CPMDSystemSection	poissonSolver	Text					
+cpmdc	schema/Potentials.capnp	1284	CPMDSystemSection	poissonParameter	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1285	CPMDSystemSection	surface	Text					
+cpmdc	schema/Potentials.capnp	1286	CPMDSystemSection	referenceCell	List					
+cpmdc	schema/Potentials.capnp	1287	CPMDSystemSection	classicalCell	List					
+cpmdc	schema/Potentials.capnp	1288	CPMDSystemSection	isotropicCell	Bool	false				
+cpmdc	schema/Potentials.capnp	1289	CPMDSystemSection	zFlexibleCell	Bool	false				
+cpmdc	schema/Potentials.capnp	1290	CPMDSystemSection	densityCutoffNumber	Int32	0				
+cpmdc	schema/Potentials.capnp	1291	CPMDSystemSection	dual	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1292	CPMDSystemSection	constantCutoff	List					
+cpmdc	schema/Potentials.capnp	1293	CPMDSystemSection	mesh	List					
+cpmdc	schema/Potentials.capnp	1294	CPMDSystemSection	scaleCartesian	Bool	false				
+cpmdc	schema/Potentials.capnp	1295	CPMDSystemSection	doubleGrid	Text					
+cpmdc	schema/Potentials.capnp	1296	CPMDSystemSection	symmetrizeCoordinates	Bool	false				
+cpmdc	schema/Potentials.capnp	1297	CPMDSystemSection	tesr	Int32	0				
+cpmdc	schema/Potentials.capnp	1298	CPMDSystemSection	polymer	Bool	false				
+cpmdc	schema/Potentials.capnp	1299	CPMDSystemSection	cluster	Bool	false				
+cpmdc	schema/Potentials.capnp	1300	CPMDSystemSection	cutoffShape	Text					
+cpmdc	schema/Potentials.capnp	1301	CPMDSystemSection	hfxCutoff	List					
+cpmdc	schema/Potentials.capnp	1302	CPMDSystemSection	boxWalls	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1303	CPMDSystemSection	nSup	Int32	0				
+cpmdc	schema/Potentials.capnp	1304	CPMDSystemSection	states	Int32	0				
+cpmdc	schema/Potentials.capnp	1305	CPMDSystemSection	occupation	List					
+cpmdc	schema/Potentials.capnp	1306	CPMDSystemSection	occupationFixed	Bool	false				
+cpmdc	schema/Potentials.capnp	1307	CPMDSystemSection	externalField	List					
+cpmdc	schema/Potentials.capnp	1308	CPMDSystemSection	pressure	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1309	CPMDSystemSection	stressTensor	List					
+cpmdc	schema/Potentials.capnp	1310	CPMDSystemSection	shockVelocity	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1311	CPMDSystemSection	checkSymmetryPrecision	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1312	CPMDSystemSection	checkSymmetryOff	Bool	false				
+cpmdc	schema/Potentials.capnp	1313	CPMDSystemSection	wCut	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1314	CPMDSystemSection	wGauss	List					
+cpmdc	schema/Potentials.capnp	1315	CPMDSystemSection	lowSpinExcitation	Text					
+cpmdc	schema/Potentials.capnp	1316	CPMDSystemSection	lowSpinExcitationLsets	Bool	false				
+cpmdc	schema/Potentials.capnp	1317	CPMDSystemSection	lseParameters	List					
+cpmdc	schema/Potentials.capnp	1318	CPMDSystemSection	modifiedGoedecker	Bool	false				
+cpmdc	schema/Potentials.capnp	1319	CPMDSystemSection	modifiedGoedeckerParameters	List					
+cpmdc	schema/Potentials.capnp	1320	CPMDSystemSection	energyProfile	Bool	false				
+cpmdc	schema/Potentials.capnp	1321	CPMDSystemSection	pointGroup	Text					
+cpmdc	schema/Potentials.capnp	1322	CPMDSystemSection	pointGroupDelta	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1323	CPMDSystemSection	pointGroupMolecule	Bool	false				
+cpmdc	schema/Potentials.capnp	1324	CPMDSystemSection	scaleX	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1325	CPMDSystemSection	scaleY	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1326	CPMDSystemSection	scaleZ	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1327	CPMDSystemSection	kpoints	List					
+cpmdc	schema/Potentials.capnp	1328	CPMDSystemSection	kpointsScaled	Bool	false				
+cpmdc	schema/Potentials.capnp	1329	CPMDSystemSection	kpointsOnlyDiagonal	Bool	false				
+cpmdc	schema/Potentials.capnp	1330	CPMDSystemSection	kpointsMonkhorstPack	List					
+cpmdc	schema/Potentials.capnp	1331	CPMDSystemSection	kpointsMonkhorstSymmetrized	Bool	false				
+cpmdc	schema/Potentials.capnp	1332	CPMDSystemSection	kpointsMonkhorstFull	Bool	false				
+cpmdc	schema/Potentials.capnp	1333	CPMDSystemSection	kpointsMonkhorstKdp	Bool	false				
+cpmdc	schema/Potentials.capnp	1334	CPMDSystemSection	kpointsMonkhorstShift	List					
+cpmdc	schema/Potentials.capnp	1335	CPMDSystemSection	kpointBands	List					
+cpmdc	schema/Potentials.capnp	1336	CPMDSystemSection	kpointsBlock	Int32	0				
+cpmdc	schema/Potentials.capnp	1337	CPMDSystemSection	kpointsBlockAll	Bool	false				
+cpmdc	schema/Potentials.capnp	1338	CPMDSystemSection	kpointsBlockCalculated	Bool	false				
+cpmdc	schema/Potentials.capnp	1339	CPMDSystemSection	kpointsBlockNoSwap	Bool	false				
+cpmdc	schema/Potentials.capnp	1340	CPMDSystemSection	lowSpinExcitationPenalty	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1341	CPMDSystemSection	cdftDonorAtoms	List					
+cpmdc	schema/Potentials.capnp	1342	CPMDSystemSection	cdftDonorWeights	List					
+cpmdc	schema/Potentials.capnp	1343	CPMDSystemSection	cdftAcceptorAtoms	List					
+cpmdc	schema/Potentials.capnp	1344	CPMDSystemSection	cdftAcceptorHdasDonors	List					
+cpmdc	schema/Potentials.capnp	1345	CPMDSystemSection	cdftAcceptorWeights	List					
+cpmdc	schema/Potentials.capnp	1346	CPMDSystemSection	couplingsFiniteDifference	Bool	false				
+cpmdc	schema/Potentials.capnp	1347	CPMDSystemSection	couplingsFiniteDifferenceDisplacement	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1348	CPMDSystemSection	couplingsProductDisplacement	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1349	CPMDSystemSection	couplingsLinres	Bool	false				
+cpmdc	schema/Potentials.capnp	1350	CPMDSystemSection	couplingsLinresTolerance	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1351	CPMDSystemSection	couplingsLinresNvects	Int32	0				
+cpmdc	schema/Potentials.capnp	1352	CPMDSystemSection	couplingsLinresSpecify	Bool	false				
+cpmdc	schema/Potentials.capnp	1353	CPMDSystemSection	couplingsLinresBruteForce	Bool	false				
+cpmdc	schema/Potentials.capnp	1354	CPMDSystemSection	couplingsLinresThresholds	List					
+cpmdc	schema/Potentials.capnp	1355	CPMDSystemSection	couplingsSurfaces	List					
+cpmdc	schema/Potentials.capnp	1356	CPMDSystemSection	couplingsFiniteDifferenceAtoms	List					
+cpmdc	schema/Potentials.capnp	1357	CPMDSystemSection	cellAbsolute	Bool	false				
+cpmdc	schema/Potentials.capnp	1358	CPMDSystemSection	cellDegree	Bool	false				
+cpmdc	schema/Potentials.capnp	1359	CPMDSystemSection	referenceCellAbsolute	Bool	false				
+cpmdc	schema/Potentials.capnp	1360	CPMDSystemSection	referenceCellDegree	Bool	false				
+cpmdc	schema/Potentials.capnp	1361	CPMDSystemSection	classicalCellAbsolute	Bool	false				
+cpmdc	schema/Potentials.capnp	1362	CPMDSystemSection	classicalCellDegree	Bool	false				
+cpmdc	schema/Potentials.capnp	1363	CPMDSystemSection	cellVectors	Bool	false				
+cpmdc	schema/Potentials.capnp	1364	CPMDSystemSection	referenceCellVectors	Bool	false				
+cpmdc	schema/Potentials.capnp	1368	CPMDCpmdSection	optimizeWavefunction	Bool	true				
+cpmdc	schema/Potentials.capnp	1369	CPMDCpmdSection	molecularDynamics	Bool	false				
+cpmdc	schema/Potentials.capnp	1370	CPMDCpmdSection	convergenceOrbitals	Float64	1.0e-6				
+cpmdc	schema/Potentials.capnp	1371	CPMDCpmdSection	maxStep	Int32	0				
+cpmdc	schema/Potentials.capnp	1372	CPMDCpmdSection	timestep	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1373	CPMDCpmdSection	restartWavefunction	Bool	false				
+cpmdc	schema/Potentials.capnp	1374	CPMDCpmdSection	trajectory	Bool	false				
+cpmdc	schema/Potentials.capnp	1375	CPMDCpmdSection	directives	List					
+cpmdc	schema/Potentials.capnp	1376	CPMDCpmdSection	optimizeGeometry	Bool	false				
+cpmdc	schema/Potentials.capnp	1377	CPMDCpmdSection	maxIter	Int32	0				
+cpmdc	schema/Potentials.capnp	1378	CPMDCpmdSection	convergenceGeometry	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1379	CPMDCpmdSection	electronMass	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1380	CPMDCpmdSection	molecularDynamicsCp	Bool	false				
+cpmdc	schema/Potentials.capnp	1381	CPMDCpmdSection	molecularDynamicsBo	Bool	false				
+cpmdc	schema/Potentials.capnp	1382	CPMDCpmdSection	molecularDynamicsEh	Bool	false				
+cpmdc	schema/Potentials.capnp	1383	CPMDCpmdSection	molecularDynamicsPt	Bool	false				
+cpmdc	schema/Potentials.capnp	1384	CPMDCpmdSection	molecularDynamicsClassical	Bool	false				
+cpmdc	schema/Potentials.capnp	1385	CPMDCpmdSection	molecularDynamicsFile	Text					
+cpmdc	schema/Potentials.capnp	1386	CPMDCpmdSection	nose	Bool	false				
+cpmdc	schema/Potentials.capnp	1387	CPMDCpmdSection	noseIons	Bool	false				
+cpmdc	schema/Potentials.capnp	1388	CPMDCpmdSection	noseElectrons	Bool	false				
+cpmdc	schema/Potentials.capnp	1389	CPMDCpmdSection	berendsen	Text					
+cpmdc	schema/Potentials.capnp	1390	CPMDCpmdSection	langevin	Bool	false				
+cpmdc	schema/Potentials.capnp	1391	CPMDCpmdSection	annealing	Text					
+cpmdc	schema/Potentials.capnp	1392	CPMDCpmdSection	quench	Bool	false				
+cpmdc	schema/Potentials.capnp	1393	CPMDCpmdSection	rattle	Bool	false				
+cpmdc	schema/Potentials.capnp	1394	CPMDCpmdSection	shake	Bool	false				
+cpmdc	schema/Potentials.capnp	1395	CPMDCpmdSection	constraint	Text					
+cpmdc	schema/Potentials.capnp	1396	CPMDCpmdSection	trotter	Text					
+cpmdc	schema/Potentials.capnp	1397	CPMDCpmdSection	restart	Bool	false				
+cpmdc	schema/Potentials.capnp	1398	CPMDCpmdSection	printOptions	Text					
+cpmdc	schema/Potentials.capnp	1399	CPMDCpmdSection	storeOptions	Text					
+cpmdc	schema/Potentials.capnp	1400	CPMDCpmdSection	centerMoleculeOff	Bool	false				
+cpmdc	schema/Potentials.capnp	1401	CPMDCpmdSection	centerMoleculeOn	Bool	false				
+cpmdc	schema/Potentials.capnp	1402	CPMDCpmdSection	diis	Bool	false				
+cpmdc	schema/Potentials.capnp	1403	CPMDCpmdSection	odiis	Bool	false				
+cpmdc	schema/Potentials.capnp	1404	CPMDCpmdSection	pcg	Bool	false				
+cpmdc	schema/Potentials.capnp	1405	CPMDCpmdSection	diagonalization	Bool	false				
+cpmdc	schema/Potentials.capnp	1406	CPMDCpmdSection	freeEnergy	Bool	false				
+cpmdc	schema/Potentials.capnp	1407	CPMDCpmdSection	interface	Bool	false				
+cpmdc	schema/Potentials.capnp	1408	CPMDCpmdSection	qmmm	Bool	false				
+cpmdc	schema/Potentials.capnp	1409	CPMDCpmdSection	bicanonicalEnsemble	Bool	false				
+cpmdc	schema/Potentials.capnp	1410	CPMDCpmdSection	cdft	Bool	false				
+cpmdc	schema/Potentials.capnp	1411	CPMDCpmdSection	properties	Bool	false				
+cpmdc	schema/Potentials.capnp	1412	CPMDCpmdSection	vdwCorrection	Text					
+cpmdc	schema/Potentials.capnp	1413	CPMDCpmdSection	vdwWannier	Text					
+cpmdc	schema/Potentials.capnp	1414	CPMDCpmdSection	dcacp	Bool	false				
+cpmdc	schema/Potentials.capnp	1415	CPMDCpmdSection	isolatedMolecule	Bool	false				
+cpmdc	schema/Potentials.capnp	1416	CPMDCpmdSection	maxRuntime	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1417	CPMDCpmdSection	timestepElectrons	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1418	CPMDCpmdSection	timestepIons	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1419	CPMDCpmdSection	cellMass	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1420	CPMDCpmdSection	temperatureElectron	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1421	CPMDCpmdSection	temperature	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1422	CPMDCpmdSection	temperatureRamp	Bool	false				
+cpmdc	schema/Potentials.capnp	1423	CPMDCpmdSection	temperatureRampTime	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1424	CPMDCpmdSection	temperatureRampRate	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1425	CPMDCpmdSection	rescaleOldVelocities	Bool	false				
+cpmdc	schema/Potentials.capnp	1426	CPMDCpmdSection	reverseVelocities	Bool	false				
+cpmdc	schema/Potentials.capnp	1427	CPMDCpmdSection	subtractComVelocity	Int32	0				
+cpmdc	schema/Potentials.capnp	1428	CPMDCpmdSection	subtractRotVelocity	Int32	0				
+cpmdc	schema/Potentials.capnp	1429	CPMDCpmdSection	prngSeed	Int32	0				
+cpmdc	schema/Potentials.capnp	1430	CPMDCpmdSection	tempControlIons	Text					
+cpmdc	schema/Potentials.capnp	1431	CPMDCpmdSection	tempControlElectrons	Text					
+cpmdc	schema/Potentials.capnp	1432	CPMDCpmdSection	tempControlCell	Text					
+cpmdc	schema/Potentials.capnp	1433	CPMDCpmdSection	berendsenIons	Text					
+cpmdc	schema/Potentials.capnp	1434	CPMDCpmdSection	berendsenElectrons	Text					
+cpmdc	schema/Potentials.capnp	1435	CPMDCpmdSection	berendsenCell	Text					
+cpmdc	schema/Potentials.capnp	1436	CPMDCpmdSection	noseIonsThermostat	Text					
+cpmdc	schema/Potentials.capnp	1437	CPMDCpmdSection	noseElectronsThermostat	Text					
+cpmdc	schema/Potentials.capnp	1438	CPMDCpmdSection	noseCellThermostat	Text					
+cpmdc	schema/Potentials.capnp	1439	CPMDCpmdSection	noseParameters	Text					
+cpmdc	schema/Potentials.capnp	1440	CPMDCpmdSection	convergenceCell	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1441	CPMDCpmdSection	convergenceAdapt	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1442	CPMDCpmdSection	convergenceEnergy	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1443	CPMDCpmdSection	convergenceCalfor	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1444	CPMDCpmdSection	convergenceRelax	Int32	0				
+cpmdc	schema/Potentials.capnp	1445	CPMDCpmdSection	convergenceRhofix	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1446	CPMDCpmdSection	convergenceInitial	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1447	CPMDCpmdSection	convergenceConstraint	Text					
+cpmdc	schema/Potentials.capnp	1448	CPMDCpmdSection	annealingIons	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1449	CPMDCpmdSection	annealingElectrons	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1450	CPMDCpmdSection	annealingCell	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1451	CPMDCpmdSection	dampingIons	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1452	CPMDCpmdSection	dampingElectrons	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1453	CPMDCpmdSection	dampingCell	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1454	CPMDCpmdSection	hessian	Text					
+cpmdc	schema/Potentials.capnp	1455	CPMDCpmdSection	project	Text					
+cpmdc	schema/Potentials.capnp	1456	CPMDCpmdSection	stressTensorSample	Int32	0				
+cpmdc	schema/Potentials.capnp	1457	CPMDCpmdSection	stressTensorVirial	Bool	false				
+cpmdc	schema/Potentials.capnp	1458	CPMDCpmdSection	classStressSample	Int32	0				
+cpmdc	schema/Potentials.capnp	1459	CPMDCpmdSection	storeSelection	Text					
+cpmdc	schema/Potentials.capnp	1460	CPMDCpmdSection	storeInterval	Int32	0				
+cpmdc	schema/Potentials.capnp	1461	CPMDCpmdSection	storeSelfConsistentInterval	Int32	0				
+cpmdc	schema/Potentials.capnp	1462	CPMDCpmdSection	storeOffSelection	Text					
+cpmdc	schema/Potentials.capnp	1463	CPMDCpmdSection	restFileCount	Int32	0				
+cpmdc	schema/Potentials.capnp	1464	CPMDCpmdSection	restFileSample	Text					
+cpmdc	schema/Potentials.capnp	1465	CPMDCpmdSection	trajectoryOptions	Text					
+cpmdc	schema/Potentials.capnp	1466	CPMDCpmdSection	trajectorySample	Int32	0				
+cpmdc	schema/Potentials.capnp	1467	CPMDCpmdSection	trajectoryRange	Text					
+cpmdc	schema/Potentials.capnp	1468	CPMDCpmdSection	movieSample	Int32	0				
+cpmdc	schema/Potentials.capnp	1469	CPMDCpmdSection	movieOff	Bool	false				
+cpmdc	schema/Potentials.capnp	1470	CPMDCpmdSection	energyBands	Bool	false				
+cpmdc	schema/Potentials.capnp	1471	CPMDCpmdSection	externalPotential	Bool	false				
+cpmdc	schema/Potentials.capnp	1472	CPMDCpmdSection	externalPotentialAdd	Bool	false				
+cpmdc	schema/Potentials.capnp	1473	CPMDCpmdSection	electrostaticPotential	Bool	false				
+cpmdc	schema/Potentials.capnp	1474	CPMDCpmdSection	electrostaticPotentialSample	Int32	0				
+cpmdc	schema/Potentials.capnp	1475	CPMDCpmdSection	dipoleDynamicsSample	Int32	0				
+cpmdc	schema/Potentials.capnp	1476	CPMDCpmdSection	dipoleDynamicsWannier	Bool	false				
+cpmdc	schema/Potentials.capnp	1477	CPMDCpmdSection	rhoOut	Bool	false				
+cpmdc	schema/Potentials.capnp	1478	CPMDCpmdSection	rhoOutSample	Int32	0				
+cpmdc	schema/Potentials.capnp	1479	CPMDCpmdSection	rhoOutBandsCount	Int32	0				
+cpmdc	schema/Potentials.capnp	1480	CPMDCpmdSection	rhoOutBands	Text					
+cpmdc	schema/Potentials.capnp	1481	CPMDCpmdSection	elf	Bool	false				
+cpmdc	schema/Potentials.capnp	1482	CPMDCpmdSection	elfParameters	Text					
+cpmdc	schema/Potentials.capnp	1483	CPMDCpmdSection	wannierParameters	Text					
+cpmdc	schema/Potentials.capnp	1484	CPMDCpmdSection	wannierOptimization	Text					
+cpmdc	schema/Potentials.capnp	1485	CPMDCpmdSection	wannierType	Text					
+cpmdc	schema/Potentials.capnp	1486	CPMDCpmdSection	wannierReference	Text					
+cpmdc	schema/Potentials.capnp	1487	CPMDCpmdSection	wannierSerial	Bool	false				
+cpmdc	schema/Potentials.capnp	1488	CPMDCpmdSection	wannierDos	Bool	false				
+cpmdc	schema/Potentials.capnp	1489	CPMDCpmdSection	wannierMolecular	Bool	false				
+cpmdc	schema/Potentials.capnp	1490	CPMDCpmdSection	wannierWfnOutOptions	Text					
+cpmdc	schema/Potentials.capnp	1491	CPMDCpmdSection	wannierWfnOutPayload	Text					
+cpmdc	schema/Potentials.capnp	1492	CPMDCpmdSection	compress	Text					
+cpmdc	schema/Potentials.capnp	1493	CPMDCpmdSection	memory	Text					
+cpmdc	schema/Potentials.capnp	1494	CPMDCpmdSection	realSpaceWfnKeep	Bool	false				
+cpmdc	schema/Potentials.capnp	1495	CPMDCpmdSection	realSpaceWfnSize	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1496	CPMDCpmdSection	splineOptions	Text					
+cpmdc	schema/Potentials.capnp	1497	CPMDCpmdSection	splinePoints	Int32	0				
+cpmdc	schema/Potentials.capnp	1498	CPMDCpmdSection	splineRange	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1499	CPMDCpmdSection	finiteDifferences	Text					
+cpmdc	schema/Potentials.capnp	1500	CPMDCpmdSection	taskGroups	Text					
+cpmdc	schema/Potentials.capnp	1501	CPMDCpmdSection	taskGroupsCount	Int32	0				
+cpmdc	schema/Potentials.capnp	1502	CPMDCpmdSection	distributeFnl	Text					
+cpmdc	schema/Potentials.capnp	1503	CPMDCpmdSection	filePath	Text					
+cpmdc	schema/Potentials.capnp	1504	CPMDCpmdSection	benchmark	Text					
+cpmdc	schema/Potentials.capnp	1505	CPMDCpmdSection	mirror	Bool	false				
+cpmdc	schema/Potentials.capnp	1506	CPMDCpmdSection	shiftPotential	Text					
+cpmdc	schema/Potentials.capnp	1507	CPMDCpmdSection	glocalizationParameters	Text					
+cpmdc	schema/Potentials.capnp	1508	CPMDCpmdSection	glocalizationOptimization	Text					
+cpmdc	schema/Potentials.capnp	1509	CPMDCpmdSection	gfunctionalType	Text					
+cpmdc	schema/Potentials.capnp	1510	CPMDCpmdSection	spreadRspace	Text					
+cpmdc	schema/Potentials.capnp	1511	CPMDCpmdSection	gUnitarityOptions	Text					
+cpmdc	schema/Potentials.capnp	1512	CPMDCpmdSection	stepTuning	Bool	false				
+cpmdc	schema/Potentials.capnp	1513	CPMDCpmdSection	gAntisym	Bool	false				
+cpmdc	schema/Potentials.capnp	1514	CPMDCpmdSection	gAntisymPenalty	Bool	false				
+cpmdc	schema/Potentials.capnp	1515	CPMDCpmdSection	gKick	Bool	false				
+cpmdc	schema/Potentials.capnp	1516	CPMDCpmdSection	gComplex	Bool	false				
+cpmdc	schema/Potentials.capnp	1517	CPMDCpmdSection	gReal	Bool	false				
+cpmdc	schema/Potentials.capnp	1518	CPMDCpmdSection	readMatrix	Bool	false				
+cpmdc	schema/Potentials.capnp	1519	CPMDCpmdSection	gStepTune	Bool	false				
+cpmdc	schema/Potentials.capnp	1520	CPMDCpmdSection	glocWfnOutOptions	Text					
+cpmdc	schema/Potentials.capnp	1521	CPMDCpmdSection	glocWfnOutPayload	Text					
+cpmdc	schema/Potentials.capnp	1522	CPMDCpmdSection	noGeoCheck	Bool	false				
+cpmdc	schema/Potentials.capnp	1523	CPMDCpmdSection	brokenSymmetry	Bool	false				
+cpmdc	schema/Potentials.capnp	1524	CPMDCpmdSection	distributedLinalg	Text					
+cpmdc	schema/Potentials.capnp	1525	CPMDCpmdSection	linalgNewOrtho	Text					
+cpmdc	schema/Potentials.capnp	1526	CPMDCpmdSection	disorthoBlockSize	Int32	0				
+cpmdc	schema/Potentials.capnp	1527	CPMDCpmdSection	statesBlockSize	Int32	0				
+cpmdc	schema/Potentials.capnp	1528	CPMDCpmdSection	allToAllPrecision	Text					
+cpmdc	schema/Potentials.capnp	1529	CPMDCpmdSection	gshell	Bool	false				
+cpmdc	schema/Potentials.capnp	1530	CPMDCpmdSection	localPotential	Bool	false				
+cpmdc	schema/Potentials.capnp	1531	CPMDCpmdSection	cdftOptions	Text					
+cpmdc	schema/Potentials.capnp	1532	CPMDCpmdSection	cdftPayload	Text					
+cpmdc	schema/Potentials.capnp	1533	CPMDCpmdSection	cdftHdaPayload	Text					
+cpmdc	schema/Potentials.capnp	1534	CPMDCpmdSection	vgfactor	Text					
+cpmdc	schema/Potentials.capnp	1535	CPMDCpmdSection	vMirror	Bool	false				
+cpmdc	schema/Potentials.capnp	1536	CPMDCpmdSection	combineSystemsOptions	Text					
+cpmdc	schema/Potentials.capnp	1537	CPMDCpmdSection	combineSystemsPayload	Text					
+cpmdc	schema/Potentials.capnp	1538	CPMDCpmdSection	combineSystemsSabPayload	Text					
+cpmdc	schema/Potentials.capnp	1539	CPMDCpmdSection	kshamOptions	Text					
+cpmdc	schema/Potentials.capnp	1540	CPMDCpmdSection	kshamPayload	Text					
+cpmdc	schema/Potentials.capnp	1541	CPMDCpmdSection	czonesSet	Text					
+cpmdc	schema/Potentials.capnp	1542	CPMDCpmdSection	woutOptions	Text					
+cpmdc	schema/Potentials.capnp	1543	CPMDCpmdSection	woutPayload	Text					
+cpmdc	schema/Potentials.capnp	1544	CPMDCpmdSection	xfmqcTrajectories	Int32	0				
+cpmdc	schema/Potentials.capnp	1545	CPMDCpmdSection	molecularDynamicsFileOptions	Text					
+cpmdc	schema/Potentials.capnp	1546	CPMDCpmdSection	molecularDynamicsBdTrajectories	Int32	0				
+cpmdc	schema/Potentials.capnp	1547	CPMDCpmdSection	parrinelloRahmanOptions	Text					
+cpmdc	schema/Potentials.capnp	1548	CPMDCpmdSection	optimizeGeometryOptions	Text					
+cpmdc	schema/Potentials.capnp	1549	CPMDCpmdSection	optimizeGeometrySample	Int32	0				
+cpmdc	schema/Potentials.capnp	1550	CPMDCpmdSection	optimizeCombinedOptions	Text					
+cpmdc	schema/Potentials.capnp	1551	CPMDCpmdSection	optimizeCombinedSample	Int32	0				
+cpmdc	schema/Potentials.capnp	1552	CPMDCpmdSection	cheby	Bool	false				
+cpmdc	schema/Potentials.capnp	1553	CPMDCpmdSection	cayley	Bool	false				
+cpmdc	schema/Potentials.capnp	1554	CPMDCpmdSection	rungeKutta	Bool	false				
+cpmdc	schema/Potentials.capnp	1555	CPMDCpmdSection	forceMatch	Bool	false				
+cpmdc	schema/Potentials.capnp	1556	CPMDCpmdSection	debugOptions	Text					
+cpmdc	schema/Potentials.capnp	1557	CPMDCpmdSection	kohnShamEnergiesOptions	Text					
+cpmdc	schema/Potentials.capnp	1558	CPMDCpmdSection	kohnShamEnergiesCount	Int32	0				
+cpmdc	schema/Potentials.capnp	1559	CPMDCpmdSection	surfaceHoppingOptions	Text					
+cpmdc	schema/Potentials.capnp	1560	CPMDCpmdSection	roksOptions	Text					
+cpmdc	schema/Potentials.capnp	1561	CPMDCpmdSection	roksExpertPayload	Text					
+cpmdc	schema/Potentials.capnp	1562	CPMDCpmdSection	pathSampling	Bool	false				
+cpmdc	schema/Potentials.capnp	1563	CPMDCpmdSection	fixrhoUpwfnOptions	Text					
+cpmdc	schema/Potentials.capnp	1564	CPMDCpmdSection	fixrhoVectors	Int32	0				
+cpmdc	schema/Potentials.capnp	1565	CPMDCpmdSection	fixrhoLoop	Text					
+cpmdc	schema/Potentials.capnp	1566	CPMDCpmdSection	fixrhoWftol	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1567	CPMDCpmdSection	bogoliubovCorrection	Text					
+cpmdc	schema/Potentials.capnp	1568	CPMDCpmdSection	vibrationalAnalysisOptions	Text					
+cpmdc	schema/Potentials.capnp	1569	CPMDCpmdSection	vibrationalAnalysisSample	Int32	0				
+cpmdc	schema/Potentials.capnp	1570	CPMDCpmdSection	vibrationalAnalysisMode	Int32	0				
+cpmdc	schema/Potentials.capnp	1571	CPMDCpmdSection	electronicSpectra	Bool	false				
+cpmdc	schema/Potentials.capnp	1572	CPMDCpmdSection	spinOrbitCouplingStates	List					
+cpmdc	schema/Potentials.capnp	1573	CPMDCpmdSection	propagationSpectra	Bool	false				
+cpmdc	schema/Potentials.capnp	1574	CPMDCpmdSection	propagationDistrub	Bool	false				
+cpmdc	schema/Potentials.capnp	1575	CPMDCpmdSection	gaugePulse	Bool	false				
+cpmdc	schema/Potentials.capnp	1576	CPMDCpmdSection	gaugeFieldFrequency	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1577	CPMDCpmdSection	nacv	Bool	false				
+cpmdc	schema/Potentials.capnp	1578	CPMDCpmdSection	orbitalHardnessOptions	Text					
+cpmdc	schema/Potentials.capnp	1579	CPMDCpmdSection	pathIntegral	Bool	false				
+cpmdc	schema/Potentials.capnp	1580	CPMDCpmdSection	pathMinimization	Bool	false				
+cpmdc	schema/Potentials.capnp	1581	CPMDCpmdSection	langevinOptions	Text					
+cpmdc	schema/Potentials.capnp	1582	CPMDCpmdSection	langevinParameter	Text					
+cpmdc	schema/Potentials.capnp	1583	CPMDCpmdSection	qmmmEasy	Bool	false				
+cpmdc	schema/Potentials.capnp	1584	CPMDCpmdSection	interfaceOptions	Text					
+cpmdc	schema/Potentials.capnp	1585	CPMDCpmdSection	trotterFactorCount	Int32	0				
+cpmdc	schema/Potentials.capnp	1586	CPMDCpmdSection	trotterFactorPayload	Text					
+cpmdc	schema/Potentials.capnp	1587	CPMDCpmdSection	linearResponse	Bool	false				
+cpmdc	schema/Potentials.capnp	1588	CPMDCpmdSection	harmonicReference	Text					
+cpmdc	schema/Potentials.capnp	1589	CPMDCpmdSection	scaledMasses	Text					
+cpmdc	schema/Potentials.capnp	1590	CPMDCpmdSection	tddft	Bool	false				
+cpmdc	schema/Potentials.capnp	1591	CPMDCpmdSection	ssic	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1592	CPMDCpmdSection	nonorthogonalOrbitalsOptions	Text					
+cpmdc	schema/Potentials.capnp	1593	CPMDCpmdSection	nonorthogonalOrbitalsLimit	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1594	CPMDCpmdSection	lanczosDiagonalizationOptions	Text					
+cpmdc	schema/Potentials.capnp	1595	CPMDCpmdSection	lanczosParametersCount	Int32	0				
+cpmdc	schema/Potentials.capnp	1596	CPMDCpmdSection	lanczosParametersPayload	Text					
+cpmdc	schema/Potentials.capnp	1597	CPMDCpmdSection	davidsonDiagonalization	Bool	false				
+cpmdc	schema/Potentials.capnp	1598	CPMDCpmdSection	davidsonParameters	Text					
+cpmdc	schema/Potentials.capnp	1599	CPMDCpmdSection	alexanderMixing	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1600	CPMDCpmdSection	andersonMixingGspace	Bool	false				
+cpmdc	schema/Potentials.capnp	1601	CPMDCpmdSection	andersonMixingCount	Int32	0				
+cpmdc	schema/Potentials.capnp	1602	CPMDCpmdSection	andersonMixingPayload	Text					
+cpmdc	schema/Potentials.capnp	1603	CPMDCpmdSection	broydenMixingOptions	Text					
+cpmdc	schema/Potentials.capnp	1604	CPMDCpmdSection	broydenMixingPayload	Text					
+cpmdc	schema/Potentials.capnp	1605	CPMDCpmdSection	diisMixingCount	Int32	0				
+cpmdc	schema/Potentials.capnp	1606	CPMDCpmdSection	diisMixingPayload	Text					
+cpmdc	schema/Potentials.capnp	1607	CPMDCpmdSection	moverhoMixing	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1608	CPMDCpmdSection	extrapolateWfnOptions	Text					
+cpmdc	schema/Potentials.capnp	1609	CPMDCpmdSection	extrapolateWfnOrder	Int32	0				
+cpmdc	schema/Potentials.capnp	1610	CPMDCpmdSection	extrapolateConstraintOrder	Int32	0				
+cpmdc	schema/Potentials.capnp	1611	CPMDCpmdSection	tsdeOptions	Text					
+cpmdc	schema/Potentials.capnp	1612	CPMDCpmdSection	tsdpOptions	Text					
+cpmdc	schema/Potentials.capnp	1613	CPMDCpmdSection	tcgp	Bool	false				
+cpmdc	schema/Potentials.capnp	1614	CPMDCpmdSection	tsdc	Bool	false				
+cpmdc	schema/Potentials.capnp	1615	CPMDCpmdSection	steepestDescentOptions	Text					
+cpmdc	schema/Potentials.capnp	1616	CPMDCpmdSection	conjugateGradientOptions	Text					
+cpmdc	schema/Potentials.capnp	1617	CPMDCpmdSection	odiisOptions	Text					
+cpmdc	schema/Potentials.capnp	1618	CPMDCpmdSection	odiisVectors	Int32	0				
+cpmdc	schema/Potentials.capnp	1619	CPMDCpmdSection	hamiltonianCutoff	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1620	CPMDCpmdSection	gdiisVectors	Int32	0				
+cpmdc	schema/Potentials.capnp	1621	CPMDCpmdSection	lbfgsOptions	Text					
+cpmdc	schema/Potentials.capnp	1622	CPMDCpmdSection	lbfgsPayload	Text					
+cpmdc	schema/Potentials.capnp	1623	CPMDCpmdSection	prfoOptions	Text					
+cpmdc	schema/Potentials.capnp	1624	CPMDCpmdSection	prfoPayload	Text					
+cpmdc	schema/Potentials.capnp	1625	CPMDCpmdSection	hesscore	Bool	false				
+cpmdc	schema/Potentials.capnp	1626	CPMDCpmdSection	bfgs	Bool	false				
+cpmdc	schema/Potentials.capnp	1627	CPMDCpmdSection	rfoOrder	Int32	0				
+cpmdc	schema/Potentials.capnp	1628	CPMDCpmdSection	inrParametersCount	Int32	0				
+cpmdc	schema/Potentials.capnp	1629	CPMDCpmdSection	inrParametersPayload	Text					
+cpmdc	schema/Potentials.capnp	1630	CPMDCpmdSection	implicitNewtonOptions	Text					
+cpmdc	schema/Potentials.capnp	1631	CPMDCpmdSection	implicitNewtonMaxIter	Int32	0				
+cpmdc	schema/Potentials.capnp	1632	CPMDCpmdSection	mixsd	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1633	CPMDCpmdSection	mixdiis	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1634	CPMDCpmdSection	restartOptions	Text					
+cpmdc	schema/Potentials.capnp	1635	CPMDCpmdSection	intFileOptions	Text					
+cpmdc	schema/Potentials.capnp	1636	CPMDCpmdSection	intFileName	Text					
+cpmdc	schema/Potentials.capnp	1637	CPMDCpmdSection	initializeWavefunctionOptions	Text					
+cpmdc	schema/Potentials.capnp	1638	CPMDCpmdSection	rattleParameters	Text					
+cpmdc	schema/Potentials.capnp	1639	CPMDCpmdSection	orthogonalizationOptions	Text					
+cpmdc	schema/Potentials.capnp	1640	CPMDCpmdSection	quenchOptions	Text					
+cpmdc	schema/Potentials.capnp	1641	CPMDCpmdSection	randomizeOptions	Text					
+cpmdc	schema/Potentials.capnp	1642	CPMDCpmdSection	randomizeAmplitude	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1643	CPMDCpmdSection	useMts	Bool	false				
+cpmdc	schema/Potentials.capnp	1644	CPMDCpmdSection	nabdyZmax	Int32	0				
+cpmdc	schema/Potentials.capnp	1645	CPMDCpmdSection	nabdySoft	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1646	CPMDCpmdSection	nabdyRedistributeAmplitude	Bool	false				
+cpmdc	schema/Potentials.capnp	1647	CPMDCpmdSection	nabdyScaleP	Bool	false				
+cpmdc	schema/Potentials.capnp	1648	CPMDCpmdSection	nabdyThermo	Text					
+cpmdc	schema/Potentials.capnp	1649	CPMDCpmdSection	noseIonsOptions	Text					
+cpmdc	schema/Potentials.capnp	1650	CPMDCpmdSection	useInStream	Bool	false				
+cpmdc	schema/Potentials.capnp	1651	CPMDCpmdSection	useOutStream	Bool	false				
+cpmdc	schema/Potentials.capnp	1652	CPMDCpmdSection	useCublas	Bool	false				
+cpmdc	schema/Potentials.capnp	1653	CPMDCpmdSection	useCufft	Bool	false				
+cpmdc	schema/Potentials.capnp	1654	CPMDCpmdSection	blasNStreamsPerDevice	Int32	0				
+cpmdc	schema/Potentials.capnp	1655	CPMDCpmdSection	blasNDevicesPerTask	Int32	0				
+cpmdc	schema/Potentials.capnp	1656	CPMDCpmdSection	fftNStreamsPerDevice	Int32	0				
+cpmdc	schema/Potentials.capnp	1657	CPMDCpmdSection	fftNDevicesPerTask	Int32	0				
+cpmdc	schema/Potentials.capnp	1658	CPMDCpmdSection	useMpiIo	Bool	false				
+cpmdc	schema/Potentials.capnp	1659	CPMDCpmdSection	traceOptions	Text					
+cpmdc	schema/Potentials.capnp	1660	CPMDCpmdSection	traceProcedure	Text					
+cpmdc	schema/Potentials.capnp	1661	CPMDCpmdSection	traceMaxDepth	Int32	0				
+cpmdc	schema/Potentials.capnp	1662	CPMDCpmdSection	traceMaxCalls	Int32	0				
+cpmdc	schema/Potentials.capnp	1663	CPMDCpmdSection	structureOptions	Text					
+cpmdc	schema/Potentials.capnp	1664	CPMDCpmdSection	structureSelection	Text					
+cpmdc	schema/Potentials.capnp	1665	CPMDCpmdSection	wannierNproc	Int32	0				
+cpmdc	schema/Potentials.capnp	1666	CPMDCpmdSection	wannierRelocalizeInScf	Bool	false				
+cpmdc	schema/Potentials.capnp	1667	CPMDCpmdSection	wannierRecomputeDipoleMatricesEvery	Int32	0				
+cpmdc	schema/Potentials.capnp	1668	CPMDCpmdSection	wannierRelocalizeEvery	Int32	0				
+cpmdc	schema/Potentials.capnp	1669	CPMDCpmdSection	paraUseMpiInPlace	Bool	false				
+cpmdc	schema/Potentials.capnp	1670	CPMDCpmdSection	paraBuffSize	Int32	0				
+cpmdc	schema/Potentials.capnp	1671	CPMDCpmdSection	paraStackBuffSize	Int32	0				
+cpmdc	schema/Potentials.capnp	1672	CPMDCpmdSection	cpGroups	Text					
+cpmdc	schema/Potentials.capnp	1673	CPMDCpmdSection	fileFusionPayload	Text					
+cpmdc	schema/Potentials.capnp	1674	CPMDCpmdSection	fileMergePayload	Text					
+cpmdc	schema/Potentials.capnp	1675	CPMDCpmdSection	fileSeparationPayload	Text					
+cpmdc	schema/Potentials.capnp	1676	CPMDCpmdSection	noReset	Int32	0				
+cpmdc	schema/Potentials.capnp	1677	CPMDCpmdSection	lbfgsNtrust	Int32	0				
+cpmdc	schema/Potentials.capnp	1678	CPMDCpmdSection	lbfgsNrestt	Int32	0				
+cpmdc	schema/Potentials.capnp	1679	CPMDCpmdSection	lbfgsNtrstr	Int32	0				
+cpmdc	schema/Potentials.capnp	1680	CPMDCpmdSection	lbfgsTrustr	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1681	CPMDCpmdSection	prfoMode	Int32	0				
+cpmdc	schema/Potentials.capnp	1682	CPMDCpmdSection	prfoMdlock	Int32	0				
+cpmdc	schema/Potentials.capnp	1683	CPMDCpmdSection	prfoTolenv	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1684	CPMDCpmdSection	prfoTrustp	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1685	CPMDCpmdSection	prfoOmin	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1686	CPMDCpmdSection	prfoNsvib	Int32	0				
+cpmdc	schema/Potentials.capnp	1687	CPMDCpmdSection	prfoCoreAtoms	List					
+cpmdc	schema/Potentials.capnp	1688	CPMDCpmdSection	prfoNsmaxp	Int32	0				
+cpmdc	schema/Potentials.capnp	1689	CPMDCpmdSection	prfoProjectedHessian	Bool	false				
+cpmdc	schema/Potentials.capnp	1690	CPMDCpmdSection	prfoDisplacement	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1691	CPMDCpmdSection	prfoHessianType	Int32	0				
+cpmdc	schema/Potentials.capnp	1692	CPMDCpmdSection	lsd	Bool	false				
+cpmdc	schema/Potentials.capnp	1693	CPMDCpmdSection	checkMemory	Bool	false				
+cpmdc	schema/Potentials.capnp	1694	CPMDCpmdSection	trotterFactorizationOff	Bool	false				
+cpmdc	schema/Potentials.capnp	1695	CPMDCpmdSection	damping	Text					
+cpmdc	schema/Potentials.capnp	1696	CPMDCpmdSection	dipoleDynamics	Bool	false				
+cpmdc	schema/Potentials.capnp	1697	CPMDCpmdSection	realSpaceWfn	Bool	false				
+cpmdc	schema/Potentials.capnp	1698	CPMDCpmdSection	noseIonsLocalT0	Bool	false				
+cpmdc	schema/Potentials.capnp	1699	CPMDCpmdSection	noseIonsLocalThermostatCount	Int32	0				
+cpmdc	schema/Potentials.capnp	1700	CPMDCpmdSection	noseIonsLocalThermostats	Text					
+cpmdc	schema/Potentials.capnp	1701	CPMDCpmdSection	noseIonsLocalRangeCount	Int32	0				
+cpmdc	schema/Potentials.capnp	1702	CPMDCpmdSection	noseIonsLocalRanges	Text					
+cpmdc	schema/Potentials.capnp	1703	CPMDCpmdSection	noseIonsCafesGroupCount	Int32	0				
+cpmdc	schema/Potentials.capnp	1704	CPMDCpmdSection	noseIonsCafesGroups	Text					
+cpmdc	schema/Potentials.capnp	1705	CPMDCpmdSection	trotterFactorization	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1709	CPMDDftSection	functional	Text	"BLYP"				
+cpmdc	schema/Potentials.capnp	1710	CPMDDftSection	lsd	Bool	false				
+cpmdc	schema/Potentials.capnp	1711	CPMDDftSection	directives	List					
+cpmdc	schema/Potentials.capnp	1712	CPMDDftSection	gcCutoff	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1713	CPMDDftSection	xcDriver	Text					
+cpmdc	schema/Potentials.capnp	1714	CPMDDftSection	libxc	Text					
+cpmdc	schema/Potentials.capnp	1715	CPMDDftSection	lrKernel	Text					
+cpmdc	schema/Potentials.capnp	1716	CPMDDftSection	refunct	Text					
+cpmdc	schema/Potentials.capnp	1717	CPMDDftSection	mtsHighFunc	Text					
+cpmdc	schema/Potentials.capnp	1718	CPMDDftSection	mtsLowFunc	Text					
+cpmdc	schema/Potentials.capnp	1719	CPMDDftSection	hfx	Bool	false				
+cpmdc	schema/Potentials.capnp	1720	CPMDDftSection	hfxScreening	Text					
+cpmdc	schema/Potentials.capnp	1721	CPMDDftSection	hubbard	Text					
+cpmdc	schema/Potentials.capnp	1722	CPMDDftSection	alpha	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1723	CPMDDftSection	beta	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1724	CPMDDftSection	oldCode	Bool	false				
+cpmdc	schema/Potentials.capnp	1725	CPMDDftSection	newCode	Bool	false				
+cpmdc	schema/Potentials.capnp	1726	CPMDDftSection	correlation	Text					
+cpmdc	schema/Potentials.capnp	1727	CPMDDftSection	exchange	Text					
+cpmdc	schema/Potentials.capnp	1728	CPMDDftSection	becke88	Bool	false				
+cpmdc	schema/Potentials.capnp	1729	CPMDDftSection	hubbardU	List					
+cpmdc	schema/Potentials.capnp	1730	CPMDDftSection	hfxWfcCutoff	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1731	CPMDDftSection	hfxBlock	Int32	0				
+cpmdc	schema/Potentials.capnp	1732	CPMDDftSection	hfxDistribution	Text	""				
+cpmdc	schema/Potentials.capnp	1736	CPMDAtomsPseudopotential	element	Text					
+cpmdc	schema/Potentials.capnp	1737	CPMDAtomsPseudopotential	path	Text					
+cpmdc	schema/Potentials.capnp	1738	CPMDAtomsPseudopotential	lmax	Int32	-1				
+cpmdc	schema/Potentials.capnp	1739	CPMDAtomsPseudopotential	loc	Int32	-1				
+cpmdc	schema/Potentials.capnp	1740	CPMDAtomsPseudopotential	skip	Int32	-1				
+cpmdc	schema/Potentials.capnp	1741	CPMDAtomsPseudopotential	kleinmanBylander	Bool	false				
+cpmdc	schema/Potentials.capnp	1742	CPMDAtomsPseudopotential	raggio	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1743	CPMDAtomsPseudopotential	nonlinearCore	Bool	false				
+cpmdc	schema/Potentials.capnp	1749	CPMDAtomConstraint	kind	Text					
+cpmdc	schema/Potentials.capnp	1750	CPMDAtomConstraint	atoms	List					
+cpmdc	schema/Potentials.capnp	1751	CPMDAtomConstraint	target	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1752	CPMDAtomConstraint	growth	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1756	CPMDIsotope	element	Text					
+cpmdc	schema/Potentials.capnp	1757	CPMDIsotope	mass	Float64					
+cpmdc	schema/Potentials.capnp	1761	CPMDAtomVelocity	atom	Int32					
+cpmdc	schema/Potentials.capnp	1762	CPMDAtomVelocity	velocity	List					
+cpmdc	schema/Potentials.capnp	1766	CPMDDummyAtom	type	Int32	1				
+cpmdc	schema/Potentials.capnp	1767	CPMDDummyAtom	atoms	List					
+cpmdc	schema/Potentials.capnp	1768	CPMDDummyAtom	weights	List					
+cpmdc	schema/Potentials.capnp	1772	CPMDAtomsSection	pseudopotentials	List					
+cpmdc	schema/Potentials.capnp	1775	CPMDAtomsSection	directives	List					
+cpmdc	schema/Potentials.capnp	1776	CPMDAtomsSection	constraints	List					
+cpmdc	schema/Potentials.capnp	1777	CPMDAtomsSection	isotopes	List					
+cpmdc	schema/Potentials.capnp	1778	CPMDAtomsSection	velocities	List					
+cpmdc	schema/Potentials.capnp	1779	CPMDAtomsSection	dummyAtoms	List					
+cpmdc	schema/Potentials.capnp	1780	CPMDAtomsSection	changeBonds	List					
+cpmdc	schema/Potentials.capnp	1781	CPMDAtomsSection	generate	Bool	false				
+cpmdc	schema/Potentials.capnp	1788	CPMDVdwSection	empiricalCorrection	Bool	false				
+cpmdc	schema/Potentials.capnp	1789	CPMDVdwSection	grimme	Text	""				
+cpmdc	schema/Potentials.capnp	1790	CPMDVdwSection	s6	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1791	CPMDVdwSection	vdwCutoff	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1792	CPMDVdwSection	vdwCell	List					
+cpmdc	schema/Potentials.capnp	1793	CPMDVdwSection	radius	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1794	CPMDVdwSection	directives	List					
+cpmdc	schema/Potentials.capnp	1800	CPMDHubbardU	element	Text					
+cpmdc	schema/Potentials.capnp	1801	CPMDHubbardU	l	Int32	2				
+cpmdc	schema/Potentials.capnp	1802	CPMDHubbardU	u	Float64					
+cpmdc	schema/Potentials.capnp	1806	CPMDDirectiveSection	directives	List					
+cpmdc	schema/Potentials.capnp	1807	CPMDDirectiveSection	subsections	List					
+cpmdc	schema/Potentials.capnp	1843	CPMDInputSection	generic	CPMDGenericSection					
+cpmdc	schema/Potentials.capnp	1844	CPMDInputSection	system	CPMDSystemSection					
+cpmdc	schema/Potentials.capnp	1845	CPMDInputSection	cpmd	CPMDCpmdSection					
+cpmdc	schema/Potentials.capnp	1846	CPMDInputSection	dft	CPMDDftSection					
+cpmdc	schema/Potentials.capnp	1847	CPMDInputSection	atoms	CPMDAtomsSection					
+cpmdc	schema/Potentials.capnp	1848	CPMDInputSection	set	CPMDSetDirective					
+cpmdc	schema/Potentials.capnp	1849	CPMDInputSection	raw	Text					
+cpmdc	schema/Potentials.capnp	1850	CPMDInputSection	atom	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1851	CPMDInputSection	basis	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1852	CPMDInputSection	clas	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1853	CPMDInputSection	eam	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1854	CPMDInputSection	exte	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1855	CPMDInputSection	hardness	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1856	CPMDInputSection	info	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1857	CPMDInputSection	linres	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1858	CPMDInputSection	molstates	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1859	CPMDInputSection	mts	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1860	CPMDInputSection	nlcc	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1861	CPMDInputSection	path	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1862	CPMDInputSection	pimd	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1863	CPMDInputSection	potential	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1864	CPMDInputSection	prop	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1865	CPMDInputSection	ptddft	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1866	CPMDInputSection	resp	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1867	CPMDInputSection	tddft	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1868	CPMDInputSection	vdw	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1869	CPMDInputSection	vectors	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1870	CPMDInputSection	wavefunction	CPMDDirectiveSection					
+cpmdc	schema/Potentials.capnp	1871	CPMDInputSection	vdwParams	CPMDVdwSection					
+cpmdc	schema/Potentials.capnp	1872	CPMDInputSection	propParams	CPMDPropSection					
+cpmdc	schema/Potentials.capnp	1873	CPMDInputSection	linresParams	CPMDLinresSection					
+cpmdc	schema/Potentials.capnp	1874	CPMDInputSection	pimdParams	CPMDPimdSection					
+cpmdc	schema/Potentials.capnp	1875	CPMDInputSection	pathParams	CPMDPathSection					
+cpmdc	schema/Potentials.capnp	1876	CPMDInputSection	tddftParams	CPMDTddftSection					
+cpmdc	schema/Potentials.capnp	1877	CPMDInputSection	respParams	CPMDRespSection					
+cpmdc	schema/Potentials.capnp	1878	CPMDInputSection	exteParams	CPMDExteSection					
+cpmdc	schema/Potentials.capnp	1879	CPMDInputSection	vectorsParams	CPMDVectorsSection					
+cpmdc	schema/Potentials.capnp	1889	CPMDParams	functional	Text	"BLYP"				
+cpmdc	schema/Potentials.capnp	1890	CPMDParams	cutOffRy	Float64	70.0				
+cpmdc	schema/Potentials.capnp	1891	CPMDParams	charge	Int32	0				
+cpmdc	schema/Potentials.capnp	1892	CPMDParams	multiplicity	Int32	1				
+cpmdc	schema/Potentials.capnp	1893	CPMDParams	task	Text	"gradient"				
+cpmdc	schema/Potentials.capnp	1894	CPMDParams	title	Text	""				
+cpmdc	schema/Potentials.capnp	1895	CPMDParams	memoryMb	UInt32	0				
+cpmdc	schema/Potentials.capnp	1896	CPMDParams	scratchDir	Text	""				
+cpmdc	schema/Potentials.capnp	1897	CPMDParams	permanentDir	Text	""				
+cpmdc	schema/Potentials.capnp	1898	CPMDParams	cpmdRoot	Text	""				
+cpmdc	schema/Potentials.capnp	1899	CPMDParams	enginePath	Text	""				
+cpmdc	schema/Potentials.capnp	1900	CPMDParams	inputBlocks	List					
+cpmdc	schema/Potentials.capnp	1901	CPMDParams	inputSections	List					
+cpmdc	schema/Potentials.capnp	1914	CommonMethodSpec	xcFunctionals	List					
+cpmdc	schema/Potentials.capnp	1915	CommonMethodSpec	basisSet	Text	""				
+cpmdc	schema/Potentials.capnp	1916	CommonMethodSpec	planewaveCutoffEv	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1917	CommonMethodSpec	charge	Int32	0				
+cpmdc	schema/Potentials.capnp	1918	CommonMethodSpec	spinMultiplicity	Int32	0				
+cpmdc	schema/Potentials.capnp	1919	CommonMethodSpec	scfEnergyToleranceEv	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1920	CommonMethodSpec	scfMaxIterations	Int32	0				
+cpmdc	schema/Potentials.capnp	1921	CommonMethodSpec	kMesh	List					
+cpmdc	schema/Potentials.capnp	1922	CommonMethodSpec	smearing	Smearing					
+cpmdc	schema/Potentials.capnp	1923	CommonMethodSpec	vanDerWaalsMethod	Text	""				
+cpmdc	schema/Potentials.capnp	1924	CommonMethodSpec	relativityMethod	Text	""				
+cpmdc	schema/Potentials.capnp	1925	CommonMethodSpec	vanDerWaalsS6	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1929	Smearing	kind	Kind	none				
+cpmdc	schema/Potentials.capnp	1930	Smearing	widthEv	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1946	MetatomicParams	modelPath	Text					
+cpmdc	schema/Potentials.capnp	1947	MetatomicParams	device	Text	"cpu"				
+cpmdc	schema/Potentials.capnp	1948	MetatomicParams	extensionsDirectory	Text	""				
+cpmdc	schema/Potentials.capnp	1949	MetatomicParams	checkConsistency	Bool	false				
+cpmdc	schema/Potentials.capnp	1950	MetatomicParams	uncertaintyThreshold	Float64	-1.0				
+cpmdc	schema/Potentials.capnp	1951	MetatomicParams	dtypeOverride	Text	""				
+cpmdc	schema/Potentials.capnp	1952	MetatomicParams	outputs	List					
+cpmdc	schema/Potentials.capnp	1959	Output	name	Text					
+cpmdc	schema/Potentials.capnp	1960	Output	perAtom	Bool	false				
+cpmdc	schema/Potentials.capnp	1961	Output	explicitGradients	List					
+cpmdc	schema/Potentials.capnp	1971	UmaParams	modelPath	Text					
+cpmdc	schema/Potentials.capnp	1972	UmaParams	taskName	Text	"omol"				
+cpmdc	schema/Potentials.capnp	1973	UmaParams	device	Text	"cpu"				
+cpmdc	schema/Potentials.capnp	1974	UmaParams	charge	Int32	0				
+cpmdc	schema/Potentials.capnp	1975	UmaParams	spin	Int32	1				
+cpmdc	schema/Potentials.capnp	1976	UmaParams	cutoff	Float64	0.0				
+cpmdc	schema/Potentials.capnp	1977	UmaParams	maxNeighbors	Int32	0				
+cpmdc	schema/Potentials.capnp	1989	LammpsParams	unitsStyle	Text	"metal"				
+cpmdc	schema/Potentials.capnp	1990	LammpsParams	atomStyle	Text	"atomic"				
+cpmdc	schema/Potentials.capnp	1991	LammpsParams	pairStyle	Text	""				
+cpmdc	schema/Potentials.capnp	1992	LammpsParams	pairCoeffs	List					
+cpmdc	schema/Potentials.capnp	1993	LammpsParams	typeToAtomicNumber	List					
+cpmdc	schema/Potentials.capnp	1994	LammpsParams	masses	List					
+cpmdc	schema/Potentials.capnp	1995	LammpsParams	newtonPair	Bool	true				
+cpmdc	schema/Potentials.capnp	1996	LammpsParams	boundary	Text	"p p p"				
+cpmdc	schema/Potentials.capnp	1997	LammpsParams	extraSetup	List					
+cpmdc	schema/Potentials.capnp	1998	LammpsParams	suffix	Text	""				
+cpmdc	schema/Potentials.capnp	2004	NWChemDplotStanza	title	Text	""				
+cpmdc	schema/Potentials.capnp	2005	NWChemDplotStanza	gaussianCube	Text	""				
+cpmdc	schema/Potentials.capnp	2006	NWChemDplotStanza	civecs	Text	""				
+cpmdc	schema/Potentials.capnp	2007	NWChemDplotStanza	limitXyz	List					
+cpmdc	schema/Potentials.capnp	2008	NWChemDplotStanza	spin	Text	""				
+cpmdc	schema/Potentials.capnp	2009	NWChemDplotStanza	orbitals	List					
+cpmdc	schema/Potentials.capnp	2010	NWChemDplotStanza	output	Text	""				
+cpmdc	schema/Potentials.capnp	2011	NWChemDplotStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2017	NWChemEspStanza	recalculate	Bool	false				
+cpmdc	schema/Potentials.capnp	2018	NWChemEspStanza	rangeFactor	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2019	NWChemEspStanza	probe	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2020	NWChemEspStanza	spacing	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2021	NWChemEspStanza	restrain	Bool	false				
+cpmdc	schema/Potentials.capnp	2022	NWChemEspStanza	restrainHfree	Bool	false				
+cpmdc	schema/Potentials.capnp	2023	NWChemEspStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2031	CPMDPropSection	dipoleMoment	Bool	false				
+cpmdc	schema/Potentials.capnp	2032	CPMDPropSection	localize	Bool	false				
+cpmdc	schema/Potentials.capnp	2033	CPMDPropSection	polarizability	Bool	false				
+cpmdc	schema/Potentials.capnp	2034	CPMDPropSection	cubecenter	List					
+cpmdc	schema/Potentials.capnp	2035	CPMDPropSection	cubefileDensity	Bool	false				
+cpmdc	schema/Potentials.capnp	2036	CPMDPropSection	cubefileOrbitals	List					
+cpmdc	schema/Potentials.capnp	2037	CPMDPropSection	chargesGaussian	Bool	false				
+cpmdc	schema/Potentials.capnp	2038	CPMDPropSection	directives	List					
+cpmdc	schema/Potentials.capnp	2044	CPMDLinresSection	convergence	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2045	CPMDLinresSection	maxSteps	Int32	0				
+cpmdc	schema/Potentials.capnp	2046	CPMDLinresSection	hthrs	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2047	CPMDLinresSection	directives	List					
+cpmdc	schema/Potentials.capnp	2053	CPMDPimdSection	replicas	Int32	0				
+cpmdc	schema/Potentials.capnp	2054	CPMDPimdSection	facmass	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2055	CPMDPimdSection	centroidDynamics	Bool	false				
+cpmdc	schema/Potentials.capnp	2056	CPMDPimdSection	normalModes	Bool	false				
+cpmdc	schema/Potentials.capnp	2057	CPMDPimdSection	staging	Bool	false				
+cpmdc	schema/Potentials.capnp	2058	CPMDPimdSection	directives	List					
+cpmdc	schema/Potentials.capnp	2064	CPMDPathSection	replicaNumber	Int32	0				
+cpmdc	schema/Potentials.capnp	2065	CPMDPathSection	nebSpring	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2066	CPMDPathSection	factor	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2067	CPMDPathSection	nloop	Int32	0				
+cpmdc	schema/Potentials.capnp	2068	CPMDPathSection	alpha	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2069	CPMDPathSection	directives	List					
+cpmdc	schema/Potentials.capnp	2075	CPMDTddftSection	states	Int32	0				
+cpmdc	schema/Potentials.capnp	2076	CPMDTddftSection	tammDancoff	Bool	false				
+cpmdc	schema/Potentials.capnp	2077	CPMDTddftSection	diagonalizer	Text	""				
+cpmdc	schema/Potentials.capnp	2078	CPMDTddftSection	convergence	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2079	CPMDTddftSection	directives	List					
+cpmdc	schema/Potentials.capnp	2085	NWChemQmdStanza	nstepNucl	Int32	0				
+cpmdc	schema/Potentials.capnp	2086	NWChemQmdStanza	dtNucl	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2087	NWChemQmdStanza	targTemp	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2088	NWChemQmdStanza	thermostat	Text	""				
+cpmdc	schema/Potentials.capnp	2089	NWChemQmdStanza	thermostatParameter	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2090	NWChemQmdStanza	randomSeed	Int32	0				
+cpmdc	schema/Potentials.capnp	2091	NWChemQmdStanza	comStep	Int32	0				
+cpmdc	schema/Potentials.capnp	2092	NWChemQmdStanza	printXyz	Int32	0				
+cpmdc	schema/Potentials.capnp	2093	NWChemQmdStanza	linear	Bool	false				
+cpmdc	schema/Potentials.capnp	2094	NWChemQmdStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2100	NWChemRamanStanza	normalMode	Bool	false				
+cpmdc	schema/Potentials.capnp	2101	NWChemRamanStanza	dynamic	Bool	false				
+cpmdc	schema/Potentials.capnp	2102	NWChemRamanStanza	low	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2103	NWChemRamanStanza	high	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2104	NWChemRamanStanza	steps	Int32	0				
+cpmdc	schema/Potentials.capnp	2105	NWChemRamanStanza	fieldFrequency	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2106	NWChemRamanStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2112	NWChemFonStanza	partial	Int32	0				
+cpmdc	schema/Potentials.capnp	2113	NWChemFonStanza	electrons	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2114	NWChemFonStanza	filled	Int32	0				
+cpmdc	schema/Potentials.capnp	2115	NWChemFonStanza	alphaOnly	Bool	false				
+cpmdc	schema/Potentials.capnp	2116	NWChemFonStanza	temperature	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2117	NWChemFonStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2125	CPMDRespSection	restraintStrength	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2126	CPMDRespSection	hyperbolic	Bool	false				
+cpmdc	schema/Potentials.capnp	2127	CPMDRespSection	tightness	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2128	CPMDRespSection	directives	List					
+cpmdc	schema/Potentials.capnp	2134	CPMDExteSection	externalField	List					
+cpmdc	schema/Potentials.capnp	2135	CPMDExteSection	directives	List					
+cpmdc	schema/Potentials.capnp	2141	CPMDVectorsSection	newOrtho	Bool	false				
+cpmdc	schema/Potentials.capnp	2142	CPMDVectorsSection	overlap	Bool	false				
+cpmdc	schema/Potentials.capnp	2143	CPMDVectorsSection	directives	List					
+cpmdc	schema/Potentials.capnp	2149	NWChemNebStanza	nbeads	Int32	0				
+cpmdc	schema/Potentials.capnp	2150	NWChemNebStanza	kbeads	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2151	NWChemNebStanza	maxiter	Int32	0				
+cpmdc	schema/Potentials.capnp	2152	NWChemNebStanza	stepsize	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2153	NWChemNebStanza	trust	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2154	NWChemNebStanza	nhist	Int32	0				
+cpmdc	schema/Potentials.capnp	2155	NWChemNebStanza	algorithm	Int32	0				
+cpmdc	schema/Potentials.capnp	2156	NWChemNebStanza	reset	Bool	false				
+cpmdc	schema/Potentials.capnp	2157	NWChemNebStanza	convergence	Convergence	unspecified				
+cpmdc	schema/Potentials.capnp	2158	NWChemNebStanza	gmax	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2159	NWChemNebStanza	grms	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2160	NWChemNebStanza	xmax	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2161	NWChemNebStanza	xrms	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2162	NWChemNebStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2175	NWChemMepgsStanza	stride	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2176	NWChemMepgsStanza	maxmep	Int32	0				
+cpmdc	schema/Potentials.capnp	2177	NWChemMepgsStanza	maxiter	Int32	0				
+cpmdc	schema/Potentials.capnp	2178	NWChemMepgsStanza	inhess	Int32	0				
+cpmdc	schema/Potentials.capnp	2179	NWChemMepgsStanza	evib	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2180	NWChemMepgsStanza	direction	Direction	both				
+cpmdc	schema/Potentials.capnp	2181	NWChemMepgsStanza	opttol	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2182	NWChemMepgsStanza	eprec	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2183	NWChemMepgsStanza	xyz	Bool	false				
+cpmdc	schema/Potentials.capnp	2184	NWChemMepgsStanza	mswg	Bool	false				
+cpmdc	schema/Potentials.capnp	2185	NWChemMepgsStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2197	NWChemTroptStanza	opttol	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2198	NWChemTroptStanza	eprec	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2199	NWChemTroptStanza	trust	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2200	NWChemTroptStanza	maxiter	Int32	0				
+cpmdc	schema/Potentials.capnp	2201	NWChemTroptStanza	inhess	Int32	0				
+cpmdc	schema/Potentials.capnp	2202	NWChemTroptStanza	lbfgs	Bool	false				
+cpmdc	schema/Potentials.capnp	2203	NWChemTroptStanza	mh	Int32	0				
+cpmdc	schema/Potentials.capnp	2204	NWChemTroptStanza	linopt	Int32	0				
+cpmdc	schema/Potentials.capnp	2205	NWChemTroptStanza	qstep	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	2206	NWChemTroptStanza	moddir	Int32	0				
+cpmdc	schema/Potentials.capnp	2207	NWChemTroptStanza	modsad	Int32	0				
+cpmdc	schema/Potentials.capnp	2208	NWChemTroptStanza	redoautoz	Bool	false				
+cpmdc	schema/Potentials.capnp	2209	NWChemTroptStanza	convergence	Convergence	unspecified				
+cpmdc	schema/Potentials.capnp	2210	NWChemTroptStanza	gmax	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2211	NWChemTroptStanza	grms	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2212	NWChemTroptStanza	xmax	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2213	NWChemTroptStanza	xrms	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2214	NWChemTroptStanza	xyz	Bool	false				
+cpmdc	schema/Potentials.capnp	2215	NWChemTroptStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2229	NWChemMetadynamicsCv	kind	Kind	bond				
+cpmdc	schema/Potentials.capnp	2230	NWChemMetadynamicsCv	atoms	List					
+cpmdc	schema/Potentials.capnp	2231	NWChemMetadynamicsCv	index1	List					
+cpmdc	schema/Potentials.capnp	2232	NWChemMetadynamicsCv	index2	List					
+cpmdc	schema/Potentials.capnp	2233	NWChemMetadynamicsCv	weight	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2234	NWChemMetadynamicsCv	sigma	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2235	NWChemMetadynamicsCv	rangeLow	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2236	NWChemMetadynamicsCv	rangeHigh	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2237	NWChemMetadynamicsCv	nrange	Int32	0				
+cpmdc	schema/Potentials.capnp	2238	NWChemMetadynamicsCv	n	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2239	NWChemMetadynamicsCv	m	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2240	NWChemMetadynamicsCv	r0	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2252	NWChemMetadynamicsStanza	cvs	List					
+cpmdc	schema/Potentials.capnp	2253	NWChemMetadynamicsStanza	tempered	Bool	false				
+cpmdc	schema/Potentials.capnp	2254	NWChemMetadynamicsStanza	boundary	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2255	NWChemMetadynamicsStanza	potentialFilename	Text	""				
+cpmdc	schema/Potentials.capnp	2256	NWChemMetadynamicsStanza	printShift	Int32	0				
+cpmdc	schema/Potentials.capnp	2257	NWChemMetadynamicsStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2264	NWChemCellOptimizeStanza	cellName	Text	""				
+cpmdc	schema/Potentials.capnp	2265	NWChemCellOptimizeStanza	strategy	Strategy	unspecified				
+cpmdc	schema/Potentials.capnp	2266	NWChemCellOptimizeStanza	optimizeLattice	List					
+cpmdc	schema/Potentials.capnp	2267	NWChemCellOptimizeStanza	optimizeLatticeVectors	List					
+cpmdc	schema/Potentials.capnp	2268	NWChemCellOptimizeStanza	latticeTolerances	List					
+cpmdc	schema/Potentials.capnp	2269	NWChemCellOptimizeStanza	cycles	Int32	0				
+cpmdc	schema/Potentials.capnp	2270	NWChemCellOptimizeStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2282	NWChemRismStanza	permittivity	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2283	NWChemRismStanza	tau	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2284	NWChemRismStanza	temp	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2285	NWChemRismStanza	tol	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2286	NWChemRismStanza	lambda	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2287	NWChemRismStanza	diis	Int32	0				
+cpmdc	schema/Potentials.capnp	2288	NWChemRismStanza	ngrid	Int32	0				
+cpmdc	schema/Potentials.capnp	2289	NWChemRismStanza	closure	Text	""				
+cpmdc	schema/Potentials.capnp	2290	NWChemRismStanza	vdwRule	Text	""				
+cpmdc	schema/Potentials.capnp	2291	NWChemRismStanza	vdwParameters	Text	""				
+cpmdc	schema/Potentials.capnp	2292	NWChemRismStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2298	NWChemDimQmStanza	frequency	Bool	false				
+cpmdc	schema/Potentials.capnp	2299	NWChemDimQmStanza	algorithm	Int32	0				
+cpmdc	schema/Potentials.capnp	2300	NWChemDimQmStanza	tolerance	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2301	NWChemDimQmStanza	efield	List					
+cpmdc	schema/Potentials.capnp	2302	NWChemDimQmStanza	localfield	Bool	false				
+cpmdc	schema/Potentials.capnp	2303	NWChemDimQmStanza	noresp	Bool	false				
+cpmdc	schema/Potentials.capnp	2304	NWChemDimQmStanza	screen	Screen	unspecified				
+cpmdc	schema/Potentials.capnp	2305	NWChemDimQmStanza	screenFactor	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2306	NWChemDimQmStanza	noseed	Bool	false				
+cpmdc	schema/Potentials.capnp	2307	NWChemDimQmStanza	debug	Bool	false				
+cpmdc	schema/Potentials.capnp	2308	NWChemDimQmStanza	printAtomicDipoles	Bool	false				
+cpmdc	schema/Potentials.capnp	2309	NWChemDimQmStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2321	NWChemGwStanza	evgw	Bool	false				
+cpmdc	schema/Potentials.capnp	2322	NWChemGwStanza	evgw0	Bool	false				
+cpmdc	schema/Potentials.capnp	2323	NWChemGwStanza	eviter	Int32	0				
+cpmdc	schema/Potentials.capnp	2324	NWChemGwStanza	method	Method	unspecified				
+cpmdc	schema/Potentials.capnp	2325	NWChemGwStanza	ngl	Int32	0				
+cpmdc	schema/Potentials.capnp	2326	NWChemGwStanza	solver	Solver	unspecified				
+cpmdc	schema/Potentials.capnp	2327	NWChemGwStanza	qpiter	Int32	0				
+cpmdc	schema/Potentials.capnp	2328	NWChemGwStanza	thresholdEv	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2329	NWChemGwStanza	occAlpha	Int32	0				
+cpmdc	schema/Potentials.capnp	2330	NWChemGwStanza	virAlpha	Int32	0				
+cpmdc	schema/Potentials.capnp	2331	NWChemGwStanza	occBeta	Int32	0				
+cpmdc	schema/Potentials.capnp	2332	NWChemGwStanza	virBeta	Int32	0				
+cpmdc	schema/Potentials.capnp	2333	NWChemGwStanza	first	Int32	0				
+cpmdc	schema/Potentials.capnp	2334	NWChemGwStanza	ncap	Bool	false				
+cpmdc	schema/Potentials.capnp	2335	NWChemGwStanza	eta	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2336	NWChemGwStanza	rpa	Bool	false				
+cpmdc	schema/Potentials.capnp	2337	NWChemGwStanza	diag	Bool	false				
+cpmdc	schema/Potentials.capnp	2338	NWChemGwStanza	core	Bool	false				
+cpmdc	schema/Potentials.capnp	2339	NWChemGwStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2355	NWChemEtransStanza	tol2e	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2356	NWChemEtransStanza	fock	NWChemToggle	unspecified				
+cpmdc	schema/Potentials.capnp	2357	NWChemEtransStanza	fmo	Bool	false				
+cpmdc	schema/Potentials.capnp	2358	NWChemEtransStanza	vectorsReactant	Text	""				
+cpmdc	schema/Potentials.capnp	2359	NWChemEtransStanza	vectorsProduct	Text	""				
+cpmdc	schema/Potentials.capnp	2360	NWChemEtransStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2366	NWChemStringStanza	nbeads	Int32	0				
+cpmdc	schema/Potentials.capnp	2367	NWChemStringStanza	maxiter	Int32	0				
+cpmdc	schema/Potentials.capnp	2368	NWChemStringStanza	stepsize	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2369	NWChemStringStanza	tol	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2370	NWChemStringStanza	interpol	Int32	0				
+cpmdc	schema/Potentials.capnp	2371	NWChemStringStanza	nhist	Int32	0				
+cpmdc	schema/Potentials.capnp	2372	NWChemStringStanza	algorithm	Int32	0				
+cpmdc	schema/Potentials.capnp	2373	NWChemStringStanza	printShift	Int32	0				
+cpmdc	schema/Potentials.capnp	2374	NWChemStringStanza	freeze1	Bool	false				
+cpmdc	schema/Potentials.capnp	2375	NWChemStringStanza	freezen	Bool	false				
+cpmdc	schema/Potentials.capnp	2376	NWChemStringStanza	hasmiddle	Bool	false				
+cpmdc	schema/Potentials.capnp	2377	NWChemStringStanza	impose	Bool	false				
+cpmdc	schema/Potentials.capnp	2378	NWChemStringStanza	reset	Bool	false				
+cpmdc	schema/Potentials.capnp	2379	NWChemStringStanza	xyzPath	Text	""				
+cpmdc	schema/Potentials.capnp	2380	NWChemStringStanza	mode	Mode	unspecified				
+cpmdc	schema/Potentials.capnp	2381	NWChemStringStanza	directives	List					
+cpmdc	schema/Potentials.capnp	2392	NWChemCdftConstraint	firstAtomStart	Int32					
+cpmdc	schema/Potentials.capnp	2393	NWChemCdftConstraint	firstAtomEnd	Int32					
+cpmdc	schema/Potentials.capnp	2394	NWChemCdftConstraint	secondAtomStart	Int32	0				
+cpmdc	schema/Potentials.capnp	2395	NWChemCdftConstraint	secondAtomEnd	Int32	0				
+cpmdc	schema/Potentials.capnp	2396	NWChemCdftConstraint	kind	Kind	charge				
+cpmdc	schema/Potentials.capnp	2397	NWChemCdftConstraint	value	Float64					
+cpmdc	schema/Potentials.capnp	2407	NWChemCdftSpec	constraints	List					
+cpmdc	schema/Potentials.capnp	2408	NWChemCdftSpec	convergence	Float64	0.0				
+cpmdc	schema/Potentials.capnp	2409	NWChemCdftSpec	population	Population	unspecified				
+cpmdc	schema/Potentials.capnp	2431	PotentialConfig	none	Void					
+cpmdc	schema/Potentials.capnp	2432	PotentialConfig	nwchem	NWChemParams					
+cpmdc	schema/Potentials.capnp	2433	PotentialConfig	cpmd	CPMDParams					
+cpmdc	schema/Potentials.capnp	2434	PotentialConfig	metatomic	MetatomicParams					
+cpmdc	schema/Potentials.capnp	2435	PotentialConfig	lammps	LammpsParams					
+cpmdc	schema/Potentials.capnp	2440	PotentialConfig	common	CommonMethodSpec					

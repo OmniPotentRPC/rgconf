@@ -1,0 +1,27 @@
+#+TITLE: Resolve a fixed-energy tunneling path
+
+The eOn client selects this calculation with the =lineb= job in the
+=[Main]= section. The =[Lineb]= section holds the seed path and the controls.
+
+- =initial_path= names the multi-frame seed band.
+- =energy= sets the turning energy in eV. The resolver retains whether the caller supplied it.
+- =opt_tol= and =perp_tol= are mass-weighted force tolerances in √eV. Each defaults to 0.001.
+- =beads= selects the number of harmonic quantum TST replicas. Use zero for the path alone, or at least two for the rate.
+- =molecular= enables rigid alignment of a free molecule.
+- =linear_seed= joins the two turning points with a straight band. Leave it false to follow the supplied seed.
+- =projected_verlet= selects velocity-projected Verlet for band optimization.
+- =endpoint_convergence= applies =opt_tol= to the endpoints and =perp_tol= to the interior.
+- =endpoint_kappa= fixes the endpoint force coefficient. Zero selects the coefficient based on =endpoint_scale=.
+
+The resolver reports the canonical fields and the origin of each value. Run
+the example from the repository root.
+
+#+BEGIN_SRC bash
+rgconf resolve --profile eonLegacyIni --ini examples/lineb.ini
+#+END_SRC
+
+The output includes =lineb.energyEv= with value 0.25 and =lineb.beads=
+with value zero. Both come from the example file.
+
+Set =result_cache= to a RocksDB directory to record computed and cache-served
+evaluations separately in eOn. Reusing the same directory permits a warm run.

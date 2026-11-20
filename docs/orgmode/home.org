@@ -1,0 +1,13 @@
+#+TITLE: rgconf
+
+rgconf is the parameter and provenance library for the OmniPotentRPC stack.
+One Cap'n Proto schema describes a run. A Rust resolver folds defaults, files,
+environment variables, command line flags, and runtime edits. Provenance
+leaves are RFC 9162 hashes from the =rfc9162= crate.
+
+* Read next
+- The tutorial shows one client file becoming a resolved band.
+- The extension how-to adds a third party key without forking ordinals.
+- The deprecation how-to covers =eon-schema= and the rgpot schema.
+- The reference lists the public types.
+- The precedence explanation is the rule the resolver implements.

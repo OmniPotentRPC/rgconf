@@ -1,0 +1,6 @@
+repo	url	ref	commit
+eOn	https://github.com/TheochemUI/eOn.git	v3.6.0	2d2adada2f64c4c5a063065abc0d9a8a56d74b2c
+rgmin	https://github.com/OmniPotentRPC/rgmin.git	develop	6b0f63cb139a73733a4f0e587f52ec359fbcdbbe
+rgsaddle	https://github.com/OmniPotentRPC/rgsaddle.git	develop	f814e607d5f2e01d3b491a7dadbf54726b1d786e
+rgpot	https://github.com/OmniPotentRPC/rgpot.git	develop	31667bba0365cbec0c4873dbf6503d620f2685f9
+cpmdc	https://github.com/OmniPotentRPC/cpmdc.git	develop	292985ef1ff27cd13e768081fdbfd89e288abfa5

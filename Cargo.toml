@@ -1,0 +1,19 @@
+# Copyright 2023--present rgconf developers
+[workspace]
+resolver = "2"
+members = [
+    "crates/rgconf-core",
+    "crates/rgconf-c-abi",
+    "crates/rgconf-cli",
+    "python",
+]
+
+[workspace.package]
+edition = "2021"
+license = "MIT"
+rust-version = "1.85"
+authors = ["Rohit Goswami <rgoswami@ieee.org>"]
+version = "0.1.0"
+repository = "https://github.com/OmniPotentRPC/rgconf"
+homepage = "https://omnipotentrpc.github.io/rgconf/"
+readme = "README.md"

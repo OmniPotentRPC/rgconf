@@ -1,0 +1,1 @@
+Nested struct and enum declarations are included in the parameter catalog, so each leaf parameter has a spec. A type name shared by a struct and an enum resolves to the declaration named by the reference scope or path. The cautious slope annotation states that rgmin defaults to 1e-4 while the schema and eOn default to 1e-6.
