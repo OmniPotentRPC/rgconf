@@ -1,1 +1,0 @@
-The parameter map lists the rgmin Riemannian L-BFGS fields and the rgsaddle ARTn and growing string fields. Each names the rgconf schema field and the eOn option it corresponds to, or marks that there is none.

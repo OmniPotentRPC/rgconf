@@ -1,1 +1,0 @@
-The parameter map records the upstream commit each citation was checked against in `generated/sources.tsv`. `tools/fetch_sources.py` fetches those commits, and CI regenerates the map from them and compares it with the committed copy.
