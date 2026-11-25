@@ -6,7 +6,8 @@
     "docs/orgmode",
     "examples",
     "include",
-    "python"
+    "python",
+    "crates/rgconf-core/src"
   ],
   "excludeFolders": [
     "docs/source",
