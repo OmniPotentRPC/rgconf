@@ -8,7 +8,6 @@ rust-version.workspace = true
 authors.workspace = true
 description = "Command line resolver for rgconf."
 repository.workspace = true
-homepage.workspace = true
 documentation = "https://docs.rs/rgconf-cli"
 readme.workspace = true
 keywords = ["configuration", "capnproto", "provenance", "cli"]

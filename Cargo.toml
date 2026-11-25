@@ -15,5 +15,4 @@ rust-version = "1.85"
 authors = ["Rohit Goswami <rgoswami@ieee.org>"]
 version = "0.1.0"
 repository = "https://github.com/OmniPotentRPC/rgconf"
-homepage = "https://omnipotentrpc.github.io/rgconf/"
 readme = "README.md"
