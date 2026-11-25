@@ -2,25 +2,22 @@
   "$schema": "https://context7.com/schema/context7.json",
   "projectTitle": "rgconf",
   "description": "Cap'n Proto parameter resolution and provenance for OmniPotentRPC.",
-  "folders": [
-    "docs/orgmode",
-    "examples",
-    "include",
-    "python",
-    "crates/rgconf-core/src"
-  ],
   "excludeFolders": [
-    "docs/source",
+    "docs/orgmode",
     "docs/newsfragments",
+    "generated",
     "tests",
     "scripts",
-    ".github",
-    "generated"
+    ".github"
   ],
   "excludeFiles": [
     "CHANGELOG.md",
-    "CODE_OF_CONDUCT.md",
-    "LICENSE"
+    "LICENSE",
+    "CMakeLists.txt",
+    "AGENTS.md",
+    "llms.txt",
+    "llms-full.txt",
+    "source-parameter-map.rst"
   ],
   "rules": []
 }
