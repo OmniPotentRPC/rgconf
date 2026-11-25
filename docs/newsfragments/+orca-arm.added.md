@@ -1,0 +1,1 @@
+`PotentialConfig.orca` (31) and `PotentialSpec.orca` (7) with `ORCAParams` (executable, method, basis, keywords, charge, multiplicity, nprocs, maxcoreMb, restart, scratchDir, keepFiles, timeoutS) configure the `orcac` ORCA engine shim.
