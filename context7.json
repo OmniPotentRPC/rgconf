@@ -1,0 +1,23 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "rgconf",
+  "description": "Cap'n Proto parameter resolution and provenance for OmniPotentRPC.",
+  "excludeFolders": [
+    "docs/orgmode",
+    "docs/newsfragments",
+    "generated",
+    "tests",
+    "scripts",
+    ".github"
+  ],
+  "excludeFiles": [
+    "CHANGELOG.md",
+    "LICENSE",
+    "CMakeLists.txt",
+    "AGENTS.md",
+    "llms.txt",
+    "llms-full.txt",
+    "source-parameter-map.rst"
+  ],
+  "rules": []
+}

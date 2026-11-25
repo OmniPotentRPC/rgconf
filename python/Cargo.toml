@@ -8,7 +8,6 @@ rust-version.workspace = true
 authors.workspace = true
 description = "PyO3 bindings for rgconf, matching the rgmin python crate."
 repository.workspace = true
-homepage.workspace = true
 documentation = "https://omnipotentrpc.github.io/rgconf/"
 readme.workspace = true
 keywords = ["configuration", "capnproto", "python", "provenance"]

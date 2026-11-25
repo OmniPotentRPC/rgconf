@@ -8,7 +8,6 @@ rust-version.workspace = true
 authors.workspace = true
 description = "Layered Cap'n Proto parameter resolution and RFC 9162 provenance for the OmniPotentRPC stack."
 repository.workspace = true
-homepage.workspace = true
 documentation = "https://docs.rs/rgconf"
 readme.workspace = true
 keywords = ["configuration", "capnproto", "provenance", "rfc9162"]
