@@ -901,3 +901,68 @@ proptest::proptest! {
         }
     }
 }
+
+#[test]
+fn orca_arm_describes_every_orcac_setting() {
+    let cat = catalog().expect("catalog");
+    for (key, default) in [
+        ("potential.orca.method", ParamValue::Text(String::new())),
+        ("potential.orca.multiplicity", ParamValue::Int(1)),
+        ("potential.orca.nprocs", ParamValue::Int(1)),
+        ("potential.orca.maxcoreMb", ParamValue::Int(1024)),
+        ("potential.orca.restart", ParamValue::Bool(true)),
+        ("potential.orca.keepFiles", ParamValue::Bool(false)),
+        ("potential.orca.timeoutS", ParamValue::Float(3600.0)),
+    ] {
+        let spec = cat.get(key).unwrap_or_else(|| panic!("catalog missing {key}"));
+        assert_eq!(spec.default_value, default, "{key}");
+    }
+    for key in [
+        "potential.orca.executable",
+        "potential.orca.basis",
+        "potential.orca.keywords",
+        "potential.orca.charge",
+        "potential.orca.scratchDir",
+    ] {
+        assert!(cat.get(key).is_some(), "catalog missing {key}");
+    }
+}
+
+#[test]
+fn consolidated_arms_and_renumbered_rgconf_arms_keep_their_names() {
+    let cat = catalog().expect("catalog");
+    for key in [
+        "potential.mullerBrown.amplitude",
+        "potential.d2.s6",
+        "potential.d2cpmd.symmetry",
+        "potential.d4.periodic",
+        "potential.plugin.libraryPath",
+        "potential.plugin.pluginName",
+        "potential.gpr.oracle.metatomic.torchDeterminism",
+    ] {
+        assert!(cat.get(key).is_some(), "catalog missing {key}");
+    }
+}
+
+#[test]
+fn orca_arm_resolves_from_toml() {
+    let toml = "[potential]\narm = \"orca\"\n\n[potential.orca]\nmethod = \"UKS PBE0\"\nbasis = \"cc-pVDZ\"\nmaxcoreMb = 3700\nnprocs = 64\n";
+    let mut resolver = Resolver::new(Profile::RgconfCanonical);
+    resolver
+        .merge_toml(ConfigLayer::JobConfigFile, toml, "job.toml")
+        .expect("orca configuration");
+    let resolution = resolver.resolve().expect("resolved orca arm");
+    assert_eq!(field(&resolution, "potential.arm").value.to_string(), "orca");
+    assert_eq!(
+        field(&resolution, "potential.orca.method").value.to_string(),
+        "UKS PBE0"
+    );
+    assert_eq!(
+        field(&resolution, "potential.orca.maxcoreMb").value,
+        ParamValue::Int(3700)
+    );
+    assert_eq!(
+        field(&resolution, "potential.orca.nprocs").value,
+        ParamValue::Int(64)
+    );
+}
