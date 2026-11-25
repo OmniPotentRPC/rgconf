@@ -1,0 +1,37 @@
+{
+  "$schema": "https://context7.com/schema/context7.json",
+  "projectTitle": "rgconf",
+  "description": "Cap'n Proto parameter resolution and provenance for OmniPotentRPC.",
+  "folders": [
+    "docs/orgmode",
+    "examples",
+    "include",
+    "python"
+  ],
+  "excludeFolders": [
+    "docs/source",
+    "docs/build",
+    "docs/newsfragments",
+    "newsfragments",
+    "changelog.d",
+    "benches",
+    "benchmarks",
+    "bench",
+    "benchflow",
+    "subprojects",
+    "third_party",
+    "tests",
+    "scripts",
+    "ci",
+    ".github",
+    "branding",
+    ".pixi",
+    "generated"
+  ],
+  "excludeFiles": [
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "LICENSE"
+  ],
+  "rules": []
+}
