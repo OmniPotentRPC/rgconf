@@ -13,7 +13,7 @@
 using Common = import "common.capnp";
 
 # Additive protocol revision implemented by this schema.
-const protocolMinor :UInt16 = 2;
+const protocolMinor :UInt16 = 3;
 
 # @struct ForceInput
 # @brief Input configuration for a potential energy evaluation.
@@ -122,6 +122,7 @@ struct Capabilities {
     optimize       @8;
     frequencies    @9;
     hessianVector  @10;
+    neighbors      @11;
   }
 }
 

@@ -966,3 +966,62 @@ fn orca_arm_resolves_from_toml() {
         ParamValue::Int(64)
     );
 }
+
+fn capabilities_operation_ordinals(schema: &str) -> Vec<(&str, u16)> {
+    let start = schema
+        .find("enum Operation {")
+        .expect("Capabilities.Operation");
+    let body = &schema[start + "enum Operation {".len()..];
+    let body = body.split('}').next().expect("Operation enum close");
+    let mut ordinals = Vec::new();
+    for raw in body.lines() {
+        let line = raw.split('#').next().expect("line").trim();
+        if line.is_empty() {
+            continue;
+        }
+        let mut words = line.trim_end_matches(';').split_whitespace();
+        let name = words.next().expect("enumerant name");
+        let ordinal = words.next().expect("enumerant ordinal");
+        assert!(
+            ordinal.starts_with('@') && words.next().is_none(),
+            "enumerant {name} is not a bare ordinal"
+        );
+        let number = ordinal[1..].parse().expect("ordinal number");
+        ordinals.push((name, number));
+    }
+    ordinals
+}
+
+#[test]
+fn capabilities_operation_neighbors_is_ordinal_11() {
+    let schema = include_str!("../schema/potential.capnp");
+    let expected: &[(&str, u16)] = &[
+        ("energy", 0),
+        ("forces", 1),
+        ("gradient", 2),
+        ("hessian", 3),
+        ("dipole", 4),
+        ("polarizability", 5),
+        ("quadrupole", 6),
+        ("stress", 7),
+        ("optimize", 8),
+        ("frequencies", 9),
+        ("hessianVector", 10),
+        ("neighbors", 11),
+    ];
+    assert_eq!(capabilities_operation_ordinals(schema), expected);
+    assert!(schema.contains("const protocolMinor :UInt16 = 3;"));
+    assert!(schema.contains(
+        "neighbours @13 (fip :ForceInput, request :NeighborRequest) -> (neighbors :NeighborList);"
+    ));
+    assert!(schema.contains(
+        "calculateHvp @14 (fip :ForceInput, direction :List(Float64)) -> (product :List(Float64));"
+    ));
+    for name in [
+        "struct NeighborRequest {",
+        "struct NeighborSystem {",
+        "struct NeighborList {",
+    ] {
+        assert!(schema.contains(name), "missing {name}");
+    }
+}
