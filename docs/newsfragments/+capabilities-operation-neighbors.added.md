@@ -1,0 +1,1 @@
+`Capabilities.Operation.neighbors` is ordinal 11, after `hessianVector`. The potentials schema protocol minor is 3. `Potential.neighbours` (13), `calculateHvp` (14), `NeighborRequest`, `NeighborSystem`, and `NeighborList` keep their ordinals.
