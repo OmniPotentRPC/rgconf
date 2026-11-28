@@ -546,9 +546,9 @@ when rgconf has none, ``abi`` for ABI bookkeeping) and the eOn option
 * ``eon:path_initialization_t.nsteps`` — ``int``, default ``250``; ``include/eon/ParametersOptions.h:598``; section Nudged Elastic Band
 * ``eon:path_initialization_t.max_move`` — ``double``, default ``0.1``; ``include/eon/ParametersOptions.h:599``; section Nudged Elastic Band
 * ``eon:path_initialization_t.force_tolerance`` — ``double``, default ``0.001``; ``include/eon/ParametersOptions.h:600``; section Nudged Elastic Band
-* ``eon:path_initialization_t.sidpp_alpha`` — ``double``, default ``0.33``; ``include/eon/ParametersOptions.h:601``; section Nudged Elastic Band
-* ``eon:path_initialization_t.sidpp_frontier_tol`` — ``double``, default ``0.01``; ``include/eon/ParametersOptions.h:602``; section Nudged Elastic Band
-* ``eon:path_initialization_t.sidpp_reparam`` — ``bool``, default ``true``; ``include/eon/ParametersOptions.h:603``; section Nudged Elastic Band
+* ``eon:path_initialization_t.sidpp_alpha`` — ``double``, default ``0.33``; ``include/eon/ParametersOptions.h:601``; section Nudged Elastic Band; rgconf ``band.PathInitConfig.sidppAlphaGrow``; eOn ``path_initialization_t.sidpp_alpha``. Fraction of the open gap at which the alternating growth places a new image. eOn defaults to 0.33 and the schema to 0.5.
+* ``eon:path_initialization_t.sidpp_frontier_tol`` — ``double``, default ``0.01``; ``include/eon/ParametersOptions.h:602``; section Nudged Elastic Band; rgconf ``band.PathInitConfig.sidppFrontierTolerance``; eOn ``path_initialization_t.sidpp_frontier_tol``. Residual above which a growth stage relaxes again before the next image is added.
+* ``eon:path_initialization_t.sidpp_reparam`` — ``bool``, default ``true``; ``include/eon/ParametersOptions.h:603``; section Nudged Elastic Band; rgconf ``band.PathInitConfig.sidppReparameterize``; eOn ``path_initialization_t.sidpp_reparam``. Places the grown path at equal arc length before the last relaxation.
 * ``eon:path_initialization_t.sidpp_ideal_ksp`` — ``bool``, default ``false``; ``include/eon/ParametersOptions.h:604``; section Nudged Elastic Band
 * ``eon:path_initialization_t.opt_method`` — ``OptType``, default ``OptType::LBFGS``; ``include/eon/ParametersOptions.h:605``; section Nudged Elastic Band
 * ``eon:path_initialization_t.oversampling`` — ``bool``, default ``false``; ``include/eon/ParametersOptions.h:606``; section Nudged Elastic Band

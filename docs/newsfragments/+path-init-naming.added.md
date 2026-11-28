@@ -1,0 +1,1 @@
+`PathInitMethod` gains `geodesic`, the whole-path geodesic of Zhu, Thompson and Martinez. `PathInitConfig` gains `sidppGrowth` (`alternating` or `forceGated`), `sidppFrontierTolerance` and `sidppReparameterize`, so the two growth rules of the sequential IDPP are one method with a named variant.

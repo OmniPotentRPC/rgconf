@@ -25,3 +25,6 @@ rgsaddle	rgsaddle_growing_string_config_t	max_steps_per_node	unmapped	none	Cap o
 rgsaddle	rgsaddle_growing_string_config_t	join_tol	unmapped	none	Frontier distance at which the two fragments join early, where -1 disables the early join. No rgconf or eOn field.
 rgsaddle	rgsaddle_growing_string_config_t	reparametrization	unmapped	none	Spline kind used to redistribute nodes. The eOn sidpp_reparam is a boolean for IDPP growth and does not choose a spline.
 rgsaddle	rgsaddle_growing_string_config_t	force_gate	convergence.ConvergenceConfig.norm	optimizer_options_t.convergence_metric	Norm used for the frontier test and the reported force. rgsaddle offers L2, Linf and max-atom, defaulting to Linf, while the rgconf ForceNorm also has the rms forms.
+eon	path_initialization_t	sidpp_alpha	band.PathInitConfig.sidppAlphaGrow	path_initialization_t.sidpp_alpha	Fraction of the open gap at which the alternating growth places a new image. eOn defaults to 0.33 and the schema to 0.5.
+eon	path_initialization_t	sidpp_frontier_tol	band.PathInitConfig.sidppFrontierTolerance	path_initialization_t.sidpp_frontier_tol	Residual above which a growth stage relaxes again before the next image is added.
+eon	path_initialization_t	sidpp_reparam	band.PathInitConfig.sidppReparameterize	path_initialization_t.sidpp_reparam	Places the grown path at equal arc length before the last relaxation.

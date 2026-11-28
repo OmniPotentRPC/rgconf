@@ -207,14 +207,46 @@ struct ClimbingImagePatch {
   convergedOnlyOnClimbingImage @9 :Common.OptBool;
 }
 
+# One name per published construction of the initial band. A variant of a
+# construction is a field of PathInitConfig, never a second method name.
 enum PathInitMethod {
   linear @0;
+  # Image dependent pair potential, every interior image relaxed toward
+  # interpolated pair distances. Smidstrup, Pedersen, Stokbro and Jonsson,
+  # J. Chem. Phys. 140, 214106 (2014).
   idpp @1;
+  # Sequential IDPP, the band grown from both endpoints on the IDPP
+  # objective. Schmerwitz, Asgeirsson and Jonsson, J. Chem. Theory Comput.
+  # 20, 155 (2024). sidppGrowth selects the growth rule, sidppGeodesic the
+  # pair targets.
   sidpp @2;
   filePath @3;
   nebPath @4;
   chemparseplot @5;
   internalCoords @6;
+  # Geodesic of the pair-distance metric, minimized over the whole path.
+  # Zhu, Thompson and Martinez, J. Chem. Phys. 150, 164103 (2019). Distinct
+  # from sidppGeodesic, which keeps the sequential growth.
+  geodesic @7;
+}
+
+# Growth rule of the sequential IDPP.
+enum SidppGrowth {
+  # A new image at sidppAlphaGrow of the open gap, on alternating sides,
+  # then a collective relaxation; the path is placed at equal arc length at
+  # the end. The rule of eOn and GPRidge.
+  alternating @0;
+  # A new image once the frontier image is under the force tolerance, at the
+  # ideal spacing along the tangent, with the gap spring scaled to that
+  # spacing. The rule of Sec. 2.3 of the paper.
+  forceGated @1;
+}
+
+struct OptSidppGrowth {
+  union {
+    unset @0 :Void;
+    value @1 :SidppGrowth;
+  }
 }
 
 struct OptPathInitMethod {
@@ -244,6 +276,8 @@ struct PathInitConfig {
   );
   sidppRefineFrames @7 :Bool = false $Common.mutability(restartOnly);
   sidppSpringConstant @8 :Float64 = 1.0 $Common.mutability(restartOnly);
+  # Inverse-distance pair targets for the sequential growth, with a last
+  # per-image pull to the full target. Not the geodesic method.
   sidppGeodesic @9 :Bool = false $Common.mutability(restartOnly) $Common.meta(
     aliases = [(format = "toml", section = "band", key = "sidpp_geodesic")],
     cliFlags = ["--sidpp-geodesic"]
@@ -254,6 +288,22 @@ struct PathInitConfig {
   );
   initialPathInput @11 :Text = "" $Common.mutability(restartOnly);
   useInternalCoords @12 :Bool = false $Common.mutability(restartOnly);
+  sidppGrowth @13 :SidppGrowth = alternating $Common.mutability(restartOnly) $Common.meta(
+    aliases = [(format = "toml", section = "band", key = "sidpp_growth")],
+    cliFlags = ["--sidpp-growth"]
+  );
+  sidppFrontierTolerance @14 :Float64 = 0.01 $Common.mutability(restartOnly) $Common.meta(
+    aliases = [
+      (format = "ini", section = "Nudged Elastic Band", key = "sidpp_frontier_tol"),
+      (format = "toml", section = "band", key = "sidpp_frontier_tol")
+    ]
+  );
+  sidppReparameterize @15 :Bool = true $Common.mutability(restartOnly) $Common.meta(
+    aliases = [
+      (format = "ini", section = "Nudged Elastic Band", key = "sidpp_reparameterize"),
+      (format = "toml", section = "band", key = "sidpp_reparameterize")
+    ]
+  );
 }
 
 struct PathInitPatch {
@@ -270,6 +320,9 @@ struct PathInitPatch {
   geodesicImagePrior @10 :Common.OptBool;
   initialPathInput @11 :Common.OptText;
   useInternalCoords @12 :Common.OptBool;
+  sidppGrowth @13 :OptSidppGrowth;
+  sidppFrontierTolerance @14 :Common.OptFloat64;
+  sidppReparameterize @15 :Common.OptBool;
 }
 
 struct ZoomNebConfig {

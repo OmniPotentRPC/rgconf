@@ -347,9 +347,9 @@ eon	include/eon/ParametersOptions.h	597	path_initialization_t	max_iterations	int
 eon	include/eon/ParametersOptions.h	598	path_initialization_t	nsteps	int	250	Nudged Elastic Band			
 eon	include/eon/ParametersOptions.h	599	path_initialization_t	max_move	double	0.1	Nudged Elastic Band			
 eon	include/eon/ParametersOptions.h	600	path_initialization_t	force_tolerance	double	0.001	Nudged Elastic Band			
-eon	include/eon/ParametersOptions.h	601	path_initialization_t	sidpp_alpha	double	0.33	Nudged Elastic Band			
-eon	include/eon/ParametersOptions.h	602	path_initialization_t	sidpp_frontier_tol	double	0.01	Nudged Elastic Band			
-eon	include/eon/ParametersOptions.h	603	path_initialization_t	sidpp_reparam	bool	true	Nudged Elastic Band			
+eon	include/eon/ParametersOptions.h	601	path_initialization_t	sidpp_alpha	double	0.33	Nudged Elastic Band	band.PathInitConfig.sidppAlphaGrow	path_initialization_t.sidpp_alpha	Fraction of the open gap at which the alternating growth places a new image. eOn defaults to 0.33 and the schema to 0.5.
+eon	include/eon/ParametersOptions.h	602	path_initialization_t	sidpp_frontier_tol	double	0.01	Nudged Elastic Band	band.PathInitConfig.sidppFrontierTolerance	path_initialization_t.sidpp_frontier_tol	Residual above which a growth stage relaxes again before the next image is added.
+eon	include/eon/ParametersOptions.h	603	path_initialization_t	sidpp_reparam	bool	true	Nudged Elastic Band	band.PathInitConfig.sidppReparameterize	path_initialization_t.sidpp_reparam	Places the grown path at equal arc length before the last relaxation.
 eon	include/eon/ParametersOptions.h	604	path_initialization_t	sidpp_ideal_ksp	bool	false	Nudged Elastic Band			
 eon	include/eon/ParametersOptions.h	605	path_initialization_t	opt_method	OptType	OptType::LBFGS	Nudged Elastic Band			
 eon	include/eon/ParametersOptions.h	606	path_initialization_t	oversampling	bool	false	Nudged Elastic Band			
