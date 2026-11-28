@@ -1010,7 +1010,7 @@ fn capabilities_operation_neighbors_is_ordinal_11() {
         ("neighbors", 11),
     ];
     assert_eq!(capabilities_operation_ordinals(schema), expected);
-    assert!(schema.contains("const protocolMinor :UInt16 = 3;"));
+    assert!(schema.contains("const protocolMinor :UInt16 = 4;"));
     assert!(schema.contains(
         "neighbours @13 (fip :ForceInput, request :NeighborRequest) -> (neighbors :NeighborList);"
     ));
@@ -1024,4 +1024,55 @@ fn capabilities_operation_neighbors_is_ordinal_11() {
     ] {
         assert!(schema.contains(name), "missing {name}");
     }
+}
+
+/// The neighbour declaration grows at the end: the fields rgpot compiled
+/// keep their ordinals and wire types, and the shell, the bin edge, the
+/// origin and the self-image switch follow them.
+#[test]
+fn neighbor_request_grows_after_systems() {
+    let schema = include_str!("../schema/potential.capnp");
+    let start = schema
+        .find("struct NeighborRequest {")
+        .expect("NeighborRequest");
+    let body = &schema[start..];
+    let body = &body[..body.find("\n}\n").expect("end of NeighborRequest")];
+    let fields: Vec<&str> = body
+        .lines()
+        .skip(1)
+        .map(str::trim)
+        .filter(|line| !line.is_empty() && !line.starts_with('#'))
+        .collect();
+    assert_eq!(
+        fields,
+        [
+            "cutoff @0 :Float64;",
+            "skin @1 :Float64 = 0;",
+            "format @2 :UInt8 = 0;",
+            "cut @3 :UInt8 = 0;",
+            "periodic @4 :List(Bool);",
+            "shifts @5 :Bool = true;",
+            "vectors @6 :Bool = true;",
+            "distances @7 :Bool = true;",
+            "mode @8 :UInt8 = 1;",
+            "cursor @9 :UInt64 = 0;",
+            "limit @10 :UInt32 = 0;",
+            "systems @11 :List(NeighborSystem);",
+            "shell @12 :NeighborShell = half;",
+            "binEdge @13 :Float64 = 0;",
+            "origin @14 :List(Float64);",
+            "excludeSelfImages @15 :Bool = false;",
+        ]
+    );
+    for constant in [
+        "const neighborFormatPairs :UInt8 = 0;",
+        "const neighborFormatCluster4 :UInt8 = 1;",
+        "const neighborCutStrict :UInt8 = 0;",
+        "const neighborCutLoose :UInt8 = 1;",
+        "const neighborModeInvalid :UInt8 = 0;",
+        "const neighborModeDefault :UInt8 = 1;",
+    ] {
+        assert!(schema.contains(constant), "missing {constant}");
+    }
+    assert!(schema.contains("enum NeighborShell {\n  half @0;\n  full @1;\n}"));
 }
